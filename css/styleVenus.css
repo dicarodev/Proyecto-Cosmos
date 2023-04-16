@@ -1,14 +1,14 @@
 @font-face {
   font-family: "ZingRust";
-  src: url(../assets/zing.rust-demo-base.otf);
+  src: url(../assets/fonts/zing.rust-demo-base.otf);
 }
 @font-face {
   font-family: "Delicious";
-  src: url(../assets/DeliciousHandrawn-Regular.ttf);
+  src: url(../assets/fonts/DeliciousHandrawn-Regular.ttf);
 }
 @font-face {
   font-family: "IndieFlower";
-  src: url(../assets/IndieFlower-Regular.ttf);
+  src: url(../assets/fonts/IndieFlower-Regular.ttf);
 }
 * {
   margin: 0;
