@@ -1,0 +1,157 @@
+@font-face {
+  font-family: "ZingRust";
+  src: url(../assets/zing.rust-demo-base.otf);
+}
+@font-face {
+  font-family: "Delicious";
+  src: url(../assets/DeliciousHandrawn-Regular.ttf);
+}
+@font-face {
+  font-family: "IndieFlower";
+  src: url(../assets/IndieFlower-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  list-style: none;
+}
+body {
+  padding-top: 1rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  background-color: #322f5d;
+}
+#centrar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+  font-family: "ZingRust";
+  text-shadow: 3px 3px 4px rgba(136, 66, 15, 1),-1px 3px 9px rgba(255, 128, 0, 1);
+  color: #3c396d;
+  font-size: 8rem;
+}
+#contenedor {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "main main";
+}
+header {
+  grid-area: header;
+  text-align: center;
+}
+main {
+  grid-area: main;
+}
+p,li{
+  font-family: IndieFlower;
+  font-size: 1.5rem;
+}
+h2{
+  font-family: Delicious;
+  font-size: 2rem;
+  text-align: center;
+}
+.contenidoUl ul li{
+  text-align: center;
+  list-style: none;
+}
+#contenido {
+  display: grid;
+  grid-template-areas:
+    "contenidoTemAgua contenidoArSuGr"
+    "contenidoDuracionMovimiento contenidoDuracionMovimiento";
+}
+#contenidoTemAgua {
+  grid-area: contenidoTemAgua;
+  background-color: #a982c8;
+  box-shadow: 10px 10px 5px 0px rgba(30,28,64,1);
+  padding: 0.5rem;
+}
+
+#contenidoArSuGr {
+  grid-area: contenidoArSuGr;
+  background-color: #a982c8;
+  box-shadow: 10px 10px 5px 0px rgba(30,28,64,1);
+  margin-left: 1rem;
+  padding: 0.5rem;
+}
+#contenidoDuracionMovimiento {
+  grid-area: contenidoDuracionMovimiento;
+  background-color: #8b88bd;
+  box-shadow: 10px 10px 5px 0px rgba(30,28,64,1);
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+#venus {
+  background: url(../assets/mapa-grande-por-satelite-detallada-de-venus.jpg);
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 20px #000, inset -40px -10px 20px rgba(3, 32, 56, 0.7);
+  animation: venus 5s linear infinite;
+}
+@keyframes venus {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: -800px;
+  }
+}
+@media only screen and (max-width: 767px){
+  body{
+    padding: 0;
+  }
+  #contenedor{
+    display: grid;
+    grid-template-areas: "header"
+                        "main";
+  }
+  header{
+    grid-area: header;
+  }
+  main{
+    grid-area: main;
+  }
+  #contenido {
+    display: grid;
+    grid-template-areas:
+      "contenidoTemAgua"
+      "contenidoArSuGr"
+      "contenidoDuracionMovimiento";
+  }
+  #contenidoArSuGr{
+    margin: 0;
+    margin-top: 1rem;
+  }
+  p,li{
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  body{
+    padding: 0;
+  }
+  #contenedor{
+    display: grid;
+    grid-template-areas: "header header"
+                        "main main";
+  }
+  header{
+    grid-area: header;
+  }
+  main{
+    grid-area: main;
+  }
+  p,li{
+    text-align: center;
+  }
+}
