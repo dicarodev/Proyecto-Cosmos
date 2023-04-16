@@ -4,46 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/planetas.css">
     <title> Urano 🪐 - El planeta inclinado</title>
+    <link rel="stylesheet" href="../css/planetas.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 <body>
-    <header>
-        <div id="urano">
-            <img src="../assets/images/urano.webp" alt="Imagen sobre Urano">
+    <header >
+        <div class="logo">
+            <span>C</span>
+            <span class="planet left">&#129680;</span>
+            <span>S</span>
+            <span>M</span>
+            <span class="planet right">&#129680;</span>
+            <span>S</span>
         </div>
-        <p>¿Por qu&eacute; no hay vida en...?</p>
-        <h1>URANO</h1>
+        <div id="logoCentro">
+            <a href="https://www.iesjuanbosco.es" target="_blank"><img src="../assets/images/logoIESJuanBosco.png" alt="Logo IES Juan Bosco"></a>
+        </div>
     </header>
 
     <main>
-        <article id="introduccion">
-            <ul>
-                <li>Del lat&iacute;n Uranus, de la traducci&oacute; latina del griego antiguo representante del cielo y padre del dios Saturno</li>
-                <li>Es conocido por su inclinaci&oacute;n extrema, ya que su eje de rotaci&oacute;n est&aacute; inclinado m&aacute;s de 90 grados en relaci&oacute;n con su plano orbital, lo que significa que parece estar girando sobre su costado.</li>
-            </ul>
-        </article>
+        <section>
+            <div id="planeta">
+                <div id="urano">
+                    <img src="../assets/images/urano.webp" alt="Imagen sobre Urano">
+                </div>
+                <p>¿Por qu&eacute; no hay vida en...?</p>
+                <h1>URANO</h1>
+            </div>
 
-        <article id="caracteristicas">
-            <ul>
-                <li><strong>TEMPERATURA MEDIA: </strong>-218&deg; C.</li>
-                <li><strong>PRESENCIA DE AGUA: </strong>S&iacute;, mayormete hielo.</li>
-                <li><strong>COMPOSICI&Oacute;N DE LA ATM&Oacute;SFERA: </strong>H&iacute;drogeno, helio, metano, agua y amoniaco.</li>
-                <li><strong>GRAVEDAD: </strong>8.7 m/s&sup2;</li>
-                <li><strong>SUPERFICIE: </strong>8.083 miles de millones de km&sup2;.</li>
-                <li><strong>DURACI&Oacute;N DEL D&Iacute;A: </strong>17H 14' 24''.</li>
-                <li><strong>DURACI&Oacute;N DE UN AÑO: </strong>84 años terrestres.</li>
-            </ul>
-        </article>
+            <div id="introduccion">
+                <p>Del lat&iacute;n Uranus, de la traducci&oacute;n latina del griego antiguo representante del cielo y padre del dios Saturno.</p>
+                <p>Es conocido por su inclinaci&oacute;n extrema, ya que su eje de rotaci&oacute;n est&aacute; inclinado m&aacute;s de 90&deg; en relaci&oacute;n con su plano orbital, lo que significa que parece estar girando sobre su costado.</p>
+            </div>
+            
+            <article id="caracteristicas">
+                <h2>CARACTERISTICAS</h2>
+                <ul>
+                    <li><span>TEMPERATURA MEDIA &rarr; </span>-218&deg; C.</li>
+                    <li><span>¿PRESENCIA DE AGUA? &rarr; </span>S&iacute;, mayormete hielo.</li>
+                    <li><span>COMPOSICI&Oacute;N DE LA ATM&Oacute;SFERA &rarr; </span>Hidr&oacute;geno, helio, metano, agua y amoniaco.</li>
+                    <li><span>GRAVEDAD &rarr; </span>8.7 m/s&sup2;</li>
+                    <li><span>SUPERFICIE &rarr; </span>8.083 miles de millones de km&sup2;.</li>
+                    <li><span>DURACI&Oacute;N DEL D&Iacute;A &rarr; </span>17H 14' 24''.</li>
+                    <li><span>DURACI&Oacute;N DE UN AÑO &rarr; </span>84 años terrestres.</li>
+                </ul>
+            </article>
 
-        <article id="curiosidades">
-            <h2><strong>DATOS CURIOSOS</strong></h2>
-            <ul>
-                <li>Sistema de anillos muy tenue. Fue descubierto en 1977 por James L. Elliot, Edward W. Dunham y Douglas J. Mink.</li>
-                <li>Urano tiene 27 lunas conocidas. Las m&aacute;s grandes son TITANIA Y OBER&Oacute;N. Sus nombres son los de la reina y el rey de las hadas en la obra "El sueño de una noche de verano" de Shakespeare.</li>
-                <li>Cada una de sus lunas tiene su propia &oacute;rbita y caracter&iacute;sticas &uacute;nicas.</li>
-            </ul>
-        </article>
+            <article id="curiosidades">
+                <h2>DATOS CURIOSOS</h2>
+                <ul>
+                    <li>Sistema de anillos muy tenue. Fue descubierto en 1977 por James L. Elliot, Edward W. Dunham y Douglas J. Mink.</li>
+                    <li>Urano tiene 27 lunas conocidas. Las m&aacute;s grandes son TITANIA Y OBER&Oacute;N. Sus nombres son los de la reina y el rey de las hadas en la obra "El sueño de una noche de verano" de Shakespeare.</li>
+                    <li>Cada una de sus lunas tiene su propia &oacute;rbita y caracter&iacute;sticas &uacute;nicas.</li>
+                </ul>
+            </article>
+        </section>
     </main>
+
+    <footer>
+        <p>Copyright</p>
+        <img src="../assets/images/botonInicioPagina.png" alt="Imagen cohete para volver al inicio" href="#" id="inicio" class="cohete">
+    </footer>
+
+    <script src="../js/pages.js"></script>
 </body>
 </html>
