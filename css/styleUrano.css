@@ -88,16 +88,23 @@ h1{
 }
 
 /*Estilos imagen y animación del planeta*/
-#urano img{
-    width: 30em;
-    animation: rotate 60s linear infinite;
+#urano{
+    width: 20em;
+    height: 20em;
+    border-radius: 50%;
+    background: url(../assets/images/mapaUrano.png);
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 20px #000, inset -40px -10px 20px rgba(3, 32, 56, 0.7);
+    animation: rotate 10s linear infinite;
+    transform: rotateZ(43deg);
 }
 @keyframes rotate{
-    from {
-        transform: rotate(0deg);
+    0% {
+        background-position-x: 0;
     }
-    to {
-        transform: rotate(360deg);
+    100% {
+        background-position-x: -800px;
     }
 }
 

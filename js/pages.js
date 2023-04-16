@@ -16,7 +16,7 @@ $(document).ready(function() {
         $("html, body").animate({ scrollTop: 0 }, 2000, function() { 
 
             //Vuelve al inicio de la página cuando se completa la animación de desplazamiento.
-            window.location.href = "#"; 
+            window.location.href = "#top"; 
         });
 
         //Agrega la clase `miOrbita` al cohete para agregar una animación de rotación.
