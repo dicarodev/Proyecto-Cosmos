@@ -170,8 +170,9 @@ li, #introduccion p{
         "caracteristicas"
         "curiosidades";
     }
-    #urano img{
-        width: 20em;
+    #urano{
+        width: 15em;
+        height: 15em;
     }
     #planeta p{
         font-size: 1.4em;
