@@ -137,7 +137,7 @@ li, #introduccion p{
 #curiosidades{
     grid-area: curiosidades;
 }
-
+/*Animacion boton cohete regrasa al inicio de la página*/
 .cohete{
     position: fixed;
     bottom: 1em;
