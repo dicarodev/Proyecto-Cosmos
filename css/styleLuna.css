@@ -1,0 +1,21 @@
+#planeta{
+    background: url(../assets/images/mapaLuna.png);
+    transform: none;
+}
+
+@keyframes rotate{
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: -818px;
+    }
+}
+
+#astronauta{
+    height: 20em;
+    background: url(../assets/images/astronauta.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
