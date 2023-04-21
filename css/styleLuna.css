@@ -19,3 +19,9 @@
     background-size: contain;
     background-position: center;
 }
+
+@media screen and (max-width: 800px) {
+    #astronauta{
+        height: 12em;
+    }
+}
