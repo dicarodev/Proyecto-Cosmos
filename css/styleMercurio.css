@@ -16,6 +16,7 @@
   box-sizing: border-box;
   color: white;
   list-style: none;
+  font-family: "IndieFlower";
 }
 body {
   padding-top: 1rem;
@@ -36,10 +37,54 @@ body {
 }
 header {
   grid-area: header;
-  text-align: center;
+  display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
+.logo{
+  display: flex;
+  align-items: center;
+}
+.logo::after {
+  content: "";
+  position: relative;
+  z-index: -5;
+  left: -5.2em;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  border: 4px solid;
+}
+span{
+  font-size: 1.6em;
+}
+.planet {
+  animation: planet-rotate 10s linear infinite;
+}
+.planet.left {
+  font-size: 1.2em;
+  transform-origin: 156% 37%;
+}
+.planet.right {
+  font-size: 1.2em;
+  transform-origin: -55% 43%;
+}
+@keyframes planet-rotate {
+  to {
+      transform: rotate(1turn);
+  }
+}
+
+#logoCentro img{
+  width: 5em;
+  border-radius: 50%;
+}
+
 main {
   grid-area: main;
+}
+#descripcionMercurio{
+  text-align: center;
 }
 p,li{
   font-family: IndieFlower;
