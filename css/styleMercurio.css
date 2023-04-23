@@ -154,6 +154,24 @@ h1{
     background-position-x: -800px;
   }
 }
+.cohete{
+  position: fixed;
+  bottom: 1em;
+  right: 10%;
+  cursor: pointer;
+  display: none;
+}
+@keyframes miOrbita {
+  from  {
+      transform: translateY(0);
+  }
+  to    {
+      transform: translateY(-100%);
+  }
+}
+.miOrbita{
+  animation: miOrbita 2s linear;
+}
 @media only screen and (max-width: 767px){
   body{
     padding: 0;
