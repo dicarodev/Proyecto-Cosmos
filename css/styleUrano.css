@@ -11,8 +11,8 @@
 
 body{
     margin: 1em 10% 1em 10%;
-    min-width: 450px;
-    font-size: 1.4em;
+    min-width: 400px;
+    font-size: 1.2em;
     font-weight: 600;
     background: linear-gradient(
         to bottom,
@@ -171,24 +171,13 @@ li, #introduccion p{
     grid-area: curiosidades;
 }
 
-/*Animacion boton cohete regrasa al inicio de la página*/
+/*Cohete regrasa al inicio de la página*/
 .cohete{
     position: fixed;
     bottom: 1em;
-    right: 7%;
+    right: 5%;
     cursor: pointer;
     display: none;
-}
-@keyframes miOrbita {
-    from  {
-        transform: translateY(0);
-    }
-    to    {
-        transform: translateY(-100%);
-    }
-}
-.miOrbita{
-    animation: miOrbita 2s linear;
 }
 
 footer{
@@ -199,6 +188,7 @@ footer{
     margin: 0;
     color: white;
     background-color: #333030;
+    box-shadow: 0px -1px 10px 0px rgba(255, 166, 0, 1),0px -4px 15px 0px rgba(213, 139, 0, 1),2px -4px 20px 1px rgba(221, 144, 0, 1);
 }
 
 .contenidoFooter{
@@ -219,7 +209,7 @@ footer{
 
     body{
         margin: 1em .5em;
-        font-size: 1.2em;
+        font-size: initial;
     }
     section{
         grid-template-areas: 
@@ -241,5 +231,27 @@ footer{
 
     #caracteristicas{
         margin-right: 0;
+    }
+
+    .contenidoFooter{
+        display: grid;
+        grid-template-areas: 
+        "planetas creditos"
+        "mapa mapa";
+    }
+    .enlacesPlanetas{
+        grid-area: planetas;
+    }
+    .pedidos{
+        grid-area: creditos;
+    }
+    .mapa{
+        grid-area: mapa;
+        justify-self: center;
+        margin-top: 2em;
+    }
+    .mapa iframe{
+        width: fit-content;
+        height: fit-content;
     }
 }
