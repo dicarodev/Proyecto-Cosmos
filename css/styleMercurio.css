@@ -21,7 +21,12 @@ body {
   padding-top: 1rem;
   padding-left: 10rem;
   padding-right: 10rem;
-  background-color: #322f5d;
+  background: linear-gradient(
+    to bottom,
+    rgba(125, 125, 80, 0.4),
+    rgba(53, 53, 108, 0.5)
+), url(../assets/img/tiro-angulo-fascinante-cielo-estrellado.jpg);
+background-size: cover;
 }
 main{
   color: white;
@@ -105,29 +110,37 @@ h1{
 #contenido {
   display: grid;
   grid-template-areas:
-    "contenidoTemAgua curiosidades";
+    "caracteriticas curiosidades";
 }
-#contenidoTemAgua{
-  grid-area: contenidoTemAgua;
-  background-color: #a982c8;
-  box-shadow: 10px 10px 5px 0px rgba(30,28,64,1);
-  padding: 0.5rem;
+#introduccion{
+  grid-area: introduccion;
+  padding: 1em;
+  width: fit-content;
+  height: fit-content;
+  border: 2px solid white;
+  border-radius: 53px 5px / 66px 5px; 
+  background-color: #b8e9f6ad;
+  box-shadow: 1px 3px 16px 11px rgba(119, 97, 128, 1),1px 2px 14px 1px rgba(38, 39, 128, 1);
 }
-#datosPlaneta {
-  display: flex;
-  background-color: #8f8cc1;
-  box-shadow: 10px 10px 5px 0px rgba(30,28,64,1);
-  padding: 0.5rem;
+article{
+  margin-top: 3em;
+  padding: 1em;
+  width: fit-content;
+  height: fit-content;
+
+  border: 2px solid white;
+  border-radius: 5px 5px 40px 40px; 
+  background-color: #b8e9f6ad;
+  box-shadow: 1px 3px 16px 11px rgba(119, 97, 128, 1),1px 2px 14px 1px rgba(38, 39, 128, 1);
 }
-#datosPlaneta article{
-  margin-left: 0.5rem;
+article h2{
+  text-align: center;
+  font-size: 2em;
+  color: black;
+  text-shadow: 5px 2px 4px rgba(140, 77, 159, 1);
 }
-#curiosidades{
-  grid-area: curiosidades;
-  margin-left: 1rem;
-  background-color: #a982c8;
-  box-shadow: 10px 10px 5px 0px rgba(30,28,64,1);
-  padding: 0.5rem;
+#caracteristicas{
+  margin-right: 3em;
 }
 #mercurio {
   background: url(../assets/img/20180517_GlobalColor2017_equi_64ppd_1000_750_430_10percent.jpg);
@@ -174,7 +187,8 @@ h1{
   #contenedor{
     display: grid;
     grid-template-areas: "header"
-                        "main";
+                        "main"
+                        "footer";
   }
   header{
     grid-area: header;
@@ -185,19 +199,18 @@ h1{
   #contenido {
     display: grid;
     grid-template-areas:
-      "contenidoTemAgua"
-      "datosPlaneta"
+      "caracteristicas"
       "curiosidades";
   }
   #curiosidades{
+    grid-area: curiosidades;
     margin: 0;
     margin-top: 1rem;
   }
-  #datosPlaneta article{
-    margin-left: 0.5rem;
-  }
-  p,li{
-    text-align: center;
+  #caracteristicas{
+    grid-area: caracteristicas;
+    margin: 0;
+    margin-top: 1.5rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -207,7 +220,8 @@ h1{
     #contenedor{
       display: grid;
       grid-template-areas: "header header"
-                          "main main";
+                          "main main"
+                          "footer footer";
     }
     header{
       grid-area: header;
@@ -215,11 +229,8 @@ h1{
     main{
       grid-area: main;
     }
-    #datosPlaneta article{
-      margin-left: 0.5rem;
-    }
-    p,li{
-      text-align: center;
+    footer{
+      grid-area: footer;
     }
 }
 footer {

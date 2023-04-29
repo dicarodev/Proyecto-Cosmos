@@ -14,23 +14,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: white;
   font-family: "IndieFlower";
 }
-body {
-  padding-top: 1rem;
-  padding-left: 10rem;
-  padding-right: 10rem;
-  background-color: #322f5d;
-}
-#contenedor {
-  display: grid;
-  grid-template-areas:
-    "header header"
-    "main main";
+body{
+  margin: 1em 10% 1em 10%;
+  min-width: 450px;
+  font-size: 1.4em;
+  font-weight: 600;
+  background: linear-gradient(
+      to bottom,
+      rgba(125, 125, 80, 0.4),
+      rgba(53, 53, 108, 0.5)
+  ), url(../assets/img/tiro-angulo-fascinante-cielo-estrellado.jpg);
+  background-size: cover;
 }
 header {
-  grid-area: header;
   display: flex;
     justify-content: space-between;
     width: 100%;
@@ -38,6 +36,7 @@ header {
 .logo{
   display: flex;
   align-items: center;
+  color: white;
 }
 .logo::after {
   content: "";
@@ -49,7 +48,16 @@ header {
   border-radius: 50%;
   border: 4px solid;
 }
-span{
+.logo span:nth-of-type(1){
+  font-size: 1.6em;
+}
+.logo span:nth-of-type(3){
+  font-size: 1.6em;
+}
+.logo span:nth-of-type(4){
+  font-size: 1.6em;
+}
+.logo span:nth-of-type(6){
   font-size: 1.6em;
 }
 .planet {
@@ -74,7 +82,7 @@ span{
   border-radius: 50%;
 }
 main{
-  grid-area: main;
+  color: white;
 }
 p{
   font-family: IndieFlower;
@@ -111,38 +119,43 @@ h1{
   justify-content: center;
   align-items: center;
 }
-main {
-  grid-area: main;
-}
 #contenidoPrincipal {
   text-align: center;
 }
 #contenido{
   display: grid;
   grid-template-areas:
-    "contenidoTemperatura contenidoCuriosidades"
-    "contenidoAtmosfera contenidoAtmosfera";
+    "caracteristicas curiosidades";
 }
-#contenidoTemperatura{
-  grid-area: contenidoTemperatura;
-  background-color: #a982c8;
-  box-shadow: 10px 10px 5px 0px rgba(30,28,64,1);
-  padding: 0.5rem;
+#introduccion{
+  grid-area: introduccion;
+  padding: 1em;
+  width: fit-content;
+  height: fit-content;
+  border: 2px solid white;
+  border-radius: 53px 5px / 66px 5px; 
+  background-color: #b8e9f6ad;
+  box-shadow: 1px 3px 16px 11px rgba(119, 97, 128, 1),1px 2px 14px 1px rgba(38, 39, 128, 1);
 }
-#contenidoCuriosidades{
-  grid-area: contenidoCuriosidades;
-  box-shadow: 10px 10px 5px 0px rgba(30,28,64,1);
-  background-color: #a982c8;
-  padding: 0.5rem;
-  margin-left: 0.5rem;
-}
-#contenidoAtmosfera{
-  grid-area: contenidoAtmosfera;
-  background-color: #8f8cc1;
-  box-shadow: 10px 10px 5px 0px rgba(30,28,64,1);
-  padding: 0.5rem;
-  margin-top: 0.7rem;
+article{
+  margin-top: 3em;
+  padding: 1em;
+  width: fit-content;
+  height: fit-content;
 
+  border: 2px solid white;
+  border-radius: 5px 5px 40px 40px; 
+  background-color: #b8e9f6ad;
+  box-shadow: 1px 3px 16px 11px rgba(119, 97, 128, 1),1px 2px 14px 1px rgba(38, 39, 128, 1);
+}
+article h2{
+  text-align: center;
+  font-size: 2em;
+  color: black;
+  text-shadow: 5px 2px 4px rgba(140, 77, 159, 1);
+}
+#caracteristicas{
+  margin-right: 3em;
 }
 @keyframes world {
   0% {
@@ -171,12 +184,14 @@ main {
   #contenido{
     display: grid;
     grid-template-areas:
-      "contenidoTemperatura"
-      "contenidoAtmosfera"
-      "contenidoCuriosidades";
+      "carcteristicas"
+      "curiosidades";
   }
-  #contenidoCuriosidades{
+  #caracteristicas{
     margin: 0;
+    margin-top: 1rem;
+  }
+  #curiosidades{
     margin-top: 1rem;
   }
   
@@ -199,4 +214,94 @@ main {
   p,li{
     text-align: center;
   }
+}
+
+footer {
+  margin-top: 1rem;
+  background-color: #10141b;
+}
+.wrapper {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+.wrapper a:active{
+  background-color: transparent;
+}
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 45px;
+  height: 45px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .tipo{
+  position: absolute;
+  top: 0;
+  font-size: 20px;
+  background: #ffffff;
+  color: #111;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .tipo::before {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon:hover .tipo {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tipo {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tipo,
+.wrapper .facebook:hover .tipo::before {
+  background: #1877f2;
+  color: #10141b;
+}
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tipo,
+.wrapper .twitter:hover .tipo::before {
+  background: #1da1f2;
+  color: #ffffff;
+}
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tipo,
+.wrapper .instagram:hover .tipo::before {
+  background: #e4405f;
+  color: #ffffff;
+}
+.wrapper .github:hover,
+.wrapper .github:hover .tipo,
+.wrapper .github:hover .tipo::before {
+  background: #333333;
+  color: #ffffff;
+}
+a {
+  color: unset;
 }
