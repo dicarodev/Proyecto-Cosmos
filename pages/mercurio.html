@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="../css/styleMercurio.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <title>Mercurio</title>
   </head>
   <body>
@@ -28,13 +29,15 @@
         </div>
       </header>
       <main>
-        <section>
+        <section id="contenido">
+          <div id="planetaContenido">
           <div id="centrar">
             <div id="mercurio"></div>
           </div>
           <div id="descripcionMercurio">
             <p>¿Porque no hay vida en mercurio ?</p>
             <h1>MERCURIO</h1>
+          </div>
           </div>
           <article id="introduccion">
             <p>
@@ -43,7 +46,6 @@
               terrestres. Un año equivale a 87'87 dias terrestres.
             </p>
           </article>
-          <div id="contenido">
             <article id="caracteristicas">
               <h2>Caracteristicas</h2>
               <h3>Temperatura y Agua</h3>
@@ -71,7 +73,6 @@
                 <li>Su color es grisáceo</li>
               </ul>
             </article>
-          </div>
         </section>
       </main>
       <footer>
@@ -90,6 +91,7 @@
           </li>
         </ul>
       </footer>
+      <img src="../assets/img/botonInicioPagina.png" alt="Imagen cohete para volver al inicio" id="inicio" class="cohete">
       <script src="../js/pages.js"></script>
     </div>
   </body>

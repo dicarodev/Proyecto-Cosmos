@@ -18,15 +18,16 @@
   font-family: IndieFlower;
 }
 body {
-  padding-top: 1rem;
-  padding-left: 10rem;
-  padding-right: 10rem;
+  margin: 1em 10% 1em 10%;
+  min-width: 450px;
+  font-size: 1.4em;
+  font-weight: 600;
   background: linear-gradient(
-    to bottom,
-    rgba(125, 125, 80, 0.4),
-    rgba(53, 53, 108, 0.5)
-), url(../assets/img/tiro-angulo-fascinante-cielo-estrellado.jpg);
-background-size: cover;
+      to bottom,
+      rgba(125, 125, 80, 0.4),
+      rgba(53, 53, 108, 0.5)
+  ), url(../assets/img/tiro-angulo-fascinante-cielo-estrellado.jpg);
+  background-size: cover;
 }
 main{
   color: white;
@@ -107,10 +108,14 @@ h1{
 #contenidoPrincipal {
   text-align: center;
 }
-#contenido {
+#contenido{
   display: grid;
-  grid-template-areas:
-    "caracteriticas curiosidades";
+  grid-template-areas: "planetaContenido planetaContenido"
+  "introduccion introduccion"
+  "caracteristicas curiosidades";
+}
+#planetaContenido{
+  grid-area: planetaContenido;
 }
 #introduccion{
   grid-area: introduccion;
@@ -140,7 +145,9 @@ article h2{
   text-shadow: 5px 2px 4px rgba(140, 77, 159, 1);
 }
 #caracteristicas{
+  grid-area: caracteristicas;
   margin-right: 3em;
+  margin-bottom: 1.5rem;
 }
 #mercurio {
   background: url(../assets/img/20180517_GlobalColor2017_equi_64ppd_1000_750_430_10percent.jpg);
@@ -180,27 +187,42 @@ article h2{
 .miOrbita{
   animation: miOrbita 2s linear;
 }
+@media only screen and (min-width: 1024px) {
+  footer{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 2.5em 0;
+    margin: 0;
+    background-color: #333030;
+  }
+}
+footer{
+  padding: 2.5em 0;
+  margin: 0;
+  background-color: #333030;
+}
 @media only screen and (max-width: 767px){
   body{
-    padding: 0;
+    margin: 0;
+    font-size: 1.2em;
   }
-  #contenedor{
-    display: grid;
-    grid-template-areas: "header"
-                        "main"
-                        "footer";
-  }
-  header{
-    grid-area: header;
-  }
-  main{
-    grid-area: main;
-  }
-  #contenido {
+  h1{
+    font-size: 6.5rem;
+  } 
+  #contenido{
     display: grid;
     grid-template-areas:
+      "planetaContenido"
+      "introduccion"
       "caracteristicas"
       "curiosidades";
+  }
+  #introducion{
+    grid-area: introducion;
+  }
+  #curiosidades{
+    grid-area: curiosidades;
   }
   #curiosidades{
     grid-area: curiosidades;
@@ -215,27 +237,9 @@ article h2{
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     body{
+      margin: 0;
       padding: 0;
     }
-    #contenedor{
-      display: grid;
-      grid-template-areas: "header header"
-                          "main main"
-                          "footer footer";
-    }
-    header{
-      grid-area: header;
-    }
-    main{
-      grid-area: main;
-    }
-    footer{
-      grid-area: footer;
-    }
-}
-footer {
-  margin-top: 1rem;
-  background-color: #10141b;
 }
 .wrapper {
   display: flex;

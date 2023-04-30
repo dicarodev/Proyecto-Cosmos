@@ -48,6 +48,18 @@ header {
     justify-content: space-between;
     width: 100%;
 }
+#contenido{
+  display: grid;
+  grid-template-areas: "planetaContenido planetaContenido"
+  "introduccion introduccion"
+  "caracteristicas curiosidades";
+}
+#planetaContenido{
+  grid-area: planetaContenido;
+}
+#curiosidades{
+  grid-area: curiosidades;
+}
 .logo{
   display: flex;
   align-items: center;
@@ -107,11 +119,6 @@ h2{
   font-size: 2rem;
   text-align: center;
 }
-#contenido {
-  display: grid;
-  grid-template-areas:
-    "caracteriticas curisodidades";
-}
 #introduccion{
   grid-area: introduccion;
   padding: 1em;
@@ -140,6 +147,7 @@ article h2{
   text-shadow: 5px 2px 4px rgba(140, 77, 159, 1);
 }
 #caracteristicas{
+  grid-area: caracteristicas;
   margin-right: 3em;
 }
 #venus {
@@ -163,68 +171,61 @@ article h2{
 }
 @media only screen and (max-width: 767px){
   body{
-    padding: 0;
-  }
-  #contenedor{
-    display: grid;
-    grid-template-areas: "header"
-                        "main"
-                        "footer";
-
-  }
-  header{
-    grid-area: header;
-  }
-  main{
-    grid-area: main;
-  }
-  #contenido {
+    margin: 0;
+    font-size: 1.2em;
+}
+  #contenido{
     display: grid;
     grid-template-areas:
-      "caracteriticas"
+      "planetaContenido"
+      "introduccion"
+      "caracteristicas"
       "curiosidades";
   }
+  #planetaContenido{
+    grid-area: planetaContenido;
+  }
   #caracteristicas{
+    grid-area: caracteristicas;
     margin: 0;
     margin-top: 1rem;
   }
+  #curiosidades{
+    grid-area:curiosidades;
+    margin-top: 1rem;
+  }
+  #introduccion{
+    grid-area: introduccion;
+  }
+  
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   body{
+    margin: 0;
     padding: 0;
   }
-  #contenedor{
-    display: grid;
-    grid-template-areas: "header header"
-                        "main main"
-                        "footer footer";
-  }
-  #contenido {
-    display: grid;
-    grid-template-areas:
-      "caracteriticas curisodidades";
-  }
-  #caracteriticas{
-    grid-area: caracteriticas;
-  }
-  #curisodidades{
-    grid-area: curisodidades;
-  }
-  header{
-    grid-area: header;
-  }
-  main{
-    grid-area: main;
-  }
-  footer{
-    grid-area: footer;
+  p,li{
+    text-align: center;
   }
 }
 
 
-footer {
-  margin-top: 1rem;
-  background-color: #10141b;
+@media only screen and (min-width: 1024px) {
+  footer{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 2.5em 0;
+    margin: 0;
+    background-color: #333030;
+  }
+}
+
+footer{
+  width: 100%;
+  padding: 2.5em 0;
+  margin: 0;
+  background-color: #333030;
 }
 .wrapper {
   display: flex;

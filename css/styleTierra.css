@@ -94,7 +94,6 @@ h2{
   text-align: center;
 }
 h1{
-  font-family: "Bungee-Regular";
   color: #7843E6;
   font-size: 8rem;
   text-shadow: 1px 3px 4px rgba(19, 224, 251, 1),-2px 2px 2px rgba(255, 0, 255, 0.7);
@@ -124,8 +123,15 @@ h1{
 }
 #contenido{
   display: grid;
-  grid-template-areas:
-    "caracteristicas curiosidades";
+  grid-template-areas: "planetaContenido planetaContenido"
+  "introduccion introduccion"
+  "caracteristicas curiosidades";
+}
+#planetaContenido{
+  grid-area: planetaContenido;
+}
+#curiosidades{
+  grid-area: curiosidades;
 }
 #introduccion{
   grid-area: introduccion;
@@ -155,6 +161,7 @@ article h2{
   text-shadow: 5px 2px 4px rgba(140, 77, 159, 1);
 }
 #caracteristicas{
+  grid-area: caracteristicas;
   margin-right: 3em;
 }
 @keyframes world {
@@ -168,31 +175,31 @@ article h2{
 }
 @media only screen and (max-width: 767px){
   body{
-    padding: 0;
-  }
-  #contenedor{
-    display: grid;
-    grid-template-areas: "header"
-                        "main";
-  }
-  header{
-    grid-area: header;
-  }
-  main{
-    grid-area: main;
-  }
+    margin: 0;
+    font-size: 1.2em;
+}
   #contenido{
     display: grid;
     grid-template-areas:
-      "carcteristicas"
+      "planetaContenido"
+      "introduccion"
+      "caracteristicas"
       "curiosidades";
   }
+  #planetaContenido{
+    grid-area: planetaContenido;
+  }
   #caracteristicas{
+    grid-area: caracteristicas;
     margin: 0;
     margin-top: 1rem;
   }
   #curiosidades{
+    grid-area:curiosidades;
     margin-top: 1rem;
+  }
+  #introduccion{
+    grid-area: introduccion;
   }
   
 }
@@ -200,25 +207,26 @@ article h2{
   body{
     padding: 0;
   }
-  #contenedor{
-    display: grid;
-    grid-template-areas: "header header"
-                        "main main";
-  }
-  header{
-    grid-area: header;
-  }
-  main{
-    grid-area: main;
-  }
   p,li{
     text-align: center;
   }
 }
+@media only screen and (min-width: 1024px) {
+  footer{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 2.5em 0;
+    margin: 0;
+    background-color: #333030;
+  }
+}
 
-footer {
-  margin-top: 1rem;
-  background-color: #10141b;
+footer{
+  width: 100%;
+  padding: 2.5em 0;
+  margin: 0;
+  background-color: #333030;
 }
 .wrapper {
   display: flex;
