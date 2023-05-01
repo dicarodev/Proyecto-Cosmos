@@ -327,3 +327,7 @@ a {
   color: unset;
 }
 
+#posibleflex{
+  display: flex;
+  justify-content: center;
+}
