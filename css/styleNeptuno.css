@@ -1,0 +1,17 @@
+#planeta{
+    background: url(../assets/images/neptuno.png);
+    transform: none;
+}
+
+h1{
+    color: #827aec; 
+    text-shadow: 
+        0px 0px 5px rgba(255, 255, 255, 1), 
+        0px 0px 10px rgba(255, 255, 255, 1), 
+        0px 0px 15px rgba(255, 255, 255, 1),
+        0px 0px 20px rgb(24, 255, 228),
+        0px 0px 30px #b0ebee,
+        0px 0px 40px #b0ebee,
+        0px 0px 55px #b0ebee,
+        0px 0px 75px #b0ebee;
+}

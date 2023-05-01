@@ -1,68 +1,99 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Jupiter, Planetas, Sistema solar, Nasa">
-    <meta name="description" content="Todos los datos sobre Jupiter">
-    <meta name="Author" content="Jorge">
     <title>Jupiter</title>
-    <link rel="stylesheet" href="../css/planetas.css">
+    <link rel="shortcut icon" href="../assets/icons/iconsCosmos.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/styleUrano.css">
+    <link rel="stylesheet" href="../css/styleJupiter.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="foto"><img src="../images/jupiter.png" alt="Jupiter"></div>
-      
-            <div class="titulo">¿Por que no hay vida en Jupiter?</div>
-            <h1>Jupiter</h1>
-        </header>
-      
-
-      <section id="introduccion">
-        <div id="conten">
-            <p>Júpiter deriva de Ius-piter, o sea, últimamente de Deus-pater "dios padre"
-            </p>
+    <header >
+        <div class="logo">
+            <span>C</span>
+            <span class="planet left">&#129680;</span>
+            <span>S</span>
+            <span>M</span>
+            <span class="planet right">&#129680;</span>
+            <span>S</span>
         </div>
-        </section>
+        <div id="logoCentro">
+            <a href="https://www.iesjuanbosco.es" target="_blank"><img src="../assets/images/logoIESJuanBosco.png" alt="Logo IES Juan Bosco"></a>
+        </div>
+    </header>
+    <main>
+        <section>
 
-        <section id="datos">
-            <div id="texto">
-                <h2>Precipitaciones</h2>
-                <ul>
-                    <li>Júpiter tiene una variación extrema de lluvia mensual por estación.</li>
-                    <li>El mes con más lluvia en Júpiter es Septiembre, con un promedio de 147 milímetros de lluvia.</li>
-                    <li>El mes con menos lluvia en Júpiter es diciembre, con un promedio de 45 milímetros de lluvia.</li>
-                    <li>No hay evidencia de que haya agua liquida en Jupiter.</li>
-                </ul>
-                
+            <div class="planeta">
+                <div id="planeta"></div>
+                <p>Por qu&eacute; no hay vida en ...?</p>
+                <h1>J&uacute;piter?</h1>
             </div>
-        </section>
-     <Section id="otrosdatos">
-        <div id="texto2">
-            <h2>Atmosfera</h2>
-            <ul>
-                <li>La atmosfera esta compuesta principalmente de Hidrogeno y Helio.</li>
-                <li>La atmosfera es densa y profunda con una estructura de varias capas.</li>
-                <li>Ademas, es activa y dinamica con fuertes vientos, tormentas gigantes como "La gran mancha roja" y tiene variedad de fenomenos meteorologicos</li>
-            </ul>
-        </div>
-     </Section>
 
-     <section id="curiosidades">
-        <div id="textocuriosidades">
-            <h2>Curiosidades</h2>
-            <ul>
-                <li>Jupiter es el 5 planeta en orden de distancia al sol.</li>
-                <li>El periodo de rotacion en Jupiter es de 9 horas, 55 minutos y 30 segundos.</li>
-                <li>El dia suele durar unas 5 horas.</li>
-                <li>Las noches duran alrededor de 4 horas y 56 minutos.</li>
-                <li>La gravedad en Jupiter es de 24,79 m/s^2 lo que equivale a 2,53 veces la gravedad de la Tierra</li>
-            </ul>
+            <div id="introduccion">
+                <p>J&uacute;piter deriva de Ius-piter, o sea, &uacute;ltimamente, de Deus-pater &ldquo;dios padre&rdquo;</p>
+            </div>
+
+            <article id="caracteristicas">
+                <h2>CARACTERISTICAS</h2>
+                <ul>
+                    <li>El mes con m&aacute;s lluvia es septiembre, con un promedio de 147 mil&iacute;metros de lluvia</li>
+                    <li>El mes con menos lluvia es diciembre, con un promedio de 45 mil&iacute;metros de lluvia.</li>
+                    <li>Hay presencia de agua? No, no hay evidencia de que haya agua l&iacute;quida en J&uacute;piter.</li>
+                    <li>La atmosfera est&aacute; compuesta principalmente de Hidr&oacute;geno y Helio y es densa y profunda, formada por varias capas.</li>
+                    <li> &iquest;Fen&oacute;menos meteorol&oacute;gicos? S&iacute;, una gran variedad.</li>
+                </ul>
+                <div id="astronauta"></div>
+            </article>
+
+            <article id="curiosidades">
+                <h2>CURIOSIDADES</h2>
+                <ul>
+                    <li>Es el quinto planeta en orden de distancia al Sol.</li>
+                    <li>El periodo de rotaci&oacute;n en J&uacute;piter es de 9 horas, 55 minutos y 30 segundos.</li>
+                    <li>El d&iacute;a dura alrededor de 5 horas.</li>
+                    <li>La gravedad en J&uacute;piter es de 24,79 m/s&sup2; lo que equivale a 2,53 veces la gravedad de la Tierra.</li>
+                </ul>
+            </article>
+            
+        </section>
+    </main>
+
+    <footer>
+        <div class="contenidoFooter">
+            <div class="enlacesPlanetas">
+                <h3>CUERPOS DEL SISTEMA SOLAR</h3>
+                <ul>
+                    <li><a href="">MERCURIO</a></li>
+                    <li><a href="">VENUS</a></li>
+                    <li><a href="">TIERRA</a></li>
+                    <li><a href="">MARTE</a></li>
+                    <li><a href="">JUPITER</a></li>
+                    <li><a href="">SATURNO</a></li>
+                    <li><a href="./urano.html">URANO</a></li>
+                    <li><a href="./neptuno.html">NEPTUNO</a></li>
+                    <li><a href="./luna.html">LA LUNA</a></li>
+                </ul>
+            </div>
+            <div class="pedidos">
+                <h3>Su pedido</h3>
+                <ul>
+                    <li><a href="./fomularios/formularioContacto.html">Contacto</a></li>
+                    <li><a href="#">Pagos</a></li>
+                    <li><a href="#">Envios</a></li>
+                </ul>
+            </div>
+            <div class="mapa">
+                <h3>UBICACI&Oacute;N</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3083.4422037949753!2d-3.2267739457325697!3d39.39150064446475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd69af036cec6af9%3A0x3cb32e283081ecee!2sIES%20Juan%20Bosco!5e0!3m2!1ses!2ses!4v1682613313155!5m2!1ses!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
-     </section>
-    </div>
-    
+        <img src="../assets/images/botonInicioPagina.png" alt="Imagen cohete para volver al inicio" id="inicio" class="cohete">
+    </footer>
+
+    <script src="../js/pages.js"></script>
 </body>
 </html>

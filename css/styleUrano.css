@@ -1,0 +1,245 @@
+@font-face {
+    font-family: "IndieFlower";
+    src: url(../assets/fonts/IndieFlower-Regular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "IndieFlower";
+}
+
+body{
+    margin: 1em 10% 1em 10%;
+    min-width: 450px;
+    font-size: 1.4em;
+    font-weight: 600;
+    background: linear-gradient(
+        to bottom,
+        rgba(125, 125, 80, 0.4),
+        rgba(53, 53, 108, 0.5)
+    ), url(../assets/images/tiro-angulo-fascinante-cielo-estrellado.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/*Estilos para el texto y la animación del logo*/
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo::after {
+    content: "";
+    position: relative;
+    z-index: -5;
+    left: -5.2em;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    border: 4px solid;
+}
+span{
+    font-size: 1.6em;
+}
+.planet {
+    animation: planet-rotate 10s linear infinite;
+}
+.planet.left {
+    font-size: 1.2em;
+    transform-origin: 156% 37%;
+}
+.planet.right {
+    font-size: 1.2em;
+    transform-origin: -55% 43%;
+}
+@keyframes planet-rotate {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+#logoCentro img{
+    width: 5em;
+    border-radius: 50%;
+}
+
+/*Estilos parte principal*/
+section{
+    display: grid;
+    margin-bottom: 5em;
+    grid-template-areas: 
+    "planeta planeta"
+    "introduccion introduccion"
+    "caracteristicas curiosidades";
+}
+
+.planeta{
+    grid-area: planeta;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.planeta p{
+    font-size: 2em;
+    padding: .5em 0;
+}
+h1{
+    font-size: 7em; 
+    color: #53daf5; 
+    text-shadow: 
+        0px 0px 5px rgba(255, 255, 255, 0.8), 
+        0px 0px 10px rgba(255, 255, 255, 0.8), 
+        0px 0px 15px rgba(255, 255, 255, 0.8),
+        0px 0px 20px rgb(120, 24, 255),
+        0px 0px 30px #c1f3f6,
+        0px 0px 40px #c1f3f6,
+        0px 0px 55px #c1f3f6;
+    padding-bottom: .5em;
+}
+
+/*Estilos imagen y animación del planeta*/
+#planeta{
+    width: 20em;
+    height: 20em;
+    border-radius: 50%;
+    background: url(../assets/images/mapaUrano.png);
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 20px #000, inset -40px -10px 20px rgba(3, 32, 56, 0.7);
+    animation: rotate 20s linear infinite;
+    transform: rotateZ(43deg);
+}
+@keyframes rotate{
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: -1960px;
+    }
+}
+
+article{
+    margin-top: 3em;
+    padding: 1em;
+    width: fit-content;
+    height: fit-content;
+
+    border: 2px solid white;
+    border-radius: 5px 5px 40px 40px; 
+    background-color: #b8e9f6ad;
+    box-shadow: 1px 3px 16px 11px rgba(119, 97, 128, 1),1px 2px 14px 1px rgba(38, 39, 128, 1);
+}
+article h2{
+    text-align: center;
+    font-size: 2em;
+    color: black;
+    text-shadow: 5px 2px 4px rgba(140, 77, 159, 1);
+}
+
+li, #introduccion p{
+    margin: 1em 0;
+    list-style: none;
+}
+
+#introduccion{
+    grid-area: introduccion;
+    padding: 1em;
+    width: fit-content;
+    height: fit-content;
+    border: 2px solid white;
+    border-radius: 53px 5px / 66px 5px; 
+    background-color: #b8e9f6ad;
+    box-shadow: 1px 3px 16px 11px rgba(119, 97, 128, 1),1px 2px 14px 1px rgba(38, 39, 128, 1);
+}
+
+#caracteristicas{
+    grid-area: caracteristicas;
+    margin-right: 3em;
+}
+#caracteristicas span{
+    font-size: 1em;
+    text-decoration: underline;
+}
+
+#curiosidades{
+    grid-area: curiosidades;
+}
+
+/*Animacion boton cohete regrasa al inicio de la página*/
+.cohete{
+    position: fixed;
+    bottom: 1em;
+    right: 7%;
+    cursor: pointer;
+    display: none;
+}
+@keyframes miOrbita {
+    from  {
+        transform: translateY(0);
+    }
+    to    {
+        transform: translateY(-100%);
+    }
+}
+.miOrbita{
+    animation: miOrbita 2s linear;
+}
+
+footer{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 2.5em 0;
+    margin: 0;
+    color: white;
+    background-color: #333030;
+}
+
+.contenidoFooter{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.enlacesPlanetas li{
+    margin: 0 0 0 2.5em;
+    list-style: disc;
+}
+.enlacesPlanetas a{
+    color: #ffff;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 800px) {
+
+    body{
+        margin: 1em .5em;
+        font-size: 1.2em;
+    }
+    section{
+        grid-template-areas: 
+        "planeta"
+        "introduccion"
+        "caracteristicas"
+        "curiosidades";
+    }
+    #planeta{
+        width: 15em;
+        height: 15em;
+    }
+    .planeta p{
+        font-size: 1.4em;
+    }
+    h1{
+        font-size: 5em; 
+    }
+
+    #caracteristicas{
+        margin-right: 0;
+    }
+}
