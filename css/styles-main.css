@@ -1,10 +1,46 @@
+@font-face {
+          font-family: "IndieFlower";
+          src: url(../assets/fonts/IndieFlower-Regular.ttf);
+}
 *{
           margin: 0;
           padding: 0;
           box-sizing: border-box;
+          list-style: none;
+          background-color: black;
+          color: white;
+          
 }
 html, body, main, iframe {
+          width: 100%;
           height: 100%;
           border: none;
+
 }
-          
+nav ul{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          padding: 1rem;
+          font-size: 1.5rem;
+          font-family: IndieFlower;
+          font-weight: bolder;
+          cursor: pointer;
+}
+nav ul li{
+          display: inline-block;
+}
+nav ul li::after{
+          content: '';
+          display: block;
+          width: 0%;
+          height: 0.125rem;
+          background: white;
+          margin: auto;
+          transition: .4s;
+}
+nav ul li:hover:after{
+          width: 100%;
+}
+/*Aquí se empezaria a editar lo que seria el sol*/
