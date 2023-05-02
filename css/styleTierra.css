@@ -2,42 +2,47 @@
   font-family: "Bungee-Regular";
   src: url(../assets/fonts/Bungee-Regular.ttf);
 }
+
 @font-face {
   font-family: "Delicious";
   src: url(../assets/fonts/DeliciousHandrawn-Regular.ttf);
 }
+
 @font-face {
   font-family: "IndieFlower";
   src: url(../assets/fonts/IndieFlower-Regular.ttf);
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "IndieFlower";
 }
-body{
+
+body {
   margin: 1em 10% 1em 10%;
   min-width: 450px;
   font-size: 1.4em;
   font-weight: 600;
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       rgba(125, 125, 80, 0.4),
-      rgba(53, 53, 108, 0.5)
-  ), url(../assets/img/tiro-angulo-fascinante-cielo-estrellado.jpg);
+      rgba(53, 53, 108, 0.5)), url(../assets/img/tiro-angulo-fascinante-cielo-estrellado.jpg);
   background-size: cover;
 }
+
 header {
   display: flex;
-    justify-content: space-between;
-    width: 100%;
+  justify-content: space-between;
+  width: 100%;
 }
-.logo{
+
+.logo {
   display: flex;
   align-items: center;
   color: white;
 }
+
 .logo::after {
   content: "";
   position: relative;
@@ -48,57 +53,70 @@ header {
   border-radius: 50%;
   border: 4px solid;
 }
-.logo span:nth-of-type(1){
+
+.logo span:nth-of-type(1) {
   font-size: 1.6em;
 }
-.logo span:nth-of-type(3){
+
+.logo span:nth-of-type(3) {
   font-size: 1.6em;
 }
-.logo span:nth-of-type(4){
+
+.logo span:nth-of-type(4) {
   font-size: 1.6em;
 }
-.logo span:nth-of-type(6){
+
+.logo span:nth-of-type(6) {
   font-size: 1.6em;
 }
+
 .planet {
   animation: planet-rotate 10s linear infinite;
 }
+
 .planet.left {
   font-size: 1.2em;
   transform-origin: 156% 37%;
 }
+
 .planet.right {
   font-size: 1.2em;
   transform-origin: -55% 43%;
 }
+
 @keyframes planet-rotate {
   to {
-      transform: rotate(1turn);
+    transform: rotate(1turn);
   }
 }
 
-#logoCentro img{
+#logoCentro img {
   width: 5em;
   border-radius: 50%;
 }
-main{
+
+main {
   color: white;
 }
-p{
+
+p {
   font-family: IndieFlower;
   font-size: 1.5rem;
 }
-h2{
+
+h2 {
   font-family: Delicious;
   font-size: 2rem;
   text-align: center;
 }
-h1{
+
+h1 {
   color: #7843E6;
   font-size: 8rem;
-  text-shadow: 1px 3px 4px rgba(19, 224, 251, 1),-2px 2px 2px rgba(255, 0, 255, 0.7);
+  text-shadow: 1px 3px 4px rgba(19, 224, 251, 1), -2px 2px 2px rgba(255, 0, 255, 0.7);
 }
-#descripcionTierra{
+
+#descripcionTierra {
   padding-top: 1rem;
   text-align: center;
 }
@@ -113,57 +131,67 @@ h1{
   box-shadow: inset 0 0 20px #000, inset -40px -10px 20px rgba(3, 32, 56, 0.7);
   animation: world 5s linear infinite;
 }
+
 #centrar {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 #contenidoPrincipal {
   text-align: center;
 }
-#contenido{
+
+#contenido {
   display: grid;
   grid-template-areas: "planetaContenido planetaContenido"
-  "introduccion introduccion"
-  "caracteristicas curiosidades";
+    "introduccion introduccion"
+    "caracteristicas curiosidades";
 }
-#planetaContenido{
+
+#planetaContenido {
   grid-area: planetaContenido;
 }
-#curiosidades{
+
+#curiosidades {
   grid-area: curiosidades;
 }
-#introduccion{
+
+#introduccion {
   grid-area: introduccion;
   padding: 1em;
   width: fit-content;
   height: fit-content;
   border: 2px solid white;
-  border-radius: 53px 5px / 66px 5px; 
+  border-radius: 53px 5px / 66px 5px;
   background-color: #b8e9f6ad;
-  box-shadow: 1px 3px 16px 11px rgba(119, 97, 128, 1),1px 2px 14px 1px rgba(38, 39, 128, 1);
+  box-shadow: 1px 3px 16px 11px rgba(119, 97, 128, 1), 1px 2px 14px 1px rgba(38, 39, 128, 1);
 }
-article{
+
+article {
   margin-top: 3em;
   padding: 1em;
   width: fit-content;
   height: fit-content;
 
   border: 2px solid white;
-  border-radius: 5px 5px 40px 40px; 
+  border-radius: 5px 5px 40px 40px;
   background-color: #b8e9f6ad;
-  box-shadow: 1px 3px 16px 11px rgba(119, 97, 128, 1),1px 2px 14px 1px rgba(38, 39, 128, 1);
+  box-shadow: 1px 3px 16px 11px rgba(119, 97, 128, 1), 1px 2px 14px 1px rgba(38, 39, 128, 1);
 }
-article h2{
+
+article h2 {
   text-align: center;
   font-size: 2em;
   color: black;
   text-shadow: 5px 2px 4px rgba(140, 77, 159, 1);
 }
-#caracteristicas{
+
+#caracteristicas {
   grid-area: caracteristicas;
   margin-right: 3em;
 }
+
 @keyframes world {
   0% {
     background-position-x: 0;
@@ -173,12 +201,14 @@ article h2{
     background-position-x: -800px;
   }
 }
-@media only screen and (max-width: 767px){
-  body{
+
+@media only screen and (max-width: 767px) {
+  body {
     margin: 0;
     font-size: 1.2em;
-}
-  #contenido{
+  }
+
+  #contenido {
     display: grid;
     grid-template-areas:
       "planetaContenido"
@@ -186,54 +216,67 @@ article h2{
       "caracteristicas"
       "curiosidades";
   }
-  #planetaContenido{
+
+  #planetaContenido {
     grid-area: planetaContenido;
   }
-  #caracteristicas{
+
+  #caracteristicas {
     grid-area: caracteristicas;
     margin: 0;
     margin-top: 1rem;
   }
-  #curiosidades{
-    grid-area:curiosidades;
+
+  #curiosidades {
+    grid-area: curiosidades;
     margin-top: 1rem;
   }
-  #introduccion{
+
+  #introduccion {
     grid-area: introduccion;
   }
-  #button-container{
+
+  #button-container {
     display: none;
   }
-  
+
 }
+
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  body{
+  body {
     padding: 0;
   }
-  p,li{
+
+  p,
+  li {
     text-align: center;
   }
-  #button-container{
+
+  #button-container {
     display: none;
   }
 }
+
 @media only screen and (min-width: 1024px) {
-  #button-container{
+  #button-container {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     top: 40px;
     height: fit-content;
   }
-  #menu{
+
+  #menu {
     display: flex;
     justify-content: space-between;
   }
-  div#menu{
+
+  div#menu {
     width: 50%;
     margin-left: 80%;
   }
-  #menu button{
+
+  #menu button {
     font-size: 25px;
     background-color: black;
     color: white;
@@ -242,26 +285,32 @@ article h2{
     padding: 10px 15px;
     animation: expanding-animation 4s infinite;
   }
-  @keyframes expanding-animation{
-    0%{
-              box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
+
+  @keyframes expanding-animation {
+    0% {
+      box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
     }
-    50%{
-              box-shadow: 0px 0px 10px 5px rgb(197, 197, 197);
+
+    50% {
+      box-shadow: 0px 0px 10px 5px rgb(197, 197, 197);
     }
-    100%{
-              box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
+
+    100% {
+      box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
     }
   }
-  #button-container:hover #menu{
+
+  #button-container:hover #menu {
     opacity: 1;
     transform: translateY(0px);
   }
-  #button-container:hover #mainbtn{
+
+  #button-container:hover #mainbtn {
     background-color: white;
     color: rgb(22, 22, 22);
   }
-  #menu{
+
+  #menu {
     transition: 500ms;
     opacity: 0;
     transform: translateY(-50px);
@@ -272,37 +321,34 @@ article h2{
     border-radius: 1rem;
     box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
   }
-  #menu{
+
+  #menu {
     margin: 2px;
   }
-  .btn{
+
+  .btn {
     transition: 500ms;
   }
-  #btn1:hover{
-    scale: 3;
-    background-image: url("https://wallpaperaccess.com/full/19602.jpg");
+
+  #btn1:hover {
+    scale: 10;
+    background-image: url(../assets/img/116940.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     content: none;
   }
-  #btn2:hover{
-    scale: 3;
+
+  #btn2:hover {
+    scale: 10;
     background-image: url("https://wallpaperaccess.com/full/527447.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     content: none;
   }
-  #btn3:hover{
-    scale: 3;
-    background-image: url("https://wallpaperaccess.com/full/361282.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    content: none;
-  }
-  #mainbtn{
+
+  #mainbtn {
     margin-left: 90%;
     font-size: 25px;
     width: 30%;
@@ -313,12 +359,13 @@ article h2{
     padding: 10px 15px;
     animation: expanding-animation 4s infinite;
   }
-  a{
+
+  a {
     color: unset;
   }
 
 
-  footer{
+  footer {
     position: absolute;
     left: 0;
     z-index: -1;
@@ -329,20 +376,23 @@ article h2{
   }
 }
 
-footer{
+footer {
   width: 100%;
   padding: 2.5em 0;
   margin: 0;
   background-color: #333030;
 }
+
 .wrapper {
   display: flex;
   list-style: none;
   justify-content: center;
 }
-.wrapper a:active{
+
+.wrapper a:active {
   background-color: transparent;
 }
+
 .wrapper .icon {
   position: relative;
   background: #ffffff;
@@ -359,7 +409,8 @@ footer{
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-.wrapper .tipo{
+
+.wrapper .tipo {
   position: absolute;
   top: 0;
   font-size: 20px;
@@ -372,6 +423,7 @@ footer{
   pointer-events: none;
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+
 .wrapper .tipo::before {
   position: absolute;
   content: "";
@@ -383,40 +435,47 @@ footer{
   transform: translate(-50%) rotate(45deg);
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+
 .wrapper .icon:hover .tipo {
   top: -45px;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
+
 .wrapper .icon:hover span,
 .wrapper .icon:hover .tipo {
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
 }
+
 .wrapper .facebook:hover,
 .wrapper .facebook:hover .tipo,
 .wrapper .facebook:hover .tipo::before {
   background: #1877f2;
   color: #10141b;
 }
+
 .wrapper .twitter:hover,
 .wrapper .twitter:hover .tipo,
 .wrapper .twitter:hover .tipo::before {
   background: #1da1f2;
   color: #ffffff;
 }
+
 .wrapper .instagram:hover,
 .wrapper .instagram:hover .tipo,
 .wrapper .instagram:hover .tipo::before {
   background: #e4405f;
   color: #ffffff;
 }
+
 .wrapper .github:hover,
 .wrapper .github:hover .tipo,
 .wrapper .github:hover .tipo::before {
   background: #333333;
   color: #ffffff;
 }
+
 a {
   color: unset;
 }
