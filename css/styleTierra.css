@@ -258,22 +258,12 @@ article h2 {
 }
 
 @media only screen and (min-width: 1024px) {
-  #button-container {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 40px;
-    height: fit-content;
-  }
 
   #menu {
     display: flex;
     justify-content: space-between;
-  }
-
-  div#menu {
-    width: 50%;
-    margin-left: 80%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 
   #menu button {
@@ -284,6 +274,7 @@ article h2 {
     border-radius: 1rem;
     padding: 10px 15px;
     animation: expanding-animation 4s infinite;
+    cursor: pointer;
   }
 
   @keyframes expanding-animation {
@@ -300,39 +291,14 @@ article h2 {
     }
   }
 
-  #button-container:hover #menu {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-
-  #button-container:hover #mainbtn {
-    background-color: white;
-    color: rgb(22, 22, 22);
-  }
-
-  #menu {
-    transition: 500ms;
-    opacity: 0;
-    transform: translateY(-50px);
-    color: white;
-    background-color: rgb(22, 22, 22);
-    padding: 5px;
-    border: 1px solid white;
-    border-radius: 1rem;
-    box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
-  }
-
-  #menu {
-    margin: 2px;
-  }
 
   .btn {
     transition: 500ms;
   }
 
   #btn1:hover {
-    scale: 3;
-    background-image: url(../assets/img/116940.jpg);
+    scale: 2ñ;
+    background-image: url(../assets/img/1771185.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -340,28 +306,16 @@ article h2 {
   }
 
   #btn2:hover {
-    scale: 3;
+    scale: 2;
     background-image: url("https://wallpaperaccess.com/full/527447.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     content: none;
   }
-
-  #mainbtn {
-    margin-left: 90%;
-    font-size: 25px;
-    width: 30%;
-    background-color: black;
-    color: white;
-    border: 1px solid white;
-    border-radius: 1rem;
-    padding: 10px 15px;
-    animation: expanding-animation 4s infinite;
-  }
-
   a {
     color: unset;
+    text-decoration: none;
   }
 
 
@@ -369,7 +323,7 @@ article h2 {
     position: absolute;
     left: 0;
     z-index: -1;
-    width: 150%;
+    width: 100%;
     padding: 2.5em 0;
     margin: 0;
     background-color: #333030;
