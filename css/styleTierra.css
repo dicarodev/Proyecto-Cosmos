@@ -331,7 +331,7 @@ article h2 {
   }
 
   #btn1:hover {
-    scale: 10;
+    scale: 3;
     background-image: url(../assets/img/116940.jpg);
     background-size: cover;
     background-position: center;
@@ -340,7 +340,7 @@ article h2 {
   }
 
   #btn2:hover {
-    scale: 10;
+    scale: 3;
     background-image: url("https://wallpaperaccess.com/full/527447.jpg");
     background-size: cover;
     background-position: center;
