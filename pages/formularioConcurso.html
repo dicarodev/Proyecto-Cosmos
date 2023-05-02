@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UN PASEO POR EL COSMOS</title>
+    <link rel="shortcut icon" href="../assets/icons/iconsCosmos.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/formularioConcurso.css">
+    
+</head>
+<body>
+    <header >
+        <div class="logo">
+            <span>C</span>
+            <span class="planet left">&#129680;</span>
+            <span>S</span>
+            <span>M</span>
+            <span class="planet right">&#129680;</span>
+            <span>S</span>
+        </div>
+        <h1>UN PASEO POR EL COSMOS</h1>
+        <div id="logoCentro">
+            <a href="https://www.iesjuanbosco.es" target="_blank"><img src="../assets/images/logoIESJuanBosco.webp" alt="Logo IES Juan Bosco"></a>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <p>¡ Bienvenidos a &quot;Un paseo por el Cosmos&quot; ! ¿Listos para poner a prueba vuestros conocimientos sobre el universo y explorar las maravillas del espacio? Prep&aacute;rate para una experiencia emocionante y desafiante, donde tendr&aacute;s que responder 30 preguntas relacionadas con el contenido aprendido. Mientras concursas, un cron&oacute;metro estar&aacute; en marcha midiendo el tiempo que tardas en completar el cuestionario. ¿Ser&aacute;s capaz de llegar al top 50 del ranking? ¡ Demuestra tus habilidades y compite por el primer puesto ! Recuerda, ¡ el conocimiento es poder y la exploraci&oacute;n del cosmos nunca termina !</p>
+            
+            
+            <div id="iniciar">
+                <label for="user_name">Ingresa tu nombre de usuario: </label>
+                <input type="text" name="user_name" pattern='[A-Za-z0-9]+' id="userName" required>
+
+                <button id="btnIniciar">Iniciar</button>
+
+                <div class="cronometro">
+                    <div id="hms">00:00:00</div>
+                </div>
+            </div>
+            
+            <form method="POST" action="respuestasForm.php" id="formularioConcuro">
+                <input type="hidden" name="user_name_hiddden" id="userNameHidden">
+                <input type="hidden" name="tiempo_empleado" id="tiempoEmpleadoHidden">
+                <div>
+                    <label for="pregunta1">1&#41; ¿Por qu&eacute; Urano tiene una inclinaci&oacute;n extrema?</label>
+                    <label for="pregunta1a"><input type="radio" name="pregunta1" id="pregunta1a" value="incorrecta"> a&#41; Porque es el planeta m&aacute;s grande del Sistema Solar.</label>
+                    <label for="pregunta1b"><input type="radio" name="pregunta1" id="pregunta1b" value="correcta"> b&#41; Porque su eje de rotaci&oacute;n est&aacute; inclinado m&aacute;s de 90° en relaci&oacute;n con su plano orbital.</label>
+                    <label for="pregunta1c"><input type="radio" name="pregunta1" id="pregunta1c" value="incorrecta"> c&#41; Porque su superficie es muy irregular.</label>
+                </div>
+                <div>
+                    <label for="pregunta2">2&#41; ¿Cu&aacute;les son las dos lunas m&aacute;s grandes de Urano?</label>
+                    <label for="pregunta2a"><input type="radio" name="pregunta2" id="pregunta2a" value="correcta"> a&#41; Titania y Ober&oacute;n.</label>
+                    <label for="pregunta2b"><input type="radio" name="pregunta2" id="pregunta2b" value="incorrecta"> b&#41; Europa y Ganimedes.</label>
+                    <label for="pregunta2c"><input type="radio" name="pregunta2" id="pregunta2c" value="incorrecta"> c&#41; Miranda y Ariel.</label>
+                </div>
+                <div>
+                    <label for="pregunta3">3&#41; ¿Cu&aacute;l es la masa de Neptuno en comparaci&oacute;n con la Tierra?</label>
+                    <label for="pregunta3a"><input type="radio" name="pregunta3" id="pregunta3a" value="correcta"> a&#41; 17 veces la masa de la Tierra.</label>
+                    <label for="pregunta3b"><input type="radio" name="pregunta3" id="pregunta3b" value="incorrecta"> b&#41; 10 veces la masa de la Tierra.</label>
+                    <label for="pregunta3c"><input type="radio" name="pregunta3" id="pregunta3c" value="incorrecta"> c&#41; 5 veces la masa de la Tierra.</label>
+                </div>
+                <div>
+                    <label for="pregunta4">4&#41; ¿Cu&aacute;l es la duraci&oacute;n de un año en Neptuno?</label>
+                    <label for="pregunta4a"><input type="radio" name="pregunta4" id="pregunta4a" value="correcta"> a&#41; 164,8 años terrestres.</label>
+                    <label for="pregunta4b"><input type="radio" name="pregunta4" id="pregunta4b" value="incorrecta"> b&#41; 84 años terrestres.</label>
+                    <label for="pregunta4c"><input type="radio" name="pregunta4" id="pregunta4c" value="incorrecta"> c&#41; 365 d&iacute;as terrestres.</label>
+                </div>
+                <div>
+                    <label for="pregunta5">5&#41; ¿Cu&aacute;l es la distancia promedio entre la Luna y la Tierra?</label>
+                    <label for="pregunta5a"><input type="radio" name="pregunta5" id="pregunta5a" value="incorrecta"> a&#41; Aproximadamente 184,400 km</label>
+                    <label for="pregunta5b"><input type="radio" name="pregunta5" id="pregunta5b" value="incorrecta"> b&#41; Aproximadamente 584,400 km</label>
+                    <label for="pregunta5c"><input type="radio" name="pregunta5" id="pregunta5c" value="correcta"> c&#41; Aproximadamente 384,400 km</label>
+                </div>
+                <div>
+                    <label for="pregunta6">6&#41; ¿Cu&aacute;l es el periodo de rotaci&oacute;n de la Luna?</label>
+                    <label for="pregunta6a"><input type="radio" name="pregunta6" id="pregunta6a" value="incorrecta"> a&#41; 365 d&iacute;as</label>
+                    <label for="pregunta6b"><input type="radio" name="pregunta6" id="pregunta6b" value="correcta"> b&#41; 27.3 d&iacute;as</label>
+                    <label for="pregunta6c"><input type="radio" name="pregunta6" id="pregunta6c" value="incorrecta"> c&#41; 24 horas</label>
+                </div>
+
+                <div>
+                    <label for="pregunta7">7&#41; ¿Cu&aacute;l es la composici&oacute;n principal de la atm&oacute;sfera de la Luna?</label>
+                    <label for="pregunta7a"><input type="radio" name="pregunta7" id="pregunta7a" value="correcta"> a&#41; Helio</label>
+                    <label for="pregunta7b"><input type="radio" name="pregunta7" id="pregunta7b" value="incorrecta"> b&#41; Hidr&oacute;geno</label>
+                    <label for="pregunta7c"><input type="radio" name="pregunta7" id="pregunta7c" value="incorrecta"> c&#41; Ox&iacute;geno</label>
+                </div>
+
+                <div>
+                    <label for="pregunta8">8&#41; ¿Qu&eacute; efectos tiene la Luna sobre la Tierra?</label>
+                    <label for="pregunta8a"><input type="radio" name="pregunta8" id="pregunta8a" value="incorrecta"> a&#41; Las lluvias y el clima.</label>
+                    <label for="pregunta8b"><input type="radio" name="pregunta8" id="pregunta8b" value="correcta"> b&#41; Las mareas y la estabilizaci&oacute;n del eje de la Tierra.</label>
+                    <label for="pregunta8c"><input type="radio" name="pregunta8" id="pregunta8c" value="incorrecta"> c&#41; El cambio de estaciones y el aumento de la gravedad.</label>
+                </div>
+
+                <div>
+                    <label for="pregunta9">9&#41; ¿Cu&aacute;l es el &uacute;nico planeta en el sistema solar que lleva el nombre de una diosa mitol&oacute;gica?</label>
+                    <label for="pregunta9a"><input type="radio" name="pregunta9" id="pregunta9a" value="correcta"> a&#41; Venus.</label>
+                    <label for="pregunta9b"><input type="radio" name="pregunta9" id="pregunta9b" value="incorrecta"> b&#41; Marte.</label>
+                    <label for="pregunta9c"><input type="radio" name="pregunta9" id="pregunta9c" value="incorrecta"> c&#41; Mercurio.</label>
+                </div>
+                
+                <div>
+                    <label for="pregunta10">10&#41; ¿Cu&aacute;l es la temperatura media en Venus?</label>
+                    <label for="pregunta10a"><input type="radio" name="pregunta10" id="pregunta10a" value="incorrecta"> a&#41; -453 &deg;C.</label>
+                    <label for="pregunta10b"><input type="radio" name="pregunta10" id="pregunta10b" value="incorrecta"> b&#41; 673 &deg;C.</label>
+                    <label for="pregunta10c"><input type="radio" name="pregunta10" id="pregunta10c" value="correcta"> c&#41; 453 &deg;C.</label>
+                </div>
+                
+                <div>
+                    <label for="pregunta11">11&#41; ¿Qu&eacute; es lo que hace que la superficie de Venus sea dif&iacute;cil de estudiar?</label>
+                    <label for="pregunta11a"><input type="radio" name="pregunta11" id="pregunta11a" value="incorrecta"> a&#41; La gravedad.</label>
+                    <label for="pregunta11b"><input type="radio" name="pregunta11" id="pregunta11b" value="correcta"> b&#41; La densa atm&oacute;sfera.</label>
+                    <label for="pregunta11c"><input type="radio" name="pregunta11" id="pregunta11c" value="incorrecta"> c&#41; La distancia desde la Tierra.</label>
+                </div>
+                
+                <div>
+                    <label for="pregunta12">12&#41; ¿Cu&aacute;nto tiempo tarda Mercurio en completar una &oacute;rbita alrededor del Sol?</label>
+                    <label for="pregunta12a"><input type="radio" name="pregunta12" id="pregunta12a" value="correcta"> a&#41; 87,87 d&iacute;as terrestres.</label>
+                    <label for="pregunta12b"><input type="radio" name="pregunta12" id="pregunta12b" value="incorrecta"> b&#41; 100 d&iacute;as terrestres.</label>
+                    <label for="pregunta12c"><input type="radio" name="pregunta12" id="pregunta12c" value="incorrecta"> c&#41; 107,67 d&iacute;as terrestres.</label>
+                </div>
+
+                <div>
+                    <label for="pregunta13">13&#41; ¿Cu&aacute;l es el planeta m&aacute;s cercano al Sol?</label>
+                    <label for="pregunta13a"><input type="radio" name="pregunta13" id="pregunta13a" value="incorrecta"> a&#41; Venus.</label>
+                    <label for="pregunta13b"><input type="radio" name="pregunta13" id="pregunta13b" value="incorrecta"> b&#41; Tierra.</label>
+                    <label for="pregunta13c"><input type="radio" name="pregunta13" id="pregunta13c" value="correcta"> c&#41; Mercurio.</label>
+                </div>
+
+                <div>
+                    <label for="pregunta14">14&#41; ¿De d&oacute;nde viene el nombre de nuestro planeta, la Tierra?</label>
+                    <label for="pregunta14a"><input type="radio" name="pregunta14" id="pregunta14a" value="correcta"> a&#41; Del lat&iacute;n "terra", que significa seco.</label>
+                    <label for="pregunta14b"><input type="radio" name="pregunta14" id="pregunta14b" value="incorrecta"> b&#41; Del griego "gea", que significa tierra.</label>
+                    <label for="pregunta14c"><input type="radio" name="pregunta14" id="pregunta14c" value="incorrecta"> c&#41; Del ingl&eacute;s "earth", que significa tierra.</label>
+                </div>
+
+                <div>
+                    <label for="pregunta15">15&#41; ¿Qu&eacute; gas es el m&aacute;s importante en la atm&oacute;sfera de la Tierra para la respiraci&oacute;n humana?</label>
+                    <label for="pregunta15a"><input type="radio" name="pregunta15" id="pregunta15a" value="incorrecta"> a&#41; Nitr&oacute;geno.</label>
+                    <label for="pregunta15b"><input type="radio" name="pregunta15" id="pregunta15b" value="correcta"> b&#41; Ox&iacute;geno.</label>
+                    <label for="pregunta15c"><input type="radio" name="pregunta15" id="pregunta15c" value="incorrecta"> c&#41; Di&oacute;xido de carbono.</label>
+                </div>
+                <div>
+                    <label for="pregunta16">16&#41; ¿De qu&eacute; est&aacute; compuesta principalmente la atm&oacute;sfera de J&uacute;piter?</label>
+                    <label for="pregunta16a"><input type="radio" name="pregunta16" id="pregunta16a" value="incorrecta"> a&#41; Ox&iacute;geno y nitr&oacute;geno</label>
+                    <label for="pregunta16b"><input type="radio" name="pregunta16" id="pregunta16b" value="correcta"> b&#41; Hidr&oacute;geno y helio</label>
+                    <label for="pregunta16c"><input type="radio" name="pregunta16" id="pregunta16c" value="incorrecta"> c&#41; Di&oacute;xido de carbono y ox&iacute;geno</label>
+                </div>
+                <div>
+                    <label for="pregunta17">17&#41; ¿Cu&aacute;l es el mes m&aacute;s lluvioso en Júpiter?</label>
+                    <label for="pregunta17a"><input type="radio" name="pregunta17" id="pregunta17a" value="incorrecta"> a&#41; Julio</label>
+                    <label for="pregunta17b"><input type="radio" name="pregunta17" id="pregunta17b" value="correcta"> b&#41; Septiembre</label>
+                    <label for="pregunta17c"><input type="radio" name="pregunta17" id="pregunta17c" value="incorrecta"> c&#41; Diciembre</label>
+                </div>
+                <div>
+                    <label for="pregunta18">18&#41; ¿Por qu&eacute; se cree que no hay vida en Marte?</label>
+                    <label for="pregunta18a"><input type="radio" name="pregunta18" id="pregunta18a" value="incorrecta"> a&#41; Debido a la intensa actividad volc&aacute;nica</label>
+                    <label for="pregunta18b"><input type="radio" name="pregunta18" id="pregunta18b" value="correcta"> b&#41; Debido a la falta de una atm&oacute;sfera adecuada</label>
+                    <label for="pregunta18c"><input type="radio" name="pregunta18" id="pregunta18c" value="incorrecta"> c&#41; Debido a la baja temperatura</label>
+                </div>
+                <div>
+                    <label for="pregunta19">19&#41; ¿De qu&eacute; est&aacute; compuesta principalmente la atm&oacute;sfera de Saturno?</label>
+                    <label for="pregunta19a"><input type="radio" name="pregunta19" id="pregunta19a" value="incorrecta"> a&#41; Ox&iacute;geno y nitr&oacute;geno</label>
+                    <label for="pregunta19b"><input type="radio" name="pregunta19" id="pregunta19b" value="correcta"> b&#41; Hidr&oacute;geno y helio</label>
+                    <label for="pregunta19c"><input type="radio" name="pregunta19" id="pregunta19c" value="incorrecta"> c&#41; Di&oacute;xido de carbono y ox&iacute;geno</label>
+                </div>
+                <div>
+                    <label for="pregunta20">20&#41; ¿Cu&aacute;l es la caracter&iacute;stica m&aacute;s distintiva de Saturno?</label>
+                    <label for="pregunta20a"><input type="radio" name="pregunta20" id="pregunta20a" value="incorrecta"> a&#41; Su tama&ntilde;o gigantesco.</label>
+                    <label for="pregunta20b"><input type="radio" name="pregunta20" id="pregunta20b" value="incorrecta"> b&#41; Su alta densidad.</label>
+                    <label for="pregunta20c"><input type="radio" name="pregunta20" id="pregunta20c" value="correcta"> c&#41; Sus anillos.</label>
+                    </div>
+                <button type="submit" onclick="detenerCrono()">Enviar respuestas</button>
+            </form>
+        </section>
+    </main>
+    <script src="../js/formularioConcurso.js"></script>
+</body>
+</html>

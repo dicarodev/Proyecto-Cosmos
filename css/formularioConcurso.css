@@ -1,0 +1,135 @@
+@font-face {
+    font-family: "IndieFlower";
+    src: url(../assets/fonts/IndieFlower-Regular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "IndieFlower";
+}
+
+body{
+    margin: 1em 10% 1em 10%;
+    min-width: 400px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/*Estilos para el texto y la animación del logo*/
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo::after {
+    content: "";
+    position: relative;
+    z-index: -5;
+    left: -5.2em;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    border: 4px solid;
+}
+span{
+    font-size: 1.6em;
+}
+.planet {
+    animation: planet-rotate 10s linear infinite;
+}
+.planet.left {
+    font-size: 1.2em;
+    transform-origin: 156% 37%;
+}
+.planet.right {
+    font-size: 1.2em;
+    transform-origin: -55% 43%;
+}
+@keyframes planet-rotate {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+h1{
+    font-size: 5em; 
+    color: #53daf5; 
+    text-shadow: 
+        0px 0px 5px rgba(255, 255, 255, 0.8), 
+        0px 0px 10px rgba(255, 255, 255, 0.8), 
+        0px 0px 15px rgba(255, 255, 255, 0.8),
+        0px 0px 20px rgb(120, 24, 255),
+        0px 0px 30px #c1f3f6,
+        0px 0px 40px #c1f3f6,
+        0px 0px 55px #c1f3f6;
+    padding-bottom: .5em;
+}
+
+#logoCentro img{
+    width: 5em;
+    border-radius: 50%;
+}
+#logoCentro img{
+    width: 5em;
+    border-radius: 50%;
+}
+
+#iniciar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em 0;
+}
+
+#userName{
+    margin: 2em 0;
+    width: 15em;
+}
+
+#btnIniciar{
+    cursor: pointer;
+    font-size: x-large;
+    font-weight: 600;
+    letter-spacing: .1em;
+    padding: .3em;
+    border-radius: 10px;
+}
+
+.cronometro{
+    margin-top: 1em;
+    width: 15em;
+    border: 4px solid #ff0000;
+}
+#hms{
+    font-size: 3em;
+    color:#000;
+    font-family: alarm;  
+    text-align: center;
+}
+
+form{
+    display: none;
+}
+form div{
+    display: flex;
+    flex-direction: column;
+}
+form input{
+    cursor: pointer;
+}
+#btnEnviar{
+    cursor: pointer;
+    font-size: large;
+    font-weight: 600;
+    letter-spacing: .1em;
+    margin-top: 1em;
+    padding: .3em;
+    border-radius: 10px;
+}
