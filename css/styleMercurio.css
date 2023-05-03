@@ -47,6 +47,7 @@ header {
 .logo{
   display: flex;
   align-items: center;
+  color: white;
 }
 .logo span:nth-of-type(1){
   font-size: 1.6em;
@@ -116,6 +117,7 @@ h1{
 }
 #planetaContenido{
   grid-area: planetaContenido;
+  color: white;
 }
 #introduccion{
   grid-area: introduccion;
@@ -172,7 +174,7 @@ article h2{
 .cohete{
   position: fixed;
   bottom: 1em;
-  right: 10%;
+  right: 5%;
   cursor: pointer;
   display: none;
 }
@@ -188,15 +190,96 @@ article h2{
   animation: miOrbita 2s linear;
 }
 @media only screen and (min-width: 1024px) {
-  footer{
-    position: absolute;
-    left: 0;
-    width: 100%;
-    padding: 2.5em 0;
-    margin: 0;
-    background-color: #333030;
+  @media only screen and (min-width: 1024px) {
+    footer{
+      position: absolute;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      padding: 2.5em 0;
+      margin: 0;
+      background-color: #333030;
+      box-shadow: 0px -1px 10px 0px rgba(255, 166, 0, 1),0px -4px 15px 0px rgba(213, 139, 0, 1),2px -4px 20px 1px rgba(221, 144, 0, 1);
+    }
+  
+    #menu {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+    #menu button {
+      font-size: 25px;
+      background-color: black;
+      color: white;
+      border: 1px solid white;
+      border-radius: 1rem;
+      padding: 10px 15px;
+      animation: expanding-animation 4s infinite;
+      cursor: pointer;
+    }
+  
+    @keyframes expanding-animation {
+      0% {
+        box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
+      }
+  
+      50% {
+        box-shadow: 0px 0px 10px 5px rgb(197, 197, 197);
+      }
+  
+      100% {
+        box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
+      }
+    }
+  
+  
+    .btn {
+      transition: 500ms;
+    }
+  
+    #btn1:hover {
+      scale: 2;
+      background-image: url(../assets/img/2838662.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      content: none;
+    }
+  
+    #btn2:hover {
+      scale: 2;
+      background-image: url(../assets/img/1771185.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      content: none;
+    }
+    a {
+      color: unset;
+      text-decoration: none;
+    }
   }
 }
+#contenidoFooter{
+  display: flex;
+  justify-content: space-evenly;
+}
+/*#contenidoFooter{
+  display: grid;
+  grid-template-areas: "creditos wrapper mapa";
+  grid-template-columns: 33% 34% 33%;
+}
+.wrapper{
+  grid-area: wrapper;
+}
+#creditos{
+  grid-area: creditos;
+}
+#mapa{
+  grid-area: mapa;
+}*/
+
 footer{
   padding: 2.5em 0;
   margin: 0;

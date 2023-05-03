@@ -96,7 +96,7 @@ header {
 }
 
 main {
-  color: white;
+  color: black;
 }
 
 p {
@@ -151,6 +151,7 @@ h1 {
 
 #planetaContenido {
   grid-area: planetaContenido;
+  color: white;
 }
 
 #curiosidades {
@@ -201,7 +202,13 @@ article h2 {
     background-position-x: -800px;
   }
 }
-
+.cohete{
+  position: fixed;
+  bottom: 1em;
+  right: 5%;
+  cursor: pointer;
+  display: none;
+}
 @media only screen and (max-width: 767px) {
   body {
     margin: 0;
@@ -297,7 +304,7 @@ article h2 {
   }
 
   #btn1:hover {
-    scale: 2ñ;
+    scale: 2;
     background-image: url(../assets/img/1771185.jpg);
     background-size: cover;
     background-position: center;
@@ -318,7 +325,10 @@ article h2 {
     text-decoration: none;
   }
 
-
+  #contenidoFooter{
+    display: flex;
+    justify-content: space-evenly;
+  }
   footer {
     position: absolute;
     left: 0;
@@ -327,6 +337,7 @@ article h2 {
     padding: 2.5em 0;
     margin: 0;
     background-color: #333030;
+    box-shadow: 0px -1px 10px 0px rgba(255, 166, 0, 1),0px -4px 15px 0px rgba(213, 139, 0, 1),2px -4px 20px 1px rgba(221, 144, 0, 1);
   }
 }
 
