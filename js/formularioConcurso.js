@@ -19,11 +19,7 @@ function leerTxt(){
     let users = {};
 
     // Obtener el contenido del archivo users.txt
-    fetch('../users.txt')
-
-    .then(response => response.text())
-
-    .then(data => {
+    fetch('../users.txt').then(response => response.text()).then(data => {
         // Dividir el contenido en líneas
         let lines = data.trim().split('\n');
 

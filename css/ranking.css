@@ -14,6 +14,7 @@ body{
     min-width: 400px;
     font-size: 1.2em;
     font-weight: 600;
+    background-color: black;
 }
 
 header{
@@ -27,6 +28,7 @@ header{
 .logo{
     display: flex;
     align-items: center;
+    color: #ffffff;
 }
 .logo::after {
     content: "";
@@ -38,10 +40,9 @@ header{
     border-radius: 50%;
     border: 4px solid;
 }
-.logo span{
+span{
     font-size: 1.6em;
 }
-
 .planet {
     animation: planet-rotate 10s linear infinite;
 }
@@ -59,8 +60,32 @@ header{
     }
 }
 
+.banderas{
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bandera_img{
+    width: 2.5em;
+    height: 1.2em;
+    cursor: pointer;
+    display: block;
+}
+
+#logoCentro img{
+    width: 5em;
+    border-radius: 50%;
+}
+#logoCentro img{
+    width: 5em;
+    border-radius: 50%;
+}
+
 h1{
     font-size: 5em; 
+    text-align: center;
     color: #53daf5; 
     text-shadow: 
         0px 0px 5px rgba(255, 255, 255, 0.8), 
@@ -70,70 +95,26 @@ h1{
         0px 0px 30px #c1f3f6,
         0px 0px 40px #c1f3f6,
         0px 0px 55px #c1f3f6;
-    padding-bottom: .5em;
+    margin-top: .5em;
 }
 
-#logoCentro img{
-    width: 5em;
-    border-radius: 50%;
-}
-#logoCentro img{
-    width: 5em;
-    border-radius: 50%;
-}
-
-span{
-    font-size: 1.3em;
-}
-#iniciar{
+.contenedorRanking{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 2em 0;
+    justify-content: center;
+    margin-top: 5em;
+    
 }
-
-#userName{
-    margin: 2em 0;
-    width: 15em;
+#ranking{
+    border: 2px solid white;
+    border-radius: 5px 5px 40px 40px; 
+    background-color: #b8e9f6ad;
+    box-shadow: 1px 3px 16px 11px rgba(119, 97, 128, 1),1px 2px 14px 1px rgba(38, 39, 128, 1);
+    padding-bottom: 2em;
 }
-
-#btnIniciar{
-    cursor: pointer;
-    font-size: x-large;
-    font-weight: 600;
-    letter-spacing: .1em;
-    padding: .3em;
-    border-radius: 10px;
-}
-
-.cronometro{
-    margin-top: 1em;
-    width: 15em;
-    border: 4px solid #ff0000;
-}
-#hms{
-    font-size: 3em;
-    color:#000;
-    font-family: alarm;  
+table{
+    font-size: 1.2em;
     text-align: center;
 }
-
-form{
-    display: none;
-}
-form div{
-    display: flex;
-    flex-direction: column;
-}
-form input{
-    cursor: pointer;
-}
-#btnEnviar{
-    cursor: pointer;
-    font-size: large;
-    font-weight: 600;
-    letter-spacing: .1em;
-    margin-top: 1em;
-    padding: .3em;
-    border-radius: 10px;
+th{
+    padding: 2em;
 }

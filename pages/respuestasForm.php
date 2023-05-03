@@ -30,4 +30,7 @@ fwrite($archivo, "$userName,$puntuacion,$tiempoEmpleado\n");
 
 // Cerramos el archivo
 fclose($archivo);
+
+header("Location: ./ranking.html");
+echo '<script>window.onload = function() { leerRankin(); }</script>';
 ?>
