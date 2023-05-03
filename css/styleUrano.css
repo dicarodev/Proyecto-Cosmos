@@ -18,7 +18,7 @@ body{
         to bottom,
         rgba(125, 125, 80, 0.4),
         rgba(53, 53, 108, 0.5)
-    ), url(../assets/images/tiro-angulo-fascinante-cielo-estrellado.jpg);
+    ), url(../assets/images/tiro-angulo-fascinante-cielo-estrellado.webp);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -33,6 +33,7 @@ header{
 .logo{
     display: flex;
     align-items: center;
+    color: #ffffff;
 }
 .logo::after {
     content: "";
@@ -88,6 +89,7 @@ section{
 .planeta p{
     font-size: 2em;
     padding: .5em 0;
+    color: white;
 }
 h1{
     font-size: 7em; 
@@ -108,7 +110,7 @@ h1{
     width: 20em;
     height: 20em;
     border-radius: 50%;
-    background: url(../assets/images/mapaUrano.png);
+    background: url(../assets/images/mapaUrano.webp);
     background-size: cover;
     background-position: center;
     box-shadow: inset 0 0 20px #000, inset -40px -10px 20px rgba(3, 32, 56, 0.7);
@@ -149,8 +151,9 @@ li, #introduccion p{
 
 #introduccion{
     grid-area: introduccion;
+    justify-content: center;
+    text-align: center;
     padding: 1em;
-    width: fit-content;
     height: fit-content;
     border: 2px solid white;
     border-radius: 53px 5px / 66px 5px; 
