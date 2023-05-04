@@ -2,17 +2,31 @@
     background: url(../assets/images/martemapa.webp);
     transform: none;
 }
+article, #introduccion{
+    border: 2px solid #FF5733;
+}
+#introduccion{
+    background-color: rgba(184, 233, 246, 0.8);
+    color: #0c0b0b;
+}
+    footer {
+        border-top: 2px solid #FF5733;
+        box-shadow: 0 0 50px 30px #FF4500; 
+        
+      }
+      
 
 h1{
-    color: #636868; 
+    color: #B36B52
+    ; 
     text-shadow: 
         0px 0px 5px rgba(255, 255, 255, 1), 
         0px 0px 10px rgba(255, 255, 255, 1), 
         0px 0px 15px rgba(255, 255, 255, 1),
-        0px 0px 20px rgb(255, 182, 24),
-        0px 0px 30px rgb(255, 210, 112),
-        0px 0px 40px rgb(255, 210, 112),
-        0px 0px 55px rgb(255, 210, 112),
+        2px -16px 10px rgba(195,84,0,1),
+     7px -16px 10px rgba(195,84,0,1),
+    -19px 3px 10px rgba(195,84,0,1),
+    2px 16px 10px rgba(195,84,0,1),
         0px 0px 75px rgb(255, 210, 112);
 }
 
@@ -27,7 +41,7 @@ h1{
 
 #astronauta{
     height: 16em;
-    background: url(../assets/images/astronauta.webp);
+    background: url(../assets/images/satelite.webp);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;

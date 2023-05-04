@@ -4,17 +4,24 @@
 }
 
 h1{
-    color: #636868; 
-    text-shadow: 
-        0px 0px 5px rgba(255, 255, 255, 1), 
-        0px 0px 10px rgba(255, 255, 255, 1), 
-        0px 0px 15px rgba(255, 255, 255, 1),
-        0px 0px 20px rgb(255, 182, 24),
-        0px 0px 30px rgb(255, 210, 112),
-        0px 0px 40px rgb(255, 210, 112),
-        0px 0px 55px rgb(255, 210, 112),
-        0px 0px 75px rgb(255, 210, 112);
+    color: #9eb6b6; 
+   
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 1), 0px 0px 10px rgba(255, 255, 255, 1), 0px 0px 15px rgba(255, 255, 255, 1), 2px -16px 10px rgba(221, 176, 141), 7px -16px 10px rgba(221, 176, 141), -19px 3px 10px rgba(221, 176, 141), 2px 16px 10px rgb(221, 176, 141), 0px 0px 75px rgb(255, 210, 112);
+
+
 }
+#introduccion{
+    background-color: rgba(184, 233, 246, 0.8);
+    color: #0c0b0b;
+}
+article, #introduccion{
+    border: 2px solid #9eb6b6;
+    
+}
+
+footer {
+    box-shadow: 0 0 80px 10px #9eb6b6;
+  }
 
 @keyframes rotate{
     0% {
@@ -27,7 +34,7 @@ h1{
 
 #astronauta{
     height: 16em;
-    background: url(../assets/images/astronauta.webp);
+    background: url(../assets/images/nave2.webp);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
