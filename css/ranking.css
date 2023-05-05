@@ -14,7 +14,9 @@ body{
     min-width: 400px;
     font-size: 1.2em;
     font-weight: 600;
-    background-color: black;
+    background: url(../assets/images/backgroundForm.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header{
@@ -101,19 +103,21 @@ h1{
 .contenedorRanking{
     display: flex;
     justify-content: center;
-    margin-top: 5em;
+    margin: 5em 0;
     
 }
 #ranking{
     border: 2px solid white;
     border-radius: 5px 5px 40px 40px; 
-    background-color: #b8e9f6ad;
-    box-shadow: 1px 3px 16px 11px rgba(119, 97, 128, 1),1px 2px 14px 1px rgba(38, 39, 128, 1);
+    background-color: #5ca9bedc;
+    box-shadow: 1px 3px 16px 11px rgba(119, 97, 128, 1),
+                1px 2px 14px 1px rgba(38, 39, 128, 1);
     padding-bottom: 2em;
 }
 table{
     font-size: 1.2em;
     text-align: center;
+    
 }
 th{
     padding: 2em;

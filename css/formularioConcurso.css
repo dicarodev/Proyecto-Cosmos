@@ -14,6 +14,9 @@ body{
     min-width: 400px;
     font-size: 1.2em;
     font-weight: 600;
+    background: url(../assets/images/backgroundForm.webp);
+    background-repeat:no-repeat;
+    background-size:cover;
 }
 
 header{
@@ -27,6 +30,7 @@ header{
 .logo{
     display: flex;
     align-items: center;
+    color: white;
 }
 .logo::after {
     content: "";
@@ -59,31 +63,49 @@ header{
     }
 }
 
+#logoCentro img{
+    width: 5em;
+    border-radius: 50%;
+}
+#logoCentro img{
+    width: 5em;
+    border-radius: 50%;
+}
+
 h1{
     font-size: 5em; 
-    color: #53daf5; 
+    color: #898bfd; 
     text-shadow: 
         0px 0px 5px rgba(255, 255, 255, 0.8), 
         0px 0px 10px rgba(255, 255, 255, 0.8), 
         0px 0px 15px rgba(255, 255, 255, 0.8),
-        0px 0px 20px rgb(120, 24, 255),
-        0px 0px 30px #c1f3f6,
-        0px 0px 40px #c1f3f6,
-        0px 0px 55px #c1f3f6;
-    padding-bottom: .5em;
+        0px 0px 20px rgb(120, 24, 255);
+    text-align: center;
+    margin: .5em 0;
 }
-
-#logoCentro img{
-    width: 5em;
-    border-radius: 50%;
+section p{
+    font-size: 1.2em;
+    padding: 3em;
+    background-color: #70B7C6;
+    border: 4px double #362D9F;
+    border-radius: 100px 100px 5px 5px / 45px 45px 5px 5px;
+    box-shadow: 0px 0px 10px 4px rgba(189, 119, 236, 1),
+                0px 0px 15px 5px rgba(189, 119, 236, 1);
 }
-#logoCentro img{
-    width: 5em;
-    border-radius: 50%;
+#userName{
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 2em 0;
+    height: 3.5em;
+    width: 20em;
+    border-radius: 10px;
+    border: 9px ridge #B1E3E7;
 }
 
 span{
-    font-size: 1.3em;
+    font-size: 2em;
+    color: white;
 }
 #iniciar{
     display: flex;
@@ -92,25 +114,57 @@ span{
     margin: 2em 0;
 }
 
-#userName{
-    margin: 2em 0;
-    width: 15em;
-}
-
 #btnIniciar{
     cursor: pointer;
-    font-size: x-large;
+    font-size: 1.5em;
     font-weight: 600;
     letter-spacing: .1em;
-    padding: .3em;
+    padding: .4em .8em;
+    background-color: rgb(230, 207, 207);
+    border: 5px solid black;
     border-radius: 10px;
 }
 
-.cronometro{
-    margin-top: 1em;
-    width: 15em;
-    border: 4px solid #ff0000;
+@keyframes parpadeoSombra {
+    0% {
+        border: 5px solid black;
+    }
+    25% {
+        box-shadow: 
+        0px 0px 5px rgba(255, 255, 255, 1), 
+        0px 0px 10px rgba(255, 255, 255, 1), 
+        0px 0px 15px rgba(255, 255, 255, 1),
+        0px 0px 20px rgb(255, 32, 24),
+        0px 0px 30px rgb(255, 119, 112),
+        0px 0px 40px rgb(255, 112, 112);
+    }
+    50% {
+        border: 5px solid black;
+        }
+    65% {
+        box-shadow: 
+        0px 0px 5px rgba(255, 255, 255, 1), 
+        0px 0px 10px rgba(255, 255, 255, 1), 
+        0px 0px 15px rgba(255, 255, 255, 1),
+        0px 0px 20px rgb(243, 22, 15),
+        0px 0px 30px rgb(252, 94, 86),
+        0px 0px 40px rgb(255, 75, 75);
+    }
+    100% {
+        border: 5px solid black;
+    }
 }
+
+.cronometro{
+    margin: 3.5em 0;
+    padding: .5em 2em;
+    width: 15em;
+    background-color: #b1e3e7e3;
+    border-radius: 10px;
+    animation: parpadeoSombra 3s infinite linear;
+}
+
+
 #hms{
     font-size: 3em;
     color:#000;
@@ -120,17 +174,38 @@ span{
 
 form{
     display: none;
+    flex-direction: column;
+    margin: 0 auto 5em auto;
+    width: 80%;
+    font-size: 1em;
+    padding: 3em;
+    background-color: #70B7C6;
+    border: 4px double #362D9F;
+    border-radius: 100px 100px 5px 5px / 45px 45px 5px 5px;
+    box-shadow: 0px 0px 10px 4px rgba(189, 119, 236, 1),
+                0px 0px 15px 5px rgba(189, 119, 236, 1);
+}
+form span{
+    font-size: 1.2em;
+    color: black;
 }
 form div{
     display: flex;
     flex-direction: column;
+    padding: .5em 0;
 }
+
 form input{
     cursor: pointer;
 }
+#finalformulario{
+    display: flex;
+}
 #btnEnviar{
     cursor: pointer;
-    font-size: large;
+    align-self: center;
+    width: fit-content;
+    font-size: 1.5em;
     font-weight: 600;
     letter-spacing: .1em;
     margin-top: 1em;

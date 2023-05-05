@@ -29,18 +29,17 @@ function leerTxt(){
             users[user] = {score, time};
         };
 
-        if (userName.value.trim() === '') {
+        if (userName.value.trim() === '' || !/^[^, ]*$/.test(userName.value)) {
             alert('Introduce un nombre de usuario valido.');
         }else if(users.hasOwnProperty(userName.value.trim())){
             alert(`El nombre de usuario ${userName.value.trim()} ya existe.`);
         }else {
-            formularioConcuro.style.display = 'block';
+            formularioConcuro.style.display = 'flex';
             setInterval(iniciarCrono, 1000);
             btnIniciar.disabled = true;
 
             let inputValue = userName.value.trim();
             document.getElementById("userNameHidden").value = inputValue;
-            console.log(inputValue);
         };
     })
     .catch(error => {

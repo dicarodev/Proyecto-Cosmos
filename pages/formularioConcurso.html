@@ -19,29 +19,29 @@
             <span class="planet right">&#129680;</span>
             <span>S</span>
         </div>
-        <h1>UN PASEO POR EL COSMOS</h1>
         <div id="logoCentro">
             <a href="https://www.iesjuanbosco.es" target="_blank"><img src="../assets/images/logoIESJuanBosco.webp" alt="Logo IES Juan Bosco"></a>
         </div>
     </header>
 
     <main>
+        <h1>UN PASEO POR EL COSMOS</h1>
         <section>
-            <p>¡ Bienvenidos a &quot;Un paseo por el Cosmos&quot; ! ¿Listos para poner a prueba vuestros conocimientos sobre el universo y explorar las maravillas del espacio? Prep&aacute;rate para una experiencia emocionante y desafiante, donde tendr&aacute;s que responder 30 preguntas relacionadas con el contenido aprendido. Mientras concursas, un cron&oacute;metro estar&aacute; en marcha midiendo el tiempo que tardas en completar el cuestionario. ¿Ser&aacute;s capaz de llegar al top 30 del ranking? ¡ Demuestra tus habilidades y compite por el primer puesto ! Recuerda, ¡ el conocimiento es poder y la exploraci&oacute;n del cosmos nunca termina !</p>
+            <p>¡ Bienvenidos a &quot;Un paseo por el Cosmos&quot; ! ¿Listos para poner a prueba vuestros conocimientos sobre el universo y explorar las maravillas del espacio? Prep&aacute;rate para una experiencia emocionante y desafiante, donde tendr&aacute;s que responder 20 preguntas relacionadas con el contenido aprendido. Mientras concursas, un cron&oacute;metro estar&aacute; en marcha midiendo el tiempo que tardas en completar el cuestionario. ¿Ser&aacute;s capaz de entrar al top 30 del ranking? Una vez inicies tu aventura no hay vuelta atras. ¡ Demuestra tus habilidades y compite por el primer puesto ! Recuerda, ¡ el conocimiento es poder y la exploraci&oacute;n del cosmos nunca termina !</p>
             
             
             <div id="iniciar">
-                <span>Ingresa tu nombre de usuario: </span>
-                <input type="text" name="user_name" pattern='[A-Za-z0-9]+' id="userName" required>
+                <span>¿ C&oacute;mo te llamas cosmonauta ?</span>
+                <input type="text" name="user_name" placeholder="Introduce un nick sin comas ni espacios" id="userName" required>
 
-                <button id="btnIniciar">Iniciar</button>
+                <button id="btnIniciar">INICIAR</button>
 
                 <div class="cronometro">
                     <div id="hms">00:00:00</div>
                 </div>
             </div>
             
-            <form method="POST" action="respuestasForm.php" id="formularioConcuro">
+            <form method="POST" action="respuestasForm.php" id="formularioConcuro" class="formularioVisible">
                 <input type="hidden" name="user_name_hiddden" id="userNameHidden">
                 <input type="hidden" name="tiempo_empleado" id="tiempoEmpleadoHidden">
                 <div>
@@ -173,7 +173,7 @@
                     <label for="pregunta20b"><input type="radio" name="pregunta20" id="pregunta20b" value="incorrecta"> b&#41; Su alta densidad.</label>
                     <label for="pregunta20c"><input type="radio" name="pregunta20" id="pregunta20c" value="correcta"> c&#41; Sus anillos.</label>
                     </div>
-                <button type="submit" onclick="detenerCrono()">Enviar respuestas</button>
+                <button id="btnEnviar" type="submit" onclick="detenerCrono()">ENVIAR RESPUESTAS</button>
             </form>
         </section>
     </main>

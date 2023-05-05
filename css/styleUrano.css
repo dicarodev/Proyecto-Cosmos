@@ -33,6 +33,7 @@ header{
 .logo{
     display: flex;
     align-items: center;
+    color: white;
 }
 .logo::after {
     content: "";
@@ -164,8 +165,9 @@ li, #introduccion p{
 
 #introduccion{
     grid-area: introduccion;
+    text-align: center;
     padding: 1em;
-    width: fit-content;
+    width: 100%;
     height: fit-content;
     border: 2px solid white;
     border-radius: 53px 5px / 66px 5px; 
