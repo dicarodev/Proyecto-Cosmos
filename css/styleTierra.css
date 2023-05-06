@@ -100,7 +100,6 @@ main {
 
 p {
   font-family: IndieFlower;
-  font-size: 1.5rem;
 }
 
 h2 {
@@ -119,7 +118,10 @@ h1 {
   padding-top: 1rem;
   text-align: center;
 }
-
+.subrayado {
+  text-decoration: underline;
+  font-size: 1.4rem;
+}
 #tierra {
   width: 400px;
   height: 400px;
