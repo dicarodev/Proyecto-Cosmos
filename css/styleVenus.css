@@ -19,7 +19,6 @@
 }
 body{
   margin: 1em 10% 1em 10%;
-  min-width: 450px;
   font-size: 1.4em;
   font-weight: 600;
   background: linear-gradient(
@@ -206,6 +205,68 @@ article h2{
   }
   #introduccion{
     grid-area: introduccion;
+  }
+  #venus{
+    height: 300px;
+    width: 300px;
+  }
+  #contenidoFooter{
+    flex-direction: column;
+  }
+  #menu {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  #menu button {
+    font-size: 25px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding: 10px 15px;
+    animation: expanding-animation 4s infinite;
+    cursor: pointer;
+  }
+
+  @keyframes expanding-animation {
+    0% {
+      box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
+    }
+
+    50% {
+      box-shadow: 0px 0px 10px 5px rgb(197, 197, 197);
+    }
+
+    100% {
+      box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
+    }
+  }
+  .btn {
+    transition: 500ms;
+  }
+
+  #btn1:hover {
+    scale: 2;
+    background-image: url("https://wallpaperaccess.com/full/527447.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    content: none;
+  }
+
+  #btn2:hover {
+    scale: 2;
+    background-image: url(../assets/img/52268.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    content: none;
+  }
+  a {
+    color: unset;
+    text-decoration: none;
   }
   
 }

@@ -19,18 +19,18 @@
 }
 body {
   margin: 1em 10% 1em 10%;
-  min-width: 450px;
   font-size: 1.4em;
   font-weight: 600;
   background: linear-gradient(
       to bottom,
       rgba(125, 125, 80, 0.4),
       rgba(53, 53, 108, 0.5)
-  ), url(../assets/img/tiro-angulo-fascinante-cielo-estrellado.jpg);
+    ),
+    url(../assets/img/tiro-angulo-fascinante-cielo-estrellado.jpg);
   background-size: cover;
 }
-main{
-  color: white;
+main {
+  color: black;
   font-size: 1.2rem;
 }
 #centrar {
@@ -41,24 +41,24 @@ main{
 header {
   display: flex;
   color: white;
-    justify-content: space-between;
-    width: 100%;
+  justify-content: space-between;
+  width: 100%;
 }
-.logo{
+.logo {
   display: flex;
   align-items: center;
   color: white;
 }
-.logo span:nth-of-type(1){
+.logo span:nth-of-type(1) {
   font-size: 1.6em;
 }
-.logo span:nth-of-type(3){
+.logo span:nth-of-type(3) {
   font-size: 1.6em;
 }
-.logo span:nth-of-type(4){
+.logo span:nth-of-type(4) {
   font-size: 1.6em;
 }
-.logo span:nth-of-type(6){
+.logo span:nth-of-type(6) {
   font-size: 1.6em;
 }
 .logo::after {
@@ -84,69 +84,77 @@ header {
 }
 @keyframes planet-rotate {
   to {
-      transform: rotate(1turn);
+    transform: rotate(1turn);
   }
 }
 
-#logoCentro img{
+#logoCentro img {
   width: 5em;
   border-radius: 50%;
 }
-#descripcionMercurio{
+#descripcionMercurio {
   text-align: center;
 }
-h2{
+h2 {
   font-family: Delicious;
   font-size: 2rem;
   text-align: center;
 }
-h1{
-  color:#7843E6;
+h1 {
+  color: #7843e6;
   font-family: Bobby;
-  text-shadow: -2px 3px 4px rgba(127, 212, 235, 1),0px -2px 3px rgba(181, 178, 178, 1);
+  text-shadow: -2px 3px 4px rgba(127, 212, 235, 1),
+    0px -2px 3px rgba(181, 178, 178, 1);
   font-size: 8rem;
 }
 #contenidoPrincipal {
   text-align: center;
 }
-#contenido{
+#contenido {
   display: grid;
-  grid-template-areas: "planetaContenido planetaContenido"
-  "introduccion introduccion"
-  "caracteristicas curiosidades";
+  grid-template-areas:
+    "planetaContenido planetaContenido"
+    "introduccion introduccion"
+    "caracteristicas curiosidades";
 }
-#planetaContenido{
+#planetaContenido {
   grid-area: planetaContenido;
-  color: white;
 }
-#introduccion{
+#introduccion {
   grid-area: introduccion;
   padding: 1em;
   width: fit-content;
   height: fit-content;
   border: 2px solid white;
-  border-radius: 53px 5px / 66px 5px; 
+  color: white;
+  border-radius: 53px 5px / 66px 5px;
   background-color: #b8e9f6ad;
-  box-shadow: 1px 3px 16px 11px rgba(119, 97, 128, 1),1px 2px 14px 1px rgba(38, 39, 128, 1);
+  box-shadow: 1px 3px 16px 11px rgba(119, 97, 128, 1),
+    1px 2px 14px 1px rgba(38, 39, 128, 1);
 }
-article{
+.subrayado {
+  text-decoration: underline;
+  font-size: 1.4rem;
+}
+article {
   margin-top: 3em;
   padding: 1em;
   width: fit-content;
   height: fit-content;
 
   border: 2px solid white;
-  border-radius: 5px 5px 40px 40px; 
+  border-radius: 5px 5px 40px 40px;
   background-color: #b8e9f6ad;
-  box-shadow: 1px 3px 16px 11px rgba(119, 97, 128, 1),1px 2px 14px 1px rgba(38, 39, 128, 1);
+  box-shadow: 1px 3px 16px 11px rgba(119, 97, 128, 1),
+    1px 2px 14px 1px rgba(38, 39, 128, 1);
 }
-article h2{
+article h2 {
   text-align: center;
   font-size: 2em;
   color: black;
   text-shadow: 5px 2px 4px rgba(140, 77, 159, 1);
 }
-#caracteristicas{
+#caracteristicas {
   grid-area: caracteristicas;
   margin-right: 3em;
   margin-bottom: 1.5rem;
@@ -160,7 +168,7 @@ article h2{
   background-position: bottom;
   box-shadow: inset 0 0 20px #000, inset -40px -10px 20px rgba(3, 32, 56, 0.7);
 
-  animation: mercurio 5s linear infinite;
+  animation: mercurio 15s linear infinite;
 }
 @keyframes mercurio {
   0% {
@@ -171,7 +179,7 @@ article h2{
     background-position-x: -800px;
   }
 }
-.cohete{
+.cohete {
   position: fixed;
   bottom: 1em;
   right: 5%;
@@ -179,121 +187,105 @@ article h2{
   display: none;
 }
 @keyframes miOrbita {
-  from  {
-      transform: translateY(0);
+  from {
+    transform: translateY(0);
   }
-  to    {
-      transform: translateY(-100%);
+  to {
+    transform: translateY(-100%);
   }
 }
-.miOrbita{
+.miOrbita {
   animation: miOrbita 2s linear;
 }
 @media only screen and (min-width: 1024px) {
-  @media only screen and (min-width: 1024px) {
-    footer{
-      position: absolute;
-      left: 0;
-      z-index: -1;
-      width: 100%;
-      padding: 2.5em 0;
-      margin: 0;
-      background-color: #333030;
-      box-shadow: 0px -1px 10px 0px rgba(255, 166, 0, 1),0px -4px 15px 0px rgba(213, 139, 0, 1),2px -4px 20px 1px rgba(221, 144, 0, 1);
+  footer {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    padding: 2.5em 0;
+    margin: 0;
+    background-color: #333030;
+    box-shadow: 0px -1px 10px 0px rgba(255, 166, 0, 1),
+      0px -4px 15px 0px rgba(213, 139, 0, 1),
+      2px -4px 20px 1px rgba(221, 144, 0, 1);
+  }
+
+  #menu {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  #menu button {
+    font-size: 25px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding: 10px 15px;
+    animation: expanding-animation 4s infinite;
+    cursor: pointer;
+  }
+
+  @keyframes expanding-animation {
+    0% {
+      box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
     }
-  
-    #menu {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 2rem;
-      margin-bottom: 2rem;
+
+    50% {
+      box-shadow: 0px 0px 10px 5px rgb(197, 197, 197);
     }
-    #menu button {
-      font-size: 25px;
-      background-color: black;
-      color: white;
-      border: 1px solid white;
-      border-radius: 1rem;
-      padding: 10px 15px;
-      animation: expanding-animation 4s infinite;
-      cursor: pointer;
-    }
-  
-    @keyframes expanding-animation {
-      0% {
-        box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
-      }
-  
-      50% {
-        box-shadow: 0px 0px 10px 5px rgb(197, 197, 197);
-      }
-  
-      100% {
-        box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
-      }
-    }
-  
-  
-    .btn {
-      transition: 500ms;
-    }
-  
-    #btn1:hover {
-      scale: 2;
-      background-image: url(../assets/img/2838662.jpg);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      content: none;
-    }
-  
-    #btn2:hover {
-      scale: 2;
-      background-image: url(../assets/img/1771185.jpg);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      content: none;
-    }
-    a {
-      color: unset;
-      text-decoration: none;
+
+    100% {
+      box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
     }
   }
+
+  .btn {
+    transition: 500ms;
+  }
+
+  #btn1:hover {
+    scale: 2;
+    background-image: url(../assets/img/2838662.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    content: none;
+  }
+
+  #btn2:hover {
+    scale: 2;
+    background-image: url(../assets/img/1771185.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    content: none;
+  }
+  a {
+    color: unset;
+    text-decoration: none;
+  }
 }
-#contenidoFooter{
+#contenidoFooter {
   display: flex;
   justify-content: space-evenly;
 }
-/*#contenidoFooter{
-  display: grid;
-  grid-template-areas: "creditos wrapper mapa";
-  grid-template-columns: 33% 34% 33%;
-}
-.wrapper{
-  grid-area: wrapper;
-}
-#creditos{
-  grid-area: creditos;
-}
-#mapa{
-  grid-area: mapa;
-}*/
 
-footer{
-  padding: 2.5em 0;
+footer {
   margin: 0;
   background-color: #333030;
 }
-@media only screen and (max-width: 767px){
-  body{
+@media only screen and (max-width: 767px) {
+  body {
     margin: 0;
-    font-size: 1.2em;
+    font-size: 1em;
   }
-  h1{
-    font-size: 6.5rem;
-  } 
-  #contenido{
+  h1 {
+    font-size: 3.5rem;
+  }
+  #contenido {
     display: grid;
     grid-template-areas:
       "planetaContenido"
@@ -301,35 +293,115 @@ footer{
       "caracteristicas"
       "curiosidades";
   }
-  #introducion{
+  #planetaContenido {
+    grid-area: planetaContenido;
+  }
+  #introducion {
     grid-area: introducion;
   }
-  #curiosidades{
+  #curiosidades {
     grid-area: curiosidades;
-  }
-  #curiosidades{
-    grid-area: curiosidades;
-    margin: 0;
     margin-top: 1rem;
   }
-  #caracteristicas{
+  #caracteristicas {
     grid-area: caracteristicas;
-    margin: 0;
     margin-top: 1.5rem;
+    margin-right: 0em;
+  }
+  #mercurio {
+    height: 300px;
+    width: 300px;
+  }
+  #contenidoFooter {
+    display: grid;
+    grid-template-areas:
+      "creditos"
+      "wrapper"
+      "mapa";
+  }
+  #creditos {
+    grid-area: creditos;
+  }
+  .wrapper {
+    grid-area: wrapper;
+  }
+  #mapa {
+    grid-area: mapa;
+  }
+  #contenidoFooter iframe {
+    width: fit-content;
+    height: fit-content;
+  }
+
+  #menu {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  #menu button {
+    font-size: 25px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding: 10px 15px;
+    animation: expanding-animation 4s infinite;
+    cursor: pointer;
+  }
+
+  @keyframes expanding-animation {
+    0% {
+      box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
+    }
+
+    50% {
+      box-shadow: 0px 0px 10px 5px rgb(197, 197, 197);
+    }
+
+    100% {
+      box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
+    }
+  }
+
+  .btn {
+    transition: 500ms;
+  }
+
+  #btn1:hover {
+    scale: 2;
+    background-image: url(../assets/img/2838662.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    content: none;
+  }
+
+  #btn2:hover {
+    scale: 2;
+    background-image: url(../assets/img/1771185.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    content: none;
+  }
+  a {
+    color: unset;
+    text-decoration: none;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    body{
-      margin: 0;
-      padding: 0;
-    }
+  body {
+    margin: 0;
+    padding: 0;
+  }
 }
 .wrapper {
   display: flex;
   list-style: none;
   justify-content: center;
 }
-.wrapper a:active{
+.wrapper a:active {
   background-color: transparent;
 }
 .wrapper .icon {
@@ -348,7 +420,7 @@ footer{
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-.wrapper .tipo{
+.wrapper .tipo {
   position: absolute;
   top: 0;
   font-size: 20px;
@@ -408,9 +480,4 @@ footer{
 }
 a {
   color: unset;
-}
-
-#posibleflex{
-  display: flex;
-  justify-content: center;
 }
