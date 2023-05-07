@@ -95,11 +95,6 @@ header {
 #descripcionMercurio {
   text-align: center;
 }
-h2 {
-  font-family: Delicious;
-  font-size: 2rem;
-  text-align: center;
-}
 h1 {
   color: #7843e6;
   font-family: Bobby;
@@ -126,7 +121,6 @@ h1 {
   width: fit-content;
   height: fit-content;
   border: 2px solid white;
-  color: white;
   border-radius: 53px 5px / 66px 5px;
   background-color: #b8e9f6ad;
   box-shadow: 1px 3px 16px 11px rgba(119, 97, 128, 1),

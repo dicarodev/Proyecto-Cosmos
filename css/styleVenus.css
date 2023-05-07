@@ -118,11 +118,6 @@ main {
 p,li{
   font-family: IndieFlower;
 }
-h2{
-  font-family: Delicious;
-  font-size: 2rem;
-  text-align: center;
-}
 #introduccion{
   grid-area: introduccion;
   padding: 1em;
