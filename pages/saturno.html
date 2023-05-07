@@ -21,18 +21,29 @@
             <span class="planet right">&#129680;</span>
             <span>S</span>
         </div>
+        <div id="botonesHeader">
+            <button type="button" class="btn-small" id="btnEspanol" onclick="translateToEspanish()"><img src="../assets/images/españa1.webp" alt="Español"></button>
+            <button type="button" class="btn-small" id="btnEnglish" onclick="translateToEnglish()"><img src="../assets/images/reinoUnido1.webp" alt="English"></button>
+        </div>
         <div id="logoCentro">
             <a href="https://www.iesjuanbosco.es" target="_blank"><img src="../assets/images/logoIESJuanBosco.webp" alt="Logo IES Juan Bosco"></a>
         </div>
+        
     </header>
     <main>
-        <section>
 
-            <div class="planeta">
-                <div id="planeta"></div>
-                <p>EL PLANETA DE LOS ANILLOS</p>
-                <h1>SATURNO</h1>
-            </div>
+        <section id="contenido">
+            <div id="planetaContenido">
+                <div id="centrar">
+                  <div id="saturno"></div>
+                </div>
+                <div id="descripcionSaturno">
+                  <p>EL PLANETA DE LOS ANILLOS</p>
+                  <h1>SATURNO</h1>
+                </div>
+              </div>
+
+       
 
             <div id="introduccion">
                 <p>El nombre de Saturno proviene del dios romano Saturno, quien era considerado el dios de la agricultura y la cosecha. Saturno era uno de los dioses m&aacute;s importantes en la mitolog&iacute;a romana, y su influencia se extendi&oacute; a la vida cotidiana de los romanos en campos como la religi&oacute;n, la pol&iacute;tica y la econom&iacute;a.</p>
@@ -64,40 +75,60 @@
             </article>
             
         </section>
-    </main>
+        <div id="menu">
+            <button type="button" class="btn" id="btn1" onclick="window.location.href='../pages/jupietr.html'">J&Uacute;PITER</button>
 
-    <footer>
-        <div class="contenidoFooter">
-            <div class="enlacesPlanetas">
-                <h3>CUERPOS DEL SISTEMA SOLAR</h3>
-                <ul>
-                    <li><a href="">MERCURIO</a></li>
-                    <li><a href="">VENUS</a></li>
-                    <li><a href="">TIERRA</a></li>
-                    <li><a href="">MARTE</a></li>
-                    <li><a href="">JUPITER</a></li>
-                    <li><a href="">SATURNO</a></li>
-                    <li><a href="./urano.html">URANO</a></li>
-                    <li><a href="./neptuno.html">NEPTUNO</a></li>
-                    <li><a href="./luna.html">LA LUNA</a></li>
-                </ul>
+            <button type="button" class="btn" id="btn2" onclick="window.location.href='../pages/urano.html'">Urano</button>
+            
+          </div>
+       
+        </main>
+        <footer>
+          <div id="contenidoFooter">
+            <div id="creditos">
+              <p>Creditos</p>
             </div>
-            <div class="pedidos">
-                <h3>Su pedido</h3>
-                <ul>
-                    <li><a href="./fomularios/formularioContacto.html">Contacto</a></li>
-                    <li><a href="#">Pagos</a></li>
-                    <li><a href="#">Envios</a></li>
-                </ul>
+            <ul class="wrapper">
+              <li class="icon github">
+                <span class="tipo">Diego</span>
+                <span><i class="fab fa-github"></i></span>
+              </li>
+              <li class="icon github">
+                <span class="tipo">Jorge</span>
+                <span><i class="fab fa-github"></i></span>
+              </li>
+              <li class="icon github">
+                <span class="tipo">Eduardo</span>
+                <a href="wwww.google.es"
+                  ><span><i class="fab fa-github"></i></span
+                ></a>
+              </li>
+            </ul>
+            <div id="mapa">
+              <p>UBICACI&Oacute;N</p>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3083.4422037949753!2d-3.2267739457325697!3d39.39150064446475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd69af036cec6af9%3A0x3cb32e283081ecee!2sIES%20Juan%20Bosco!5e0!3m2!1ses!2ses!4v1682613313155!5m2!1ses!2ses"
+                width="400"
+                height="300"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
-            <div class="mapa">
-                <h3>UBICACI&Oacute;N</h3>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3083.4422037949753!2d-3.2267739457325697!3d39.39150064446475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd69af036cec6af9%3A0x3cb32e283081ecee!2sIES%20Juan%20Bosco!5e0!3m2!1ses!2ses!4v1682613313155!5m2!1ses!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-        <img src="../assets/images/botonInicioPagina.webp" alt="Imagen cohete para volver al inicio" id="inicio" class="cohete">
-    </footer>
-
-    <script src="../js/pages.js"></script>
-</body>
-</html>
+          </div>
+        </footer>
+        <img
+          src="../assets/images/botonInicioPagina.webp"
+          alt="Imagen cohete para volver al inicio"
+          id="inicio"
+          class="cohete"
+        />
+        <script src="../js/saturno.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="../js/pages.js"></script>
+      </div>
+    </body>
+  </html>
+  
+    
