@@ -15,3 +15,9 @@ h1{
         0px 0px 55px #b0ebee,
         0px 0px 75px #b0ebee;
 }
+#btn1:hover{
+    background-image: url(../assets/images/Uranus.jpg);
+}
+#btn2:hover{
+    background-image: url(../assets/images/Sol.jpg);
+}

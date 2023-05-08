@@ -11,10 +11,8 @@
 
 body{
     margin: 1em 10% 1em 10%;
-    min-width: 400px;
     font-size: 1.2em;
     font-weight: 600;
-    letter-spacing: .03em;
     background: linear-gradient(
         to bottom,
         rgba(125, 125, 80, 0.4),
@@ -27,8 +25,6 @@ body{
 header{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2em;
     width: 100%;
 }
 
@@ -48,9 +44,18 @@ header{
     border-radius: 50%;
     border: 4px solid;
 }
-span{
+.logo span:nth-of-type(1){
     font-size: 1.6em;
-}
+  }
+  .logo span:nth-of-type(3){
+    font-size: 1.6em;
+  }
+  .logo span:nth-of-type(4){
+    font-size: 1.6em;
+  }
+  .logo span:nth-of-type(6){
+    font-size: 1.6em;
+  }
 .planet {
     animation: planet-rotate 10s linear infinite;
 }
@@ -68,34 +73,11 @@ span{
     }
 }
 
-
-.inicio{
-    width: fit-content;
-    font-size: 1.2em;
-    font-weight: 600;
-    letter-spacing: .1em;
-    padding: .3em;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px rgba(255, 166, 0, 1),
-                0px 0px 10px 0px rgba(213, 139, 0, 1),
-                0px 0px 10px 0px rgba(221, 144, 0, 1);
-}
-
-.inicio a{
-    color: black;
-    text-decoration: none;
-}
-
 .banderas{
+    height: fit-content;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: .5em;
-    background-color: rgba(51, 49, 47, 0.864);
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px rgba(255, 166, 0, 1),
-                0px 0px 10px 0px rgba(213, 139, 0, 1),
-                0px 0px 10px 0px rgba(221, 144, 0, 1);
 }
 
 .bandera_img{
@@ -169,7 +151,6 @@ h1{
 article{
     margin-top: 3em;
     padding: 1em;
-    width: fit-content;
     height: fit-content;
 
     border: 2px solid white;
@@ -191,9 +172,8 @@ li, #introduccion p{
 
 #introduccion{
     grid-area: introduccion;
-    text-align: center;
     padding: 1em;
-    width: 100%;
+    width: fit-content;
     height: fit-content;
     border: 2px solid white;
     border-radius: 53px 5px / 66px 5px; 
@@ -223,20 +203,8 @@ li, #introduccion p{
     display: none;
 }
 
-footer{
-    position: absolute;
-    left: 0;
-    width: 100%;
-    padding: 2.5em 0;
-    margin: 0;
-    color: white;
-    background-color: #333030;
-    box-shadow: 0px -1px 10px 0px rgba(255, 166, 0, 1),
-                0px -4px 15px 0px rgba(213, 139, 0, 1),
-                2px -4px 20px 1px rgba(221, 144, 0, 1);
-}
 
-.contenidoFooter{
+#contenidoFooter{
     display: flex;
     justify-content: space-evenly;
 }
@@ -253,7 +221,7 @@ footer{
 @media screen and (max-width: 800px) {
 
     body{
-        margin: 1em .5em;
+        margin: 0;
         font-size: initial;
     }
     section{
@@ -277,13 +245,6 @@ footer{
     #caracteristicas{
         margin-right: 0;
     }
-
-    .contenidoFooter{
-        display: grid;
-        grid-template-areas: 
-        "planetas creditos"
-        "mapa mapa";
-    }
     .enlacesPlanetas{
         grid-area: planetas;
     }
@@ -299,4 +260,172 @@ footer{
         width: fit-content;
         height: fit-content;
     }
+    #contenidoFooter{
+        flex-direction: column;
+      }
 }
+
+/*Edicion Edu*/
+#menu {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  #menu button {
+    font-size: 25px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding: 10px 15px;
+    animation: expanding-animation 4s infinite;
+    cursor: pointer;
+  }
+
+  @keyframes expanding-animation {
+    0% {
+      box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
+    }
+
+    50% {
+      box-shadow: 0px 0px 10px 5px rgb(197, 197, 197);
+    }
+
+    100% {
+      box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
+    }
+  }
+  .btn {
+    transition: 500ms;
+  }
+
+  #btn1:hover {
+    scale: 2;
+    background-image: url(../assets/images/Saturn.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    content: none;
+  }
+
+  #btn2:hover {
+    scale: 2;
+    background-image: url(../assets/images/Neptune.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    content: none;
+  }
+  a {
+    color: unset;
+    text-decoration: none;
+  }
+  @media only screen and (min-width: 1024px) {
+    article{
+        width: fit-content;
+    }
+    footer{
+      position: absolute;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      padding: 2.5em 0;
+      margin: 0;
+      background-color: #333030;
+      box-shadow: 0px -1px 10px 0px rgba(255, 166, 0, 1),0px -4px 15px 0px rgba(213, 139, 0, 1),2px -4px 20px 1px rgba(221, 144, 0, 1);
+    }
+  }
+  footer{
+    width: 100%;
+    padding: 2.5em 0;
+    margin: 0;
+    background-color: #333030;
+  }
+
+  .wrapper {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+  }
+  .wrapper a:active{
+    background-color: transparent;
+  }
+  .wrapper .icon {
+    position: relative;
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 10px;
+    width: 45px;
+    height: 45px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .wrapper .tipo{
+    position: absolute;
+    top: 0;
+    font-size: 20px;
+    background: #ffffff;
+    color: #111;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .wrapper .tipo::before {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .wrapper .icon:hover .tipo {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tipo {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  .wrapper .facebook:hover,
+  .wrapper .facebook:hover .tipo,
+  .wrapper .facebook:hover .tipo::before {
+    background: #1877f2;
+    color: #10141b;
+  }
+  .wrapper .twitter:hover,
+  .wrapper .twitter:hover .tipo,
+  .wrapper .twitter:hover .tipo::before {
+    background: #1da1f2;
+    color: #ffffff;
+  }
+  .wrapper .instagram:hover,
+  .wrapper .instagram:hover .tipo,
+  .wrapper .instagram:hover .tipo::before {
+    background: #e4405f;
+    color: #ffffff;
+  }
+  .wrapper .github:hover,
+  .wrapper .github:hover .tipo,
+  .wrapper .github:hover .tipo::before {
+    background: #333333;
+    color: #ffffff;
+  }
+  a {
+    color: unset;
+  }
+  

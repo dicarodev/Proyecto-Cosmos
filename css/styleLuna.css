@@ -38,3 +38,9 @@ h1{
         height: 12em;
     }
 }
+#btn1:hover{
+    background-image: url(../assets/images/Earth.jpg);
+}
+#btn2:hover{
+    background-image: url(../assets/images/Mars.jpg);
+}

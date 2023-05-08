@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="../css/styleUrano.css">
     <link rel="stylesheet" href="../css/styleLuna.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
 </head>
 <body>
     <header >
@@ -19,19 +23,6 @@
             <span>M</span>
             <span class="planet right">&#129680;</span>
             <span>S</span>
-        </div>
-        <div >
-            <button class="inicio">
-                <a href="../index.html">¿Volvemos a la nave?</a>
-            </button>
-        </div>
-        <div id="banderas" class="banderas">
-            <div class="bandera_item" data-language="es">
-                <img src="../assets/icons/es.svg" alt="Bandera de España para la traducción" class="bandera_img">
-            </div>
-            <div class="bandera_item" data-language="en">
-                <img src="../assets/icons/gb.svg" alt="Bandera de Gran Bretaña para la traducción" class="bandera_img">
-            </div>
         </div>
         <div id="logoCentro">
             <a href="https://www.iesjuanbosco.es" target="_blank"><img src="../assets/images/logoIESJuanBosco.webp" alt="Logo IES Juan Bosco"></a>
@@ -79,37 +70,59 @@
         </section>
     </main>
 
+    <div id="menu">
+        <button type="button" class="btn" id="btn1">Tierra</button>
+        <button
+          type="button"
+          class="btn"
+          id="btn2"
+          onclick="window.location.href='http://www.google.es'"
+        >
+          Marte
+        </button>
+      </div>
     <footer>
-        <div class="contenidoFooter">
-            <div class="enlacesPlanetas">
-                <p>CUERPOS DEL SISTEMA SOLAR</p>
-                <ul>
-                    <li><a href="">MERCURIO</a></li>
-                    <li><a href="">VENUS</a></li>
-                    <li><a href="">TIERRA</a></li>
-                    <li><a href="">MARTE</a></li>
-                    <li><a href="">JUPITER</a></li>
-                    <li><a href="">SATURNO</a></li>
-                    <li><a href="./urano.html">URANO</a></li>
-                    <li><a href="./neptuno.html">NEPTUNO</a></li>
-                    <li><a href="./luna.html">LA LUNA</a></li>
-                </ul>
-            </div>
-            <div class="creditos">
-                <p>CR&Eacute;DITOS/FORMULARIO???</p>
-                <ul>
-                    <li><a href="#"></a>EDU</li>
-                    <li><a href="#"></a>JORGE</li>
-                    <li><a href="#"></a>DIEGO</li>
-                </ul>
-            </div>
-            <div class="mapa">
-                <p>UBICACI&Oacute;N</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3083.4422037949753!2d-3.2267739457325697!3d39.39150064446475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd69af036cec6af9%3A0x3cb32e283081ecee!2sIES%20Juan%20Bosco!5e0!3m2!1ses!2ses!4v1682613313155!5m2!1ses!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+      <div id="contenidoFooter">
+        <div id="creditos">
+          <p>Credios</p>
         </div>
-        <img src="../assets/images/botonInicioPagina.webp" alt="Imagen cohete para volver al inicio" id="inicio" class="cohete">
+        <ul class="wrapper">
+          <li class="icon github">
+            <span class="tipo">Diego</span>
+            <span><i class="fab fa-github"></i></span>
+          </li>
+          <li class="icon github">
+            <span class="tipo">Jorge</span>
+            <span><i class="fab fa-github"></i></span>
+          </li>
+          <li class="icon github">
+            <span class="tipo">Eduardo</span>
+            <a href="wwww.google.es"
+              ><span><i class="fab fa-github"></i></span
+            ></a>
+          </li>
+        </ul>
+        <div class="">
+          <p>UBICACI&Oacute;N</p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3083.4422037949753!2d-3.2267739457325697!3d39.39150064446475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd69af036cec6af9%3A0x3cb32e283081ecee!2sIES%20Juan%20Bosco!5e0!3m2!1ses!2ses!4v1682613313155!5m2!1ses!2ses"
+            width="400"
+            height="300"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
     </footer>
+    <img
+      src="../assets/images/botonInicioPagina.webp"
+      alt="Imagen cohete para volver al inicio"
+      id="inicio"
+      class="cohete"
+    />
+
 
     <script src="../js/pages.js"></script>
 </body>
