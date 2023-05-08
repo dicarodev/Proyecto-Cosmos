@@ -14,7 +14,11 @@ body{
     min-width: 400px;
     font-size: 1.2em;
     font-weight: 600;
-    background: url(../assets/images/backgroundForm.webp);
+    background: linear-gradient(
+        to bottom,
+        rgba(125, 125, 80, 0.4),
+        rgba(53, 53, 108, 0.5)
+    ), url(../assets/images/tiro-angulo-fascinante-cielo-estrellado.webp);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -62,11 +66,33 @@ span{
     }
 }
 
+.inicio{
+    width: fit-content;
+    font-size: 1.2em;
+    font-weight: 600;
+    letter-spacing: .1em;
+    padding: .3em;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(255, 166, 0, 1),
+                0px 0px 10px 0px rgba(213, 139, 0, 1),
+                0px 0px 10px 0px rgba(221, 144, 0, 1);
+}
+
+.inicio a{
+    color: black;
+    text-decoration: none;
+}
+
 .banderas{
-    height: fit-content;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: .5em;
+    background-color: rgba(51, 49, 47, 0.864);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(255, 166, 0, 1),
+                0px 0px 10px 0px rgba(213, 139, 0, 1),
+                0px 0px 10px 0px rgba(221, 144, 0, 1);
 }
 
 .bandera_img{
@@ -80,24 +106,18 @@ span{
     width: 5em;
     border-radius: 50%;
 }
-#logoCentro img{
-    width: 5em;
-    border-radius: 50%;
-}
 
 h1{
     font-size: 5em; 
-    text-align: center;
-    color: #53daf5; 
+    line-height: normal;
+    color: #898bfd; 
     text-shadow: 
         0px 0px 5px rgba(255, 255, 255, 0.8), 
         0px 0px 10px rgba(255, 255, 255, 0.8), 
         0px 0px 15px rgba(255, 255, 255, 0.8),
-        0px 0px 20px rgb(120, 24, 255),
-        0px 0px 30px #c1f3f6,
-        0px 0px 40px #c1f3f6,
-        0px 0px 55px #c1f3f6;
-    margin-top: .5em;
+        0px 0px 20px rgb(120, 24, 255);
+    text-align: center;
+    margin: .5em 0;
 }
 
 .contenedorRanking{
@@ -108,16 +128,18 @@ h1{
 }
 #ranking{
     border: 2px solid white;
+    
+    background-color: #70B7C6;
+    border: 4px double #362D9F;
     border-radius: 5px 5px 40px 40px; 
-    background-color: #5ca9bedc;
-    box-shadow: 1px 3px 16px 11px rgba(119, 97, 128, 1),
-                1px 2px 14px 1px rgba(38, 39, 128, 1);
+    box-shadow: 0px 0px 10px 4px rgba(189, 119, 236, 1),
+                0px 0px 15px 5px rgba(189, 119, 236, 1);
     padding-bottom: 2em;
 }
 table{
     font-size: 1.2em;
     text-align: center;
-    
+    letter-spacing: .03em;
 }
 th{
     padding: 2em;

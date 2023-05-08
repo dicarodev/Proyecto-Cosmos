@@ -14,9 +14,15 @@ body{
     min-width: 400px;
     font-size: 1.2em;
     font-weight: 600;
-    background: url(../assets/images/backgroundForm.webp);
-    background-repeat:no-repeat;
-    background-size:cover;
+    letter-spacing: .03em;
+    line-height: 1.8em;
+    background: linear-gradient(
+        to bottom,
+        rgba(125, 125, 80, 0.4),
+        rgba(53, 53, 108, 0.5)
+    ), url(../assets/images/tiro-angulo-fascinante-cielo-estrellado.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header{
@@ -63,17 +69,51 @@ header{
     }
 }
 
-#logoCentro img{
-    width: 5em;
-    border-radius: 50%;
+.inicio{
+    width: fit-content;
+    font-size: 1.2em;
+    font-weight: 600;
+    letter-spacing: .1em;
+    padding: .3em;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(255, 166, 0, 1),
+                0px 0px 10px 0px rgba(213, 139, 0, 1),
+                0px 0px 10px 0px rgba(221, 144, 0, 1);
 }
+
+.inicio a{
+    color: black;
+    text-decoration: none;
+}
+
+.banderas{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5em;
+    background-color: rgba(51, 49, 47, 0.864);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(255, 166, 0, 1),
+                0px 0px 10px 0px rgba(213, 139, 0, 1),
+                0px 0px 10px 0px rgba(221, 144, 0, 1);
+}
+
+.bandera_img{
+    width: 2.5em;
+    height: 1.2em;
+    cursor: pointer;
+    display: block;
+}
+
 #logoCentro img{
     width: 5em;
     border-radius: 50%;
 }
 
+
 h1{
     font-size: 5em; 
+    line-height: normal;
     color: #898bfd; 
     text-shadow: 
         0px 0px 5px rgba(255, 255, 255, 0.8), 
@@ -157,8 +197,7 @@ span{
 
 .cronometro{
     margin: 3.5em 0;
-    padding: .5em 2em;
-    width: 15em;
+    padding: 1em 2em;
     background-color: #b1e3e7e3;
     border-radius: 10px;
     animation: parpadeoSombra 3s infinite linear;
