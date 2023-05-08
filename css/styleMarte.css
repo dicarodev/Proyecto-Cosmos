@@ -75,6 +75,7 @@ article, #introduccion{
     footer {
         border-top: 2px solid #FF5733;
         box-shadow: 0 0 50px 30px #FF4500; 
+        min-width: 500px;
         
       }
       

@@ -2,6 +2,9 @@
     font-family: "IndieFlower";
     src: url(../assets/fonts/IndieFlower-Regular.ttf);
 }
+*{
+  background-color: transparent;
+}
 #descripcionJupiter {
   text-align: center;
 }
@@ -65,6 +68,7 @@
 }
 
 body{
+  
     margin: 1em 10% 1em 10%;
     min-width: 450px;
     font-size: 1.4em;
@@ -76,6 +80,8 @@ body{
     ), url(../assets/images/tiro-angulo-fascinante-cielo-estrellado.webp);
     background-repeat: no-repeat;
     background-size: cover;
+    
+  
 }
 
 header{
@@ -256,6 +262,7 @@ li, #introduccion p{
 }
 
 footer{
+  min-width: 500px;
     position: absolute;
     left: 0;
     width: 100%;

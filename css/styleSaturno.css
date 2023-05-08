@@ -63,7 +63,7 @@ article, #introduccion{
 
 footer{
     box-shadow: 0 0 100px 5px rgba(206, 187, 138, 0.5);
-
+    min-width: 500px;
 }
 
 #btnEspanol,
