@@ -173,7 +173,7 @@ li, #introduccion p{
 #introduccion{
     grid-area: introduccion;
     padding: 1em;
-    width: fit-content;
+    width: 100%;
     height: fit-content;
     border: 2px solid white;
     border-radius: 53px 5px / 66px 5px; 
@@ -194,21 +194,57 @@ li, #introduccion p{
     grid-area: curiosidades;
 }
 
-/*Cohete regrasa al inicio de la página*/
-.cohete{
-    position: fixed;
-    bottom: 1em;
-    right: 5%;
-    cursor: pointer;
-    display: none;
+/*Edicion Edu*/
+#menu {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem;
+}
+#menu button {
+  font-size: 25px;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 1rem;
+  padding: 10px 15px;
+  animation: expanding-animation 4s infinite;
+  cursor: pointer;
 }
 
+@keyframes expanding-animation {
+  0% {
+    box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
+  }
 
-#contenidoFooter{
-    display: flex;
-    justify-content: space-evenly;
+  50% {
+    box-shadow: 0px 0px 10px 5px rgb(197, 197, 197);
+  }
+
+  100% {
+    box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
+  }
+}
+.btn {
+  transition: 500ms;
 }
 
+#btn1:hover {
+  scale: 2;
+  background-image: url(../assets/images/Saturn.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  content: none;
+}
+
+#btn2:hover {
+  scale: 2;
+  background-image: url(../assets/images/Neptune.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  content: none;
+}
 .enlacesPlanetas li{
     margin: 0 0 0 2.5em;
     list-style: disc;
@@ -218,214 +254,170 @@ li, #introduccion p{
     text-decoration: none;
 }
 
-@media screen and (max-width: 800px) {
-
-    body{
-        margin: 0;
-        font-size: initial;
-    }
-    section{
-        grid-template-areas: 
-        "planeta"
-        "introduccion"
-        "caracteristicas"
-        "curiosidades";
-    }
-    #planeta{
-        width: 15em;
-        height: 15em;
-    }
-    .planeta p{
-        font-size: 1.4em;
-    }
-    h1{
-        font-size: 5em; 
-    }
-
-    #caracteristicas{
-        margin-right: 0;
-    }
-    .enlacesPlanetas{
-        grid-area: planetas;
-    }
-    .pedidos{
-        grid-area: creditos;
-    }
-    .mapa{
-        grid-area: mapa;
-        justify-self: center;
-        margin-top: 2em;
-    }
-    .mapa iframe{
-        width: fit-content;
-        height: fit-content;
-    }
-    #contenidoFooter{
-        flex-direction: column;
-      }
+#contenidoFooter{
+  display: flex;
+  justify-content: space-evenly;
+}
+footer{
+  width: 100%;
+  padding: 2.5em 0;
+  margin: 0;
+  background-color: #333030;
+  box-shadow: 0px -1px 10px 0px rgba(255, 166, 0, 1),0px -4px 15px 0px rgba(213, 139, 0, 1),2px -4px 20px 1px rgba(221, 144, 0, 1);
 }
 
-/*Edicion Edu*/
-#menu {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-  #menu button {
-    font-size: 25px;
-    background-color: black;
-    color: white;
-    border: 1px solid white;
-    border-radius: 1rem;
-    padding: 10px 15px;
-    animation: expanding-animation 4s infinite;
-    cursor: pointer;
-  }
+a {
+  color: unset;
+  text-decoration: none;
+}
+.wrapper {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+.wrapper a:active{
+  background-color: transparent;
+}
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 45px;
+  height: 45px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .tipo{
+  position: absolute;
+  top: 0;
+  font-size: 20px;
+  background: #ffffff;
+  color: #111;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .tipo::before {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon:hover .tipo {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tipo {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tipo,
+.wrapper .facebook:hover .tipo::before {
+  background: #1877f2;
+  color: #10141b;
+}
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tipo,
+.wrapper .twitter:hover .tipo::before {
+  background: #1da1f2;
+  color: #ffffff;
+}
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tipo,
+.wrapper .instagram:hover .tipo::before {
+  background: #e4405f;
+  color: #ffffff;
+}
+.wrapper .github:hover,
+.wrapper .github:hover .tipo,
+.wrapper .github:hover .tipo::before {
+  background: #333333;
+  color: #ffffff;
+}
+a {
+  color: unset;
+}
 
-  @keyframes expanding-animation {
-    0% {
-      box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
-    }
+/*Cohete regrasa al inicio de la página*/
+.cohete{
+  position: fixed;
+  bottom: 1em;
+  right: 5%;
+  cursor: pointer;
+  display: none;
+}
 
-    50% {
-      box-shadow: 0px 0px 10px 5px rgb(197, 197, 197);
-    }
+@media screen and (max-width: 800px) {
 
-    100% {
-      box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
-    }
-  }
-  .btn {
-    transition: 500ms;
-  }
-
-  #btn1:hover {
-    scale: 2;
-    background-image: url(../assets/images/Saturn.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    content: none;
-  }
-
-  #btn2:hover {
-    scale: 2;
-    background-image: url(../assets/images/Neptune.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    content: none;
-  }
-  a {
-    color: unset;
-    text-decoration: none;
-  }
-  @media only screen and (min-width: 1024px) {
-    article{
-        width: fit-content;
-    }
-    footer{
-      position: absolute;
-      left: 0;
-      z-index: -1;
-      width: 100%;
-      padding: 2.5em 0;
+  body{
       margin: 0;
-      background-color: #333030;
-      box-shadow: 0px -1px 10px 0px rgba(255, 166, 0, 1),0px -4px 15px 0px rgba(213, 139, 0, 1),2px -4px 20px 1px rgba(221, 144, 0, 1);
+      font-size: initial;
+  }
+  section{
+      grid-template-areas: 
+      "planeta"
+      "introduccion"
+      "caracteristicas"
+      "curiosidades";
+  }
+  #planeta{
+      width: 15em;
+      height: 15em;
+  }
+  .planeta p{
+      font-size: 1.4em;
+  }
+  h1{
+      font-size: 5em; 
+  }
+
+  #caracteristicas{
+      margin-right: 0;
+  }
+  .mapa{
+      grid-area: mapa;
+      justify-self: center;
+      margin-top: 2em;
+  }
+  .mapa iframe{
+      width: fit-content;
+      height: fit-content;
+  }
+  #contenidoFooter{
+      flex-direction: column;
+      align-items: center;
     }
+}
+
+@media only screen and (min-width: 1024px) {
+  article{
+      width: fit-content;
   }
   footer{
+    position: absolute;
+    left: 0;
+    z-index: -1;
     width: 100%;
     padding: 2.5em 0;
     margin: 0;
     background-color: #333030;
   }
-
-  .wrapper {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-  }
-  .wrapper a:active{
-    background-color: transparent;
-  }
-  .wrapper .icon {
-    position: relative;
-    background: #ffffff;
-    border-radius: 50%;
-    padding: 15px;
-    margin: 10px;
-    width: 45px;
-    height: 45px;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  .wrapper .tipo{
-    position: absolute;
-    top: 0;
-    font-size: 20px;
-    background: #ffffff;
-    color: #111;
-    padding: 5px 8px;
-    border-radius: 5px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  .wrapper .tipo::before {
-    position: absolute;
-    content: "";
-    width: 8px;
-    height: 8px;
-    background: #ffffff;
-    bottom: -3px;
-    left: 50%;
-    transform: translate(-50%) rotate(45deg);
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  .wrapper .icon:hover .tipo {
-    top: -45px;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-  }
-  .wrapper .icon:hover span,
-  .wrapper .icon:hover .tipo {
-    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
-  }
-  .wrapper .facebook:hover,
-  .wrapper .facebook:hover .tipo,
-  .wrapper .facebook:hover .tipo::before {
-    background: #1877f2;
-    color: #10141b;
-  }
-  .wrapper .twitter:hover,
-  .wrapper .twitter:hover .tipo,
-  .wrapper .twitter:hover .tipo::before {
-    background: #1da1f2;
-    color: #ffffff;
-  }
-  .wrapper .instagram:hover,
-  .wrapper .instagram:hover .tipo,
-  .wrapper .instagram:hover .tipo::before {
-    background: #e4405f;
-    color: #ffffff;
-  }
-  .wrapper .github:hover,
-  .wrapper .github:hover .tipo,
-  .wrapper .github:hover .tipo::before {
-    background: #333333;
-    color: #ffffff;
-  }
-  a {
-    color: unset;
-  }
-  
+}
