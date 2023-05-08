@@ -1,0 +1,640 @@
+@font-face {
+    font-family: "IndieFlower";
+    src: url(../assets/fonts/IndieFlower-Regular.ttf);
+}
+*{
+  background-color: transparent;
+}
+#descripcionJupiter {
+  text-align: center;
+}
+#jupiter {
+  background: url(../assets/images/mapaJupiter.webp);
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: bottom;
+  box-shadow: inset 0 0 20px #000, inset -40px -10px 20px rgba(3, 32, 56, 0.7);
+
+  animation: jupiter 15s linear infinite;
+}
+#btnEspanol,
+#btnEnglish {
+  padding: 5px;
+  font-size: 14px;
+  background-color: transparent;
+  border: none;
+}
+
+.btn-small {
+  padding: 5px;
+  font-size: 14px;
+}
+
+#btnEspanol img,
+#btnEnglish img {
+  width: 40px;
+  height: 40px;
+}
+#centrar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contenido {
+  display: grid;
+  grid-template-areas:
+    "planetaContenido planetaContenido"
+    "introduccion introduccion"
+    "caracteristicas curiosidades";
+}
+#planetaContenido {
+  grid-area: planetaContenido;
+}
+@keyframes jupiter {
+  0% {
+    background-position-x: 0;
+}
+100% {
+    background-position-x: -1960px;
+}
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "IndieFlower";
+}
+
+body{
+  
+    margin: 1em 10% 1em 10%;
+    min-width: 450px;
+    font-size: 1.4em;
+    font-weight: 600;
+    background: linear-gradient(
+        to bottom,
+        rgba(125, 125, 80, 0.4),
+        rgba(53, 53, 108, 0.5)
+    ), url(../assets/images/tiro-angulo-fascinante-cielo-estrellado.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/*Estilos para el texto y la animación del logo*/
+.logo{
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+}
+.logo::after {
+    content: "";
+    position: relative;
+    z-index: -5;
+    left: -5.2em;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    border: 4px solid;
+}
+span{
+    font-size: 1.6em;
+}
+.planet {
+    animation: planet-rotate 10s linear infinite;
+}
+.planet.left {
+    font-size: 1.2em;
+    transform-origin: 156% 37%;
+}
+.planet.right {
+    font-size: 1.2em;
+    transform-origin: -55% 43%;
+}
+@keyframes planet-rotate {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+#logoCentro img{
+    width: 5em;
+    border-radius: 50%;
+}
+
+/*Estilos parte principal*/
+section{
+    display: grid;
+    margin-bottom: 5em;
+    grid-template-areas: 
+    "planeta planeta"
+    "introduccion introduccion"
+    "caracteristicas curiosidades";
+}
+
+.planeta{
+    grid-area: planeta;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#descripcionJupiter p{
+    font-size: 2em;
+    padding: .5em 0;
+    color: white;
+}
+h1{
+    font-size: 7em; 
+    color: #53daf5; 
+    text-shadow: 
+        0px 0px 5px rgba(255, 255, 255, 0.8), 
+        0px 0px 10px rgba(255, 255, 255, 0.8), 
+        0px 0px 15px rgba(255, 255, 255, 0.8),
+        0px 0px 20px rgb(120, 24, 255),
+        0px 0px 30px #c1f3f6,
+        0px 0px 40px #c1f3f6,
+        0px 0px 55px #c1f3f6;
+    padding-bottom: .5em;
+}
+
+/*Estilos imagen y animación del planeta*/
+#planeta{
+    width: 20em;
+    height: 20em;
+    border-radius: 50%;
+    background: url(../assets/images/mapaUrano.webp);
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 20px #000, inset -40px -10px 20px rgba(3, 32, 56, 0.7);
+    animation: rotate 20s linear infinite;
+    transform: rotateZ(43deg);
+}
+
+@keyframes rotate {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: -1960px;
+    }
+}
+
+article{
+    margin-top: 3em;
+    padding: 1em;
+    width: fit-content;
+    height: fit-content;
+    border: 2px solid white;
+    border-radius: 5px 5px 40px 40px; 
+    background-color: #b8e9f6ad;
+    box-shadow: 1px 3px 16px 11px rgba(119, 97, 128, 1),1px 2px 14px 1px rgba(38, 39, 128, 1);
+}
+
+article h2{
+    text-align: center;
+    font-size: 2em;
+    color: black;
+    text-shadow: 5px 2px 4px rgba(140, 77, 159, 1);
+}
+
+li, #introduccion p{
+    margin: 1em 0;
+    list-style: none;
+}
+
+#introduccion{
+    grid-area: introduccion;
+    justify-content: center;
+    text-align: center;
+    padding: 1em;
+    height: fit-content;
+    border: 2px solid white;
+    border-radius: 53px 5px / 66px 5px; 
+    background-color: #b8e9f6ad;
+    box-shadow: 1px 3px 16px 11px rgba(119, 97, 128, 1),1px 2px 14px 1px rgba(38, 39, 128, 1);
+    background-color: rgba(184, 233, 246, 0.8);
+    color: #0c0b0b;
+}
+
+#caracteristicas{
+    grid-area: caracteristicas;
+    margin-right: 3em;
+}
+
+#caracteristicas span{
+    font-size: 1em;
+    text-decoration: underline;
+}
+
+#curiosidades{
+    grid-area: curiosidades;
+}
+
+/* Animacion boton cohete regrasa al inicio de la página */
+.cohete{
+    position: fixed;
+    bottom: 1em;
+    right: 7%;
+    cursor: pointer;
+    display: none;
+}
+
+@keyframes miOrbita {
+    from  {
+        transform: translateY(0);
+    }
+    to    {
+        transform: translateY(-100%);
+    }
+}
+
+.miOrbita{
+    animation: miOrbita 2s linear;
+}
+
+footer{
+  min-width: 500px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 2.5em 0;
+    margin: 0;
+    color: white;
+    background-color: #333030;
+    box-shadow: 0 0 80px 10px #9eb6b6;
+    text-align: center;
+}
+
+footer p{
+    font-size: 1.2em;
+    margin-bottom:0.5em;
+}
+
+/* Estilos para la sección de navegación */
+nav{
+    margin-top: 1em;
+    text-align: center;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 0 1em;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover{
+    color: #53daf5;
+}
+
+/* Estilos para la sección de astronauta */
+#astronauta{
+    height: 16em;
+    background: url(../assets/images/nave2.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+@media screen and (max-width: 800px) {
+    #astronauta{
+        height: 12em;
+    }
+
+}
+
+#jupiter{
+    background: url(../assets/images/mapaJupiter.webp);
+    transform: none;
+}
+
+h1{
+    color: #9eb6b6; 
+   
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 1), 0px 0px 10px rgba(255, 255, 255, 1), 0px 0px 15px rgba(255, 255, 255, 1), 2px -16px 10px rgba(221, 176, 141), 7px -16px 10px rgba(221, 176, 141), -19px 3px 10px rgba(221, 176, 141), 2px 16px 10px rgb(221, 176, 141), 0px 0px 75px rgb(255, 210, 112);
+
+
+}
+#introduccion{
+    background-color: rgba(184, 233, 246, 0.8);
+    color: #0c0b0b;
+}
+article, #introduccion{
+    border: 2px solid #9eb6b6;
+    
+}
+
+footer {
+    box-shadow: 0 0 80px 10px #9eb6b6;
+  }
+
+@keyframes rotate{
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: -1070px;
+    }
+}
+@media only screen and (min-width: 1024px) {
+  footer {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    padding: 2.5em 0;
+    margin: 0;
+    background-color: #333030;
+    box-shadow: 0px -1px 10px 0px rgba(255, 166, 0, 1),
+      0px -4px 15px 0px rgba(213, 139, 0, 1),
+      2px -4px 20px 1px rgba(221, 144, 0, 1);
+  }
+
+  #menu {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  #menu button {
+    font-size: 25px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding: 10px 15px;
+    animation: expanding-animation 4s infinite;
+    cursor: pointer;
+  }
+
+  @keyframes expanding-animation {
+    0% {
+      box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
+    }
+
+    50% {
+      box-shadow: 0px 0px 10px 5px rgb(197, 197, 197);
+    }
+
+    100% {
+      box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
+    }
+  }
+
+  .btn {
+    transition: 500ms;
+  }
+
+  #btn1:hover {
+    scale: 2;
+    background-image: url(../assets/images/marteEstrellado.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    content: none;
+  }
+
+  #btn2:hover {
+    scale: 2;
+    background-image: url(../assets/images/saturnoEstrellado.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    content: none;
+  }
+  a {
+    color: unset;
+    text-decoration: none;
+  }
+}
+#contenidoFooter {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer {
+  margin: 0;
+  background-color: #333030;
+}
+@media only screen and (max-width: 767px) {
+  body {
+    margin: 0;
+    font-size: 1em;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  #contenido {
+    display: grid;
+    grid-template-areas:
+      "planetaContenido"
+      "introduccion"
+      "caracteristicas"
+      "curiosidades";
+  }
+  #planetaContenido {
+    grid-area: planetaContenido;
+  }
+  #introducion {
+    grid-area: introducion;
+  }
+  #curiosidades {
+    grid-area: curiosidades;
+    margin-top: 1rem;
+  }
+  #caracteristicas {
+    grid-area: caracteristicas;
+    margin-top: 1.5rem;
+    margin-right: 0em;
+  }
+  #jupiter {
+    height: 300px;
+    width: 300px;
+  }
+  #contenidoFooter {
+    display: grid;
+    grid-template-areas:
+      "creditos"
+      "wrapper"
+      "mapa";
+  }
+  #creditos {
+    grid-area: creditos;
+  }
+  .wrapper {
+    grid-area: wrapper;
+  }
+  #mapa {
+    grid-area: mapa;
+  }
+  #contenidoFooter iframe {
+    width: fit-content;
+    height: fit-content;
+  }
+
+  #menu {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  #menu button {
+    font-size: 25px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding: 10px 15px;
+    animation: expanding-animation 4s infinite;
+    cursor: pointer;
+  }
+
+  @keyframes expanding-animation {
+    0% {
+      box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
+    }
+
+    50% {
+      box-shadow: 0px 0px 10px 5px rgb(197, 197, 197);
+    }
+
+    100% {
+      box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
+    }
+  }
+
+  .btn {
+    transition: 500ms;
+  }
+
+  #btn1:hover {
+    scale: 2;
+    background-image: url(../assets/img/2838662.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    content: none;
+  }
+
+  #btn2:hover {
+    scale: 2;
+    background-image: url(../assets/img/1771185.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    content: none;
+  }
+  a {
+    color: unset;
+    text-decoration: none;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+}
+.wrapper {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+.wrapper a:active {
+  background-color: transparent;
+}
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 45px;
+  height: 45px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .tipo {
+  position: absolute;
+  top: 0;
+  font-size: 20px;
+  background: #ffffff;
+  color: #111;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .tipo::before {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon:hover .tipo {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tipo {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tipo,
+.wrapper .facebook:hover .tipo::before {
+  background: #1877f2;
+  color: #10141b;
+}
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tipo,
+.wrapper .twitter:hover .tipo::before {
+  background: #1da1f2;
+  color: #ffffff;
+}
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tipo,
+.wrapper .instagram:hover .tipo::before {
+  background: #e4405f;
+  color: #ffffff;
+}
+.wrapper .github:hover,
+.wrapper .github:hover .tipo,
+.wrapper .github:hover .tipo::before {
+  background: #333333;
+  color: #ffffff;
+}
+a {
+  color: unset;
+}
