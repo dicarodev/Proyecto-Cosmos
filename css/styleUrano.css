@@ -1,197 +1,221 @@
 @font-face {
-    font-family: "IndieFlower";
-    src: url(../assets/fonts/IndieFlower-Regular.ttf);
-}
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "IndieFlower";
+  font-family: "IndieFlower";
+  src: url(../assets/fonts/IndieFlower-Regular.ttf);
 }
 
-body{
-    margin: 1em 10% 1em 10%;
-    font-size: 1.2em;
-    font-weight: 600;
-    background: linear-gradient(
-        to bottom,
-        rgba(125, 125, 80, 0.4),
-        rgba(53, 53, 108, 0.5)
-    ), url(../assets/images/tiro-angulo-fascinante-cielo-estrellado.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "IndieFlower";
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+body {
+  margin: 1em 10% 1em 10%;
+  font-size: 1.2em;
+  font-weight: 600;
+  background: url(../assets/images/background2.webp);
+  background-repeat: repeat-y;
+  background-size: cover;
+  animation: backgroung 200s linear infinite;
+}
+
+@keyframes backgroung {
+  0% {
+    background-position-y: 0;
+  }
+
+  100% {
+    background-position-y: -3646px;
+  }
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 /*Estilos para el texto y la animación del logo*/
-.logo{
-    display: flex;
-    align-items: center;
-    color: white;
+.logo {
+  display: flex;
+  align-items: center;
+  color: white;
 }
+
 .logo::after {
-    content: "";
-    position: relative;
-    z-index: -5;
-    left: -5.2em;
-    width: 3em;
-    height: 3em;
-    border-radius: 50%;
-    border: 4px solid;
+  content: "";
+  position: relative;
+  z-index: -5;
+  left: -5.2em;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  border: 4px solid;
 }
-.logo span:nth-of-type(1){
-    font-size: 1.6em;
-  }
-  .logo span:nth-of-type(3){
-    font-size: 1.6em;
-  }
-  .logo span:nth-of-type(4){
-    font-size: 1.6em;
-  }
-  .logo span:nth-of-type(6){
-    font-size: 1.6em;
-  }
+
+.logo span:nth-of-type(1) {
+  font-size: 1.6em;
+}
+
+.logo span:nth-of-type(3) {
+  font-size: 1.6em;
+}
+
+.logo span:nth-of-type(4) {
+  font-size: 1.6em;
+}
+
+.logo span:nth-of-type(6) {
+  font-size: 1.6em;
+}
+
 .planet {
-    animation: planet-rotate 10s linear infinite;
+  animation: planet-rotate 10s linear infinite;
 }
+
 .planet.left {
-    font-size: 1.2em;
-    transform-origin: 156% 37%;
+  font-size: 1.2em;
+  transform-origin: 156% 37%;
 }
+
 .planet.right {
-    font-size: 1.2em;
-    transform-origin: -55% 43%;
+  font-size: 1.2em;
+  transform-origin: -55% 43%;
 }
+
 @keyframes planet-rotate {
-    to {
-        transform: rotate(1turn);
-    }
+  to {
+    transform: rotate(1turn);
+  }
 }
 
-.banderas{
-    height: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.banderas {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.bandera_img{
-    width: 2.5em;
-    height: 1.2em;
-    cursor: pointer;
-    display: block;
+.bandera_img {
+  width: 2.5em;
+  height: 1.2em;
+  cursor: pointer;
+  display: block;
 }
 
-#logoCentro img{
-    width: 5em;
-    border-radius: 50%;
+#logoCentro img {
+  width: 5em;
+  border-radius: 50%;
 }
 
 /*Estilos parte principal*/
-section{
-    display: grid;
-    margin-bottom: 5em;
-    grid-template-areas: 
+section {
+  display: grid;
+  margin-bottom: 5em;
+  grid-template-areas:
     "planeta planeta"
     "introduccion introduccion"
     "caracteristicas curiosidades";
 }
 
-.planeta{
-    grid-area: planeta;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.planeta {
+  grid-area: planeta;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.planeta p{
-    font-size: 2em;
-    padding: 1em 0;
-    color: #ffffff;
+
+.planeta p {
+  font-size: 2em;
+  padding: 1em 0;
+  color: #ffffff;
 }
-h1{
-    font-size: 7em; 
-    color: #53daf5; 
-    text-shadow: 
-        0px 0px 5px rgba(255, 255, 255, 0.8), 
-        0px 0px 10px rgba(255, 255, 255, 0.8), 
-        0px 0px 15px rgba(255, 255, 255, 0.8),
-        0px 0px 20px rgb(120, 24, 255),
-        0px 0px 30px #c1f3f6,
-        0px 0px 40px #c1f3f6,
-        0px 0px 55px #c1f3f6;
-    padding-bottom: .5em;
+
+h1 {
+  font-size: 7em;
+  color: #53daf5;
+  text-shadow:
+    0px 0px 5px rgba(255, 255, 255, 0.8),
+    0px 0px 10px rgba(255, 255, 255, 0.8),
+    0px 0px 15px rgba(255, 255, 255, 0.8),
+    0px 0px 20px rgb(120, 24, 255),
+    0px 0px 30px #c1f3f6,
+    0px 0px 40px #c1f3f6,
+    0px 0px 55px #c1f3f6;
+  padding-bottom: .5em;
 }
 
 /*Estilos imagen y animación del planeta*/
-#planeta{
-    width: 20em;
-    height: 20em;
-    border-radius: 50%;
-    background: url(../assets/images/mapaUrano.webp);
-    background-size: cover;
-    background-position: center;
-    box-shadow: inset 0 0 20px #000, inset -40px -10px 20px rgba(3, 32, 56, 0.7);
-    animation: rotate 20s linear infinite;
-    transform: rotateZ(43deg);
-}
-@keyframes rotate{
-    0% {
-        background-position-x: 0;
-    }
-    100% {
-        background-position-x: -1960px;
-    }
+#planeta {
+  width: 20em;
+  height: 20em;
+  border-radius: 50%;
+  background: url(../assets/images/mapasPlanetas/mapaUrano.webp);
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 20px #000, inset -40px -10px 20px rgba(3, 32, 56, 0.7);
+  animation: rotate 20s linear infinite;
+  transform: rotateZ(43deg);
 }
 
-article{
-    margin-top: 3em;
-    padding: 1em;
-    height: fit-content;
+@keyframes rotate {
+  0% {
+    background-position-x: 0;
+  }
 
-    border: 2px solid white;
-    border-radius: 5px 5px 40px 40px; 
-    background-color: #b8e9f6ad;
-    box-shadow: 1px 3px 16px 11px rgba(119, 97, 128, 1),1px 2px 14px 1px rgba(38, 39, 128, 1);
-}
-article h2{
-    text-align: center;
-    font-size: 2em;
-    color: black;
-    text-shadow: 5px 2px 4px rgba(140, 77, 159, 1);
+  100% {
+    background-position-x: -1960px;
+  }
 }
 
-li, #introduccion p{
-    margin: 1em 0;
-    list-style: none;
+article {
+  margin-top: 3em;
+  padding: 1em;
+  height: fit-content;
+
+  border: 2px solid white;
+  border-radius: 5px 5px 40px 40px;
+  background-color: #b8e9f6e5;
+  box-shadow: 1px 3px 16px 11px rgba(119, 97, 128, 1), 1px 2px 14px 1px rgba(38, 39, 128, 1);
 }
 
-#introduccion{
-    grid-area: introduccion;
-    padding: 1em;
-    width: 100%;
-    height: fit-content;
-    border: 2px solid white;
-    border-radius: 53px 5px / 66px 5px; 
-    background-color: #b8e9f6ad;
-    box-shadow: 1px 3px 16px 11px rgba(119, 97, 128, 1),1px 2px 14px 1px rgba(38, 39, 128, 1);
+article h2 {
+  text-align: center;
+  font-size: 2em;
+  color: black;
+  text-shadow: 5px 2px 4px rgba(140, 77, 159, 1);
 }
 
-#caracteristicas{
-    grid-area: caracteristicas;
-    margin-right: 3em;
-}
-#caracteristicas span{
-    font-size: 1em;
-    text-decoration: underline;
+li,
+#introduccion p {
+  margin: 1em 0;
+  list-style: none;
 }
 
-#curiosidades{
-    grid-area: curiosidades;
+#introduccion {
+  grid-area: introduccion;
+  text-align: center;
+  padding: 1em;
+  width: 100%;
+  height: fit-content;
+  border: 2px solid white;
+  border-radius: 53px 5px / 66px 5px;
+  background-color: #b8e9f6e5;
+  box-shadow: 1px 3px 16px 11px rgba(119, 97, 128, 1), 1px 2px 14px 1px rgba(38, 39, 128, 1);
+}
+
+#caracteristicas {
+  grid-area: caracteristicas;
+  margin-right: 3em;
+}
+
+#caracteristicas span {
+  font-size: 1em;
+  text-decoration: underline;
+}
+
+#curiosidades {
+  grid-area: curiosidades;
 }
 
 /*Edicion Edu*/
@@ -200,6 +224,7 @@ li, #introduccion p{
   justify-content: space-between;
   margin: 3rem;
 }
+
 #menu button {
   font-size: 25px;
   background-color: black;
@@ -224,13 +249,14 @@ li, #introduccion p{
     box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
   }
 }
+
 .btn {
   transition: 500ms;
 }
 
 #btn1:hover {
   scale: 2;
-  background-image: url(../assets/images/Saturn.jpg);
+  background-image: url(../assets/images/imagesNav/6saturno.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -239,45 +265,51 @@ li, #introduccion p{
 
 #btn2:hover {
   scale: 2;
-  background-image: url(../assets/images/Neptune.jpg);
+  background-image: url(../assets/images/imagesNav/8neptuno.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   content: none;
 }
-.enlacesPlanetas li{
-    margin: 0 0 0 2.5em;
-    list-style: disc;
-}
-.enlacesPlanetas a{
-    color: #ffff;
-    text-decoration: none;
+
+.enlacesPlanetas li {
+  margin: 0 0 0 2.5em;
+  list-style: disc;
 }
 
-#contenidoFooter{
+.enlacesPlanetas a {
+  color: #ffff;
+  text-decoration: none;
+}
+
+#contenidoFooter {
   display: flex;
   justify-content: space-evenly;
 }
-footer{
+
+footer {
   width: 100%;
   padding: 2.5em 0;
   margin: 0;
   background-color: #333030;
-  box-shadow: 0px -1px 10px 0px rgba(255, 166, 0, 1),0px -4px 15px 0px rgba(213, 139, 0, 1),2px -4px 20px 1px rgba(221, 144, 0, 1);
+  box-shadow: 0px -1px 10px 0px rgba(255, 166, 0, 1), 0px -4px 15px 0px rgba(213, 139, 0, 1), 2px -4px 20px 1px rgba(221, 144, 0, 1);
 }
 
 a {
   color: unset;
   text-decoration: none;
 }
+
 .wrapper {
   display: flex;
   list-style: none;
   justify-content: center;
 }
-.wrapper a:active{
+
+.wrapper a:active {
   background-color: transparent;
 }
+
 .wrapper .icon {
   position: relative;
   background: #ffffff;
@@ -294,7 +326,8 @@ a {
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-.wrapper .tipo{
+
+.wrapper .tipo {
   position: absolute;
   top: 0;
   font-size: 20px;
@@ -307,6 +340,7 @@ a {
   pointer-events: none;
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+
 .wrapper .tipo::before {
   position: absolute;
   content: "";
@@ -318,100 +352,115 @@ a {
   transform: translate(-50%) rotate(45deg);
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+
 .wrapper .icon:hover .tipo {
   top: -45px;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
+
 .wrapper .icon:hover span,
 .wrapper .icon:hover .tipo {
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
 }
+
 .wrapper .facebook:hover,
 .wrapper .facebook:hover .tipo,
 .wrapper .facebook:hover .tipo::before {
   background: #1877f2;
   color: #10141b;
 }
+
 .wrapper .twitter:hover,
 .wrapper .twitter:hover .tipo,
 .wrapper .twitter:hover .tipo::before {
   background: #1da1f2;
   color: #ffffff;
 }
+
 .wrapper .instagram:hover,
 .wrapper .instagram:hover .tipo,
 .wrapper .instagram:hover .tipo::before {
   background: #e4405f;
   color: #ffffff;
 }
+
 .wrapper .github:hover,
 .wrapper .github:hover .tipo,
 .wrapper .github:hover .tipo::before {
   background: #333333;
   color: #ffffff;
 }
+
 a {
   color: unset;
 }
 
 /*Cohete regrasa al inicio de la página*/
-.cohete{
+.cohete {
   position: fixed;
   bottom: 1em;
-  right: 5%;
+  right: 2%;
   cursor: pointer;
   display: none;
 }
 
 @media screen and (max-width: 800px) {
 
-  body{
-      margin: 0;
-      font-size: initial;
+  body {
+    margin: 0;
+    font-size: initial;
   }
-  section{
-      grid-template-areas: 
+  
+  section {
+    grid-template-areas:
       "planeta"
       "introduccion"
       "caracteristicas"
       "curiosidades";
   }
-  #planeta{
-      width: 15em;
-      height: 15em;
-  }
-  .planeta p{
-      font-size: 1.4em;
-  }
-  h1{
-      font-size: 5em; 
+
+  #planeta {
+    width: 15em;
+    height: 15em;
   }
 
-  #caracteristicas{
-      margin-right: 0;
+  .planeta p {
+    font-size: 1.4em;
   }
-  .mapa{
-      grid-area: mapa;
-      justify-self: center;
-      margin-top: 2em;
+
+  h1 {
+    font-size: 5em;
   }
-  .mapa iframe{
-      width: fit-content;
-      height: fit-content;
+
+  #caracteristicas {
+    margin-right: 0;
   }
-  #contenidoFooter{
-      flex-direction: column;
-      align-items: center;
-    }
+
+  .mapa {
+    grid-area: mapa;
+    justify-self: center;
+    margin-top: 2em;
+  }
+
+  .mapa iframe {
+    width: fit-content;
+    height: fit-content;
+  }
+
+  #contenidoFooter {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
-  article{
-      width: fit-content;
+  article {
+    width: fit-content;
   }
-  footer{
+
+  footer {
     position: absolute;
     left: 0;
     z-index: -1;

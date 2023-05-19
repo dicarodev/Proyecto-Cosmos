@@ -2,170 +2,29 @@
   font-family: "ZingRust";
   src: url(../assets/fonts/zing.rust-demo-base.otf);
 }
-@font-face {
-  font-family: "Delicious";
-  src: url(../assets/fonts/DeliciousHandrawn-Regular.ttf);
-}
-@font-face {
-  font-family: "IndieFlower";
-  src: url(../assets/fonts/IndieFlower-Regular.ttf);
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-  font-family: "IndieFlower";
-}
-.subrayado {
-  text-decoration: underline;
-  font-size: 1.6rem;
-}
-body{
-  margin: 1em 10% 1em 10%;
-  font-size: 1.4em;
-  font-weight: 600;
-  background: linear-gradient(
-      to bottom,
-      rgba(125, 125, 80, 0.4),
-      rgba(53, 53, 108, 0.5)
-  ), url(../assets/img/tiro-angulo-fascinante-cielo-estrellado.jpg);
-  background-size: cover;
-}
-#centrar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-h1{
-  font-family: "ZingRust";
-  text-shadow: 3px 3px 4px rgba(136, 66, 15, 1),-1px 3px 9px rgba(255, 128, 0, 1);
-  color: #3c396d;
-  font-size: 8rem;
-}
-#descripcionVenus{
-  text-align: center;
-}
-header {
-  display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-#contenido{
+section {
   display: grid;
-  grid-template-areas: "planetaContenido planetaContenido"
-  "introduccion introduccion"
-  "caracteristicas curiosidades";
+  grid-template-areas: 
+    "planetaContenido planetaContenido"
+    "introduccion introduccion"
+    "caracteristicas curiosidades";
 }
-#planetaContenido{
+
+#planetaContenido {
   grid-area: planetaContenido;
-  color: white;
-}
-#curiosidades{
-  grid-area: curiosidades;
-}
-.logo{
   display: flex;
+  flex-direction: column;
   align-items: center;
-  color: white;
-}
-.logo::after {
-  content: "";
-  position: relative;
-  z-index: -5;
-  left: -5.2em;
-  width: 3em;
-  height: 3em;
-  border-radius: 50%;
-  border: 4px solid;
-}
-.logo span:nth-of-type(1){
-  font-size: 1.6em;
-}
-.logo span:nth-of-type(3){
-  font-size: 1.6em;
-}
-.logo span:nth-of-type(4){
-  font-size: 1.6em;
-}
-.logo span:nth-of-type(6){
-  font-size: 1.6em;
-}
-.planet {
-  animation: planet-rotate 10s linear infinite;
-}
-.planet.left {
-  font-size: 1.2em;
-  transform-origin: 156% 37%;
-}
-.planet.right {
-  font-size: 1.2em;
-  transform-origin: -55% 43%;
-}
-@keyframes planet-rotate {
-  to {
-      transform: rotate(1turn);
-  }
-}
-
-#logoCentro img{
-  width: 5em;
-  border-radius: 50%;
-}
-main {
-  color: blacks;
-}
-p,li{
-  font-family: IndieFlower;
-}
-#introduccion{
-  grid-area: introduccion;
-  padding: 1em;
-  width: fit-content;
-  height: fit-content;
-  border: 2px solid white;
-  border-radius: 53px 5px / 66px 5px; 
-  background-color: #b8e9f6ad;
-  box-shadow: 1px 3px 16px 11px rgba(119, 97, 128, 1),1px 2px 14px 1px rgba(38, 39, 128, 1);
-}
-article{
-  margin-top: 3em;
-  padding: 1em;
-  width: fit-content;
-  height: fit-content;
-
-  border: 2px solid white;
-  border-radius: 5px 5px 40px 40px; 
-  background-color: #b8e9f6ad;
-  box-shadow: 1px 3px 16px 11px rgba(119, 97, 128, 1),1px 2px 14px 1px rgba(38, 39, 128, 1);
-}
-article h2{
-  text-align: center;
-  font-size: 2em;
-  color: black;
-  text-shadow: 5px 2px 4px rgba(140, 77, 159, 1);
-}
-#caracteristicas{
-  grid-area: caracteristicas;
-  margin-right: 3em;
 }
 #venus {
-  background: url(../assets/img/mapa-grande-por-satelite-detallada-de-venus.jpg);
-  width: 400px;
-  height: 400px;
+  background: url(../assets/images/mapasPlanetas/mapaVenus.webp);
+  width: 20em;
+  height: 20em;
   border-radius: 50%;
   background-size: cover;
   background-position: center;
   box-shadow: inset 0 0 20px #000, inset -40px -10px 20px rgba(3, 32, 56, 0.7);
-  animation: venus 5s linear infinite;
-}
-
-.cohete{
-  position: fixed;
-  bottom: 1em;
-  right: 5%;
-  cursor: pointer;
-  display: none;
+  animation: venus 15s linear infinite;
 }
 @keyframes venus {
   0% {
@@ -176,12 +35,39 @@ article h2{
     background-position-x: -800px;
   }
 }
-@media only screen and (max-width: 767px){
-  body{
-    margin: 0;
-    font-size: 1.2em;
+#planetaContenido p {
+  font-size: 2em;
+  padding: 1em 0;
+  color: #ffffff;
 }
-  #contenido{
+h1{
+  font-family: "ZingRust";
+  text-shadow: 3px 3px 4px rgba(136, 66, 15, 1),-1px 3px 9px rgba(255, 128, 0, 1);
+  color: #3c396d;
+}
+
+#caracteristicas p {
+  margin: 1em 0;
+}
+
+#curiosidades p {
+  margin: 1em 0;
+}
+
+#introduccion{
+  margin-top: 0;
+}
+
+#btn1:hover {
+  background-image: url(../assets/images/imagesNav/1mercurio.webp);
+}
+
+#btn2:hover {
+  background-image: url(../assets/images/imagesNav/3tierra.webp);
+}
+@media screen and (max-width: 800px) {
+
+  section {
     display: grid;
     grid-template-areas:
       "planetaContenido"
@@ -189,258 +75,14 @@ article h2{
       "caracteristicas"
       "curiosidades";
   }
-  #planetaContenido{
-    grid-area: planetaContenido;
-  }
-  #caracteristicas{
-    grid-area: caracteristicas;
-    margin: 0;
-    margin-top: 1rem;
-  }
-  #curiosidades{
-    grid-area:curiosidades;
-    margin-top: 1rem;
-  }
-  #introduccion{
-    grid-area: introduccion;
-  }
-  #venus{
-    height: 300px;
-    width: 300px;
-  }
-  #contenidoFooter{
-    flex-direction: column;
-  }
-  #menu {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-  #menu button {
-    font-size: 25px;
-    background-color: black;
-    color: white;
-    border: 1px solid white;
-    border-radius: 1rem;
-    padding: 10px 15px;
-    animation: expanding-animation 4s infinite;
-    cursor: pointer;
+
+  #planetaContenido p {
+    font-size: 1.4em;
   }
 
-  @keyframes expanding-animation {
-    0% {
-      box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
-    }
-
-    50% {
-      box-shadow: 0px 0px 10px 5px rgb(197, 197, 197);
-    }
-
-    100% {
-      box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
-    }
-  }
-  .btn {
-    transition: 500ms;
+  #tierra {
+    height: 15em;
+    width: 15em;
   }
 
-  #btn1:hover {
-    scale: 2;
-    background-image: url("https://wallpaperaccess.com/full/527447.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    content: none;
-  }
-
-  #btn2:hover {
-    scale: 2;
-    background-image: url(../assets/img/52268.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    content: none;
-  }
-  a {
-    color: unset;
-    text-decoration: none;
-  }
-  
-}
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  body{
-    margin: 0;
-    padding: 0;
-  }
-  p,li{
-    text-align: center;
-  }
-}
-
-
-@media only screen and (min-width: 1024px) {
-  footer{
-    position: absolute;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    padding: 2.5em 0;
-    margin: 0;
-    background-color: #333030;
-    box-shadow: 0px -1px 10px 0px rgba(255, 166, 0, 1),0px -4px 15px 0px rgba(213, 139, 0, 1),2px -4px 20px 1px rgba(221, 144, 0, 1);
-  }
-
-  #menu {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-  #menu button {
-    font-size: 25px;
-    background-color: black;
-    color: white;
-    border: 1px solid white;
-    border-radius: 1rem;
-    padding: 10px 15px;
-    animation: expanding-animation 4s infinite;
-    cursor: pointer;
-  }
-
-  @keyframes expanding-animation {
-    0% {
-      box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
-    }
-
-    50% {
-      box-shadow: 0px 0px 10px 5px rgb(197, 197, 197);
-    }
-
-    100% {
-      box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
-    }
-  }
-
-
-  .btn {
-    transition: 500ms;
-  }
-
-  #btn1:hover {
-    scale: 2;
-    background-image: url("https://wallpaperaccess.com/full/527447.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    content: none;
-  }
-
-  #btn2:hover {
-    scale: 2;
-    background-image: url(../assets/img/52268.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    content: none;
-  }
-  a {
-    color: unset;
-    text-decoration: none;
-  }
-}
-#contenidoFooter{
-  display: flex;
-  justify-content: space-evenly;
-}
-footer{
-  width: 100%;
-  padding: 2.5em 0;
-  margin: 0;
-  background-color: #333030;
-}
-.wrapper {
-  display: flex;
-  list-style: none;
-  justify-content: center;
-}
-.wrapper a:active{
-  background-color: transparent;
-}
-.wrapper .icon {
-  position: relative;
-  background: #ffffff;
-  border-radius: 50%;
-  padding: 15px;
-  margin: 10px;
-  width: 45px;
-  height: 45px;
-  font-size: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-.wrapper .tipo{
-  position: absolute;
-  top: 0;
-  font-size: 20px;
-  background: #ffffff;
-  color: #111;
-  padding: 5px 8px;
-  border-radius: 5px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-.wrapper .tipo::before {
-  position: absolute;
-  content: "";
-  width: 8px;
-  height: 8px;
-  background: #ffffff;
-  bottom: -3px;
-  left: 50%;
-  transform: translate(-50%) rotate(45deg);
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-.wrapper .icon:hover .tipo {
-  top: -45px;
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-.wrapper .icon:hover span,
-.wrapper .icon:hover .tipo {
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
-}
-.wrapper .facebook:hover,
-.wrapper .facebook:hover .tipo,
-.wrapper .facebook:hover .tipo::before {
-  background: #1877f2;
-  color: #10141b;
-}
-.wrapper .twitter:hover,
-.wrapper .twitter:hover .tipo,
-.wrapper .twitter:hover .tipo::before {
-  background: #1da1f2;
-  color: #ffffff;
-}
-.wrapper .instagram:hover,
-.wrapper .instagram:hover .tipo,
-.wrapper .instagram:hover .tipo::before {
-  background: #e4405f;
-  color: #ffffff;
-}
-.wrapper .github:hover,
-.wrapper .github:hover .tipo,
-.wrapper .github:hover .tipo::before {
-  background: #333333;
-  color: #ffffff;
-}
-a {
-  color: unset;
 }

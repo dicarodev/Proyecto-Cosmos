@@ -2,29 +2,43 @@
     font-family: "IndieFlower";
     src: url(../assets/fonts/IndieFlower-Regular.ttf);
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "IndieFlower";
 }
 
-body{
+body {
     margin: 1em 10% 1em 10%;
     font-size: 1.2em;
     font-weight: 600;
     letter-spacing: .03em;
     line-height: 1.8em;
-    background: linear-gradient(
-        to bottom,
-        rgba(125, 125, 80, 0.4),
-        rgba(53, 53, 108, 0.5)
-    ), url(../assets/images/tiro-angulo-fascinante-cielo-estrellado.webp);
-    background-repeat: no-repeat;
+    background: url(../assets/images/background2.webp);
+    background-repeat: repeat-y;
     background-size: cover;
+    animation: backgroung 200s linear infinite;
 }
 
-header{
+@keyframes backgroung {
+    0% {
+        background-position-y: 0;
+    }
+
+    100% {
+        background-position-y: -3646px;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,11 +46,12 @@ header{
 }
 
 /*Estilos para el texto y la animación del logo*/
-.logo{
+.logo {
     display: flex;
     align-items: center;
     color: white;
 }
+
 .logo::after {
     content: "";
     position: relative;
@@ -47,28 +62,32 @@ header{
     border-radius: 50%;
     border: 4px solid;
 }
-.logo span{
+
+.logo span {
     font-size: 1.6em;
 }
 
 .planet {
     animation: planet-rotate 10s linear infinite;
 }
+
 .planet.left {
     font-size: 1.2em;
     transform-origin: 156% 37%;
 }
+
 .planet.right {
     font-size: 1.2em;
     transform-origin: -55% 43%;
 }
+
 @keyframes planet-rotate {
     to {
         transform: rotate(1turn);
     }
 }
 
-.inicio{
+.inicio {
     width: fit-content;
     font-size: 1.2em;
     font-weight: 600;
@@ -76,16 +95,16 @@ header{
     padding: .3em;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(255, 166, 0, 1),
-                0px 0px 10px 0px rgba(213, 139, 0, 1),
-                0px 0px 10px 0px rgba(221, 144, 0, 1);
+        0px 0px 10px 0px rgba(213, 139, 0, 1),
+        0px 0px 10px 0px rgba(221, 144, 0, 1);
 }
 
-.inicio a{
+.inicio a {
     color: black;
     text-decoration: none;
 }
 
-.banderas{
+.banderas {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -93,67 +112,70 @@ header{
     background-color: rgba(51, 49, 47, 0.864);
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(255, 166, 0, 1),
-                0px 0px 10px 0px rgba(213, 139, 0, 1),
-                0px 0px 10px 0px rgba(221, 144, 0, 1);
+        0px 0px 10px 0px rgba(213, 139, 0, 1),
+        0px 0px 10px 0px rgba(221, 144, 0, 1);
 }
 
-.bandera_img{
+.bandera_img {
     width: 2.5em;
     height: 1.2em;
     cursor: pointer;
     display: block;
 }
 
-#logoCentro img{
+#logoCentro img {
     width: 5em;
     border-radius: 50%;
 }
 
 
-h1{
-    font-size: 5em; 
+h1 {
+    font-size: 5em;
     line-height: normal;
-    color: #898bfd; 
-    text-shadow: 
-        0px 0px 5px rgba(255, 255, 255, 0.8), 
-        0px 0px 10px rgba(255, 255, 255, 0.8), 
+    color: #898bfd;
+    text-shadow:
+        0px 0px 5px rgba(255, 255, 255, 0.8),
+        0px 0px 10px rgba(255, 255, 255, 0.8),
         0px 0px 15px rgba(255, 255, 255, 0.8),
         0px 0px 20px rgb(120, 24, 255);
     text-align: center;
     margin: .5em 0;
 }
-section p{
+
+section p {
     font-size: 1.2em;
     padding: 3em;
     background-color: #70B7C6;
     border: 4px double #362D9F;
     border-radius: 100px 100px 5px 5px / 45px 45px 5px 5px;
     box-shadow: 0px 0px 10px 4px rgba(189, 119, 236, 1),
-                0px 0px 15px 5px rgba(189, 119, 236, 1);
+        0px 0px 15px 5px rgba(189, 119, 236, 1);
 }
-#userName{
+
+#userName {
     text-align: center;
     font-size: 1.2em;
     font-weight: 600;
     margin: 2em 0;
     height: 3.5em;
-    width: 20em;
+    width: 18em;
     border-radius: 10px;
     border: 9px ridge #B1E3E7;
 }
 
-#iniciar span{
+#iniciar span {
     font-size: 2em;
     color: white;
 }
-#iniciar{
+
+#iniciar {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 2em 0;
 }
 
-#btnIniciar{
+#btnIniciar {
     cursor: pointer;
     font-size: 1.5em;
     font-weight: 600;
@@ -168,33 +190,37 @@ section p{
     0% {
         border: 5px solid black;
     }
+
     25% {
-        box-shadow: 
-        0px 0px 5px rgba(255, 255, 255, 1), 
-        0px 0px 10px rgba(255, 255, 255, 1), 
-        0px 0px 15px rgba(255, 255, 255, 1),
-        0px 0px 20px rgb(255, 32, 24),
-        0px 0px 30px rgb(255, 119, 112),
-        0px 0px 40px rgb(255, 112, 112);
+        box-shadow:
+            0px 0px 5px rgba(255, 255, 255, 1),
+            0px 0px 10px rgba(255, 255, 255, 1),
+            0px 0px 15px rgba(255, 255, 255, 1),
+            0px 0px 20px rgb(255, 32, 24),
+            0px 0px 30px rgb(255, 119, 112),
+            0px 0px 40px rgb(255, 112, 112);
     }
+
     50% {
         border: 5px solid black;
-        }
-    65% {
-        box-shadow: 
-        0px 0px 5px rgba(255, 255, 255, 1), 
-        0px 0px 10px rgba(255, 255, 255, 1), 
-        0px 0px 15px rgba(255, 255, 255, 1),
-        0px 0px 20px rgb(243, 22, 15),
-        0px 0px 30px rgb(252, 94, 86),
-        0px 0px 40px rgb(255, 75, 75);
     }
+
+    65% {
+        box-shadow:
+            0px 0px 5px rgba(255, 255, 255, 1),
+            0px 0px 10px rgba(255, 255, 255, 1),
+            0px 0px 15px rgba(255, 255, 255, 1),
+            0px 0px 20px rgb(243, 22, 15),
+            0px 0px 30px rgb(252, 94, 86),
+            0px 0px 40px rgb(255, 75, 75);
+    }
+
     100% {
         border: 5px solid black;
     }
 }
 
-.cronometro{
+.cronometro {
     margin: 3.5em 0;
     padding: 1em 2em;
     background-color: #b1e3e7e3;
@@ -203,14 +229,14 @@ section p{
 }
 
 
-#hms{
+#hms {
     font-size: 3em;
-    color:#000;
-    font-family: alarm;  
+    color: #000;
+    font-family: alarm;
     text-align: center;
 }
 
-form{
+form {
     display: none;
     flex-direction: column;
     margin: 0 auto 5em auto;
@@ -221,25 +247,29 @@ form{
     border: 4px double #362D9F;
     border-radius: 100px 100px 5px 5px / 45px 45px 5px 5px;
     box-shadow: 0px 0px 10px 4px rgba(189, 119, 236, 1),
-                0px 0px 15px 5px rgba(189, 119, 236, 1);
+        0px 0px 15px 5px rgba(189, 119, 236, 1);
 }
-form span{
+
+form span {
     font-size: 1.2em;
     color: black;
 }
-form div{
+
+form div {
     display: flex;
     flex-direction: column;
     padding: .5em 0;
 }
 
-form input{
+form input {
     cursor: pointer;
 }
-#finalformulario{
+
+#finalformulario {
     display: flex;
 }
-#btnEnviar{
+
+#btnEnviar {
     cursor: pointer;
     align-self: center;
     width: fit-content;
@@ -251,26 +281,30 @@ form input{
     border-radius: 10px;
 }
 
-#contenidoFooter{
+#contenidoFooter {
     display: flex;
     justify-content: space-evenly;
 }
 
-.enlacesPlanetas li{
+.enlacesPlanetas li {
     margin: 0 0 0 2.5em;
     list-style: disc;
 }
-.enlacesPlanetas a{
+
+.enlacesPlanetas a {
     color: #ffff;
     text-decoration: none;
 }
 
-footer{
+footer {
+    position: absolute;
+    left: 0;
+    z-index: -1;
     width: 100%;
     padding: 2.5em 0;
     margin: 0;
     background-color: #333030;
-    box-shadow: 0px -1px 10px 0px rgba(255, 166, 0, 1),0px -4px 15px 0px rgba(213, 139, 0, 1),2px -4px 20px 1px rgba(221, 144, 0, 1);
+    box-shadow: 0px -1px 10px 0px rgba(255, 166, 0, 1), 0px -4px 15px 0px rgba(213, 139, 0, 1), 2px -4px 20px 1px rgba(221, 144, 0, 1);
 }
 
 .wrapper {
@@ -278,9 +312,11 @@ footer{
     list-style: none;
     justify-content: center;
 }
-.wrapper a:active{
+
+.wrapper a:active {
     background-color: transparent;
 }
+
 .wrapper .icon {
     position: relative;
     background: #ffffff;
@@ -297,7 +333,8 @@ footer{
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-.wrapper .tipo{
+
+.wrapper .tipo {
     position: absolute;
     top: 0;
     font-size: 20px;
@@ -310,6 +347,7 @@ footer{
     pointer-events: none;
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+
 .wrapper .tipo::before {
     position: absolute;
     content: "";
@@ -321,76 +359,86 @@ footer{
     transform: translate(-50%) rotate(45deg);
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+
 .wrapper .icon:hover .tipo {
     top: -45px;
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
 }
+
 .wrapper .icon:hover span,
 .wrapper .icon:hover .tipo {
     text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
 }
+
 .wrapper .facebook:hover,
 .wrapper .facebook:hover .tipo,
 .wrapper .facebook:hover .tipo::before {
     background: #1877f2;
     color: #10141b;
 }
+
 .wrapper .twitter:hover,
 .wrapper .twitter:hover .tipo,
 .wrapper .twitter:hover .tipo::before {
     background: #1da1f2;
     color: #ffffff;
 }
+
 .wrapper .instagram:hover,
 .wrapper .instagram:hover .tipo,
 .wrapper .instagram:hover .tipo::before {
     background: #e4405f;
     color: #ffffff;
 }
+
 .wrapper .github:hover,
 .wrapper .github:hover .tipo,
 .wrapper .github:hover .tipo::before {
     background: #333333;
     color: #ffffff;
 }
+
 a {
     color: unset;
 }
 
 @media screen and (max-width: 800px) {
 
-    body{
+    body {
         margin: 0;
         font-size: initial;
     }
-    h1{
-        font-size: 5em; 
+    header{
+        flex-direction: column;
     }
 
-    .mapa{
+    h1 {
+        font-size: 4em;
+    }
+
+    section p{
+        font-size: initial;
+    }
+    #iniciar span{
+        text-align: center;
+        font-size: 1.4em;
+    }
+    form{
+        padding: 1em;
+    }
+    .mapa {
         align-self: center;
         margin-top: 2em;
     }
-    .mapa iframe{
+
+    .mapa iframe {
         width: fit-content;
         height: fit-content;
     }
-    #contenidoFooter{
-        flex-direction: column;
-    }
-}
 
-@media only screen and (min-width: 1024px) {
-footer{
-    position: absolute;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    padding: 2.5em 0;
-    margin: 0;
-    background-color: #333030;
-    box-shadow: 0px -1px 10px 0px rgba(255, 166, 0, 1),0px -4px 15px 0px rgba(213, 139, 0, 1),2px -4px 20px 1px rgba(221, 144, 0, 1);
+    #contenidoFooter {
+        flex-direction: column;
     }
 }

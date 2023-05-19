@@ -1,5 +1,5 @@
 #planeta{
-    background: url(../assets/images/neptuno.webp);
+    background: url(../assets/images/mapasPlanetas/neptuno.webp);
     transform: none;
 }
 
@@ -16,8 +16,8 @@ h1{
         0px 0px 75px #b0ebee;
 }
 #btn1:hover{
-    background-image: url(../assets/images/Uranus.jpg);
+    background-image: url(../assets/images/imagesNav/7urano.webp);
 }
 #btn2:hover{
-    background-image: url(../assets/images/Sol.jpg);
+    background-image: url(../assets/images/imagesNav/sol.webp);
 }

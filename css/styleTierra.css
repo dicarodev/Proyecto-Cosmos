@@ -1,6 +1,6 @@
-#contenido {
+section {
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
     "planetaContenido planetaContenido"
     "introduccion introduccion"
     "caracteristicas curiosidades";
@@ -17,14 +17,14 @@
   width: 20em;
   height: 20em;
   border-radius: 50%;
-  background: url(../assets/img/img.png);
+  background: url(../assets/images/mapasPlanetas/mapaTierra.webp);
   background-size: cover;
   background-position: center;
   box-shadow: inset 0 0 20px #000, inset -40px -10px 20px rgba(3, 32, 56, 0.7);
   animation: world 20s linear infinite;
 }
 
-#planetaContenido p{
+#planetaContenido p {
   font-size: 2em;
   padding: 1em 0;
   color: #ffffff;
@@ -32,7 +32,6 @@
 
 h1 {
   color: #7843E6;
-  font-size: 7rem;
   text-shadow: 1px 3px 4px rgba(19, 224, 251, 1), -2px 2px 2px rgba(255, 0, 255, 0.7);
 }
 
@@ -46,16 +45,24 @@ h1 {
   }
 }
 
-#caracteristicas p{
-  margin: 1em 0;
-}
-#curiosidades p{
+#caracteristicas p {
   margin: 1em 0;
 }
 
-@media only screen and (max-width: 767px) {
+#curiosidades p {
+  margin: 1em 0;
+}
 
-  #contenido {
+#btn1:hover {
+  background-image: url(../assets/images/imagesNav/2venus.webp);
+}
+
+#btn2:hover {
+  background-image: url(../assets/images/imagesNav/4marte.webp);
+}
+@media screen and (max-width: 800px) {
+
+  section {
     display: grid;
     grid-template-areas:
       "planetaContenido"
@@ -64,15 +71,11 @@ h1 {
       "curiosidades";
   }
 
-  #planetaContenido {
-    grid-area: planetaContenido;
+  #planetaContenido p {
+    font-size: 1.4em;
   }
 
-  #planetaContenido p{
-      font-size: 1.4em;
-  }
-
-  #tierra{
+  #tierra {
     height: 15em;
     width: 15em;
   }

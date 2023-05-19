@@ -1,5 +1,5 @@
 #planeta{
-    background: url(../assets/images/mapaLuna.webp);
+    background: url(../assets/images/mapasPlanetas/mapaLuna.webp);
     transform: none;
 }
 
@@ -39,8 +39,8 @@ h1{
     }
 }
 #btn1:hover{
-    background-image: url(../assets/images/Earth.jpg);
+    background-image: url(../assets/images/imagesNav/3tierra.webp);
 }
 #btn2:hover{
-    background-image: url(../assets/images/Mars.jpg);
+    background-image: url(../assets/images/imagesNav/4marte.webp);
 }
