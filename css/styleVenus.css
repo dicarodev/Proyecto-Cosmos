@@ -1,6 +1,6 @@
 @font-face {
   font-family: "ZingRust";
-  src: url(../assets/fonts/zing.rust-demo-base.otf);
+  src: url(../assets/fonts/zing.rust-demo-base.woff);
 }
 section {
   display: grid;

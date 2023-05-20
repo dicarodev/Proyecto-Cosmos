@@ -1,6 +1,6 @@
 @font-face {
     font-family: "IndieFlower";
-    src: url(../assets/fonts/IndieFlower-Regular.ttf);
+    src: url(../assets/fonts/IndieFlower-Regular.woff);
 }
 *{
     margin: 0;
@@ -90,7 +90,7 @@ header{
     text-decoration: none;
 }
 
-.banderas{
+/*.banderas{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -107,7 +107,7 @@ header{
     height: 1.2em;
     cursor: pointer;
     display: block;
-}
+}*/
 
 #logoCentro img{
     width: 5em;

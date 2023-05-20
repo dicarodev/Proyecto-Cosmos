@@ -1,6 +1,6 @@
 @font-face {
   font-family: "IndieFlower";
-  src: url(../assets/fonts/IndieFlower-Regular.ttf);
+  src: url(../assets/fonts/IndieFlower-Regular.woff);
 }
 
 * {
@@ -89,7 +89,7 @@ header {
   }
 }
 
-.banderas {
+/*.banderas {
   height: fit-content;
   display: flex;
   align-items: center;
@@ -101,7 +101,7 @@ header {
   height: 1.2em;
   cursor: pointer;
   display: block;
-}
+}*/
 
 #logoCentro img {
   width: 5em;
@@ -225,8 +225,7 @@ li,
   margin: 3rem;
 }
 
-#menu button {
-  font-size: 25px;
+#menu a {
   background-color: black;
   color: white;
   border: 1px solid white;

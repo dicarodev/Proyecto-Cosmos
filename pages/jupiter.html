@@ -9,7 +9,7 @@
   <link rel="shortcut icon" href="../assets/icons/iconsCosmos.ico" type="image/x-icon">
   <link rel="stylesheet" href="../css/styleUrano.css">
   <link rel="stylesheet" href="../css/styleJupiter.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 
 <body>
@@ -22,12 +22,12 @@
       <span class="planet right">&#129680;</span>
       <span>S</span>
     </div>
-    <div id="botonesHeader">
+    <!--<div id="botonesHeader">
       <button type="button" class="btn-small" id="btnEspanol" onclick="translateToEspanish()"><img
           src="../assets/images/españa1.webp" alt="Español"></button>
       <button type="button" class="btn-small" id="btnEnglish" onclick="translateToEnglish()"><img
           src="../assets/images/reinoUnido1.webp" alt="English"></button>
-    </div>
+    </div>-->
     <div id="logoCentro">
       <a href="https://www.iesjuanbosco.es" target="_blank"><img src="../assets/images/logoIESJuanBosco.webp"
           alt="Logo IES Juan Bosco"></a>
@@ -36,24 +36,27 @@
   <main>
     <section>
       <div id="planetaContenido">
-          <div id="jupiter"></div>
-          <p>EL PLANETA GIGANTE</p>
-          <h1>J&Uacute;PITER</h1>
+        <div id="jupiter"></div>
+        <p>EL PLANETA GIGANTE</p>
+        <h1>JÚPITER</h1>
       </div>
 
       <div id="introduccion">
-        <p>J&uacute;piter deriva de Ius-piter, o sea, &uacute;ltimamente, de Deus-pater &ldquo;dios padre&rdquo;. Esta evoluci&oacute;n del nombre se debe a la influencia de la mitolog&iacute;a griega en la romana, en la cual Zeus era el dios supremo, equivalente a J&uacute;piter. As&iacute; que en cierto modo, J&uacute;piter tambi&eacute;n podr&iacute;a considerarse como el padre de los dioses en la mitolog&iacute;a romana.</p>
+        <p>Júpiter deriva de Ius-piter, o sea, últimamente, de Deus-pater &ldquo;dios padre&rdquo;. Esta evolución del
+          nombre se debe a la influencia de la mitología griega en la romana, en la cual Zeus era el dios
+          supremo, equivalente a Júpiter. Así que en cierto modo, Júpiter también
+          podría considerarse como el padre de los dioses en la mitología romana.</p>
       </div>
 
       <article id="caracteristicas">
-        <h2>CARACTERISTICAS</h2>
+        <h2>CARACTERÍSTICAS</h2>
         <ul>
-          <li>El mes con m&aacute;s lluvia es septiembre, con un promedio de 147 mil&iacute;metros de lluvia</li>
-          <li>El mes con menos lluvia es diciembre, con un promedio de 45 mil&iacute;metros de lluvia.</li>
-          <li>Hay presencia de agua? No, no hay evidencia de que haya agua l&iacute;quida en J&uacute;piter.</li>
-          <li>La atmosfera est&aacute; compuesta principalmente de Hidr&oacute;geno y Helio y es densa y profunda,
-            formada por varias capas.</li>
-          <li> &iquest;Fen&oacute;menos meteorol&oacute;gicos? S&iacute;, una gran variedad.</li>
+          <li>El mes con más lluvia es septiembre, con un promedio de 147 milímetros de lluvia.</li>
+          <li>El mes con menos lluvia es diciembre, con un promedio de 45 milímetros de lluvia.</li>
+          <li>¿Hay presencia de agua? No, no hay evidencia de que haya agua líquida en Júpiter.</li>
+          <li>La atmósfera está compuesta principalmente de Hidrógeno y Helio. Es densa y profunda,
+            está formada por varias capas.</li>
+          <li> ¿Existen fenómenos meteorológicos? Sí, una gran variedad.</li>
         </ul>
         <div id="astronauta"></div>
       </article>
@@ -61,18 +64,18 @@
       <article id="curiosidades">
         <h2>CURIOSIDADES</h2>
         <ul>
-          <li>Es el quinto planeta en orden de distancia al Sol.</li>
-          <li>El periodo de rotaci&oacute;n en J&uacute;piter es de 9 horas, 55 minutos y 30 segundos.</li>
-          <li>El d&iacute;a dura alrededor de 5 horas.</li>
-          <li>La gravedad en J&uacute;piter es de 24,79 m/s&sup2; lo que equivale a 2,53 veces la gravedad de la Tierra.
+          <li>Es el 5&ordm; planeta en orden de distancia al Sol.</li>
+          <li>El periodo de rotación en Júpiter es de 9 horas, 55 minutos y 30 segundos.</li>
+          <li>El día dura alrededor de 5 horas.</li>
+          <li>La gravedad en Júpiter es de 24,79 m/s&sup2; lo que equivale a 2,53 veces la gravedad de la Tierra.
           </li>
         </ul>
       </article>
 
     </section>
     <div id="menu">
-      <button type="button" class="btn" id="btn1"><a href="./marte.html">Marte</a></button>
-      <button type="button" class="btn" id="btn2"><a href="./saturno.html">Saturno</a></button>
+      <a class="btn" id="btn1" href="./marte.html">Marte</a>
+      <a class="btn" id="btn2" href="./saturno.html">Saturno</a>
     </div>
   </main>
   <footer>
@@ -104,7 +107,7 @@
     </div>
   </footer>
   <img src="../assets/images/botonInicioPagina.webp" alt="Imagen cohete para volver al inicio" id="inicio"
-    class="cohete" />
+    class="cohete">
   <script src="../js/jupiter.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="../js/pages.js"></script>

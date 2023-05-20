@@ -15,9 +15,16 @@ h1{
         0px 0px 55px #b0ebee,
         0px 0px 75px #b0ebee;
 }
+
+#voyager{
+    color: blue;
+    text-decoration: underline;
+}
+
 #btn1:hover{
     background-image: url(../assets/images/imagesNav/7urano.webp);
 }
 #btn2:hover{
-    background-image: url(../assets/images/imagesNav/sol.webp);
+    background-image: url(../assets/images/nave2.webp);
+    background-size: contain;
 }

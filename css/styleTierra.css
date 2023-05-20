@@ -60,6 +60,15 @@ h1 {
 #btn2:hover {
   background-image: url(../assets/images/imagesNav/4marte.webp);
 }
+
+#btn3:hover {
+  scale: 2;
+  background-image: url(../assets/images/imagesNav/laLuna.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  content: none;
+}
 @media screen and (max-width: 800px) {
 
   section {
