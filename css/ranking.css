@@ -1,6 +1,7 @@
 @font-face {
     font-family: "IndieFlower";
     src: url(../assets/fonts/IndieFlower-Regular.woff);
+    font-display: swap;
 }
 *{
     margin: 0;
