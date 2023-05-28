@@ -469,3 +469,7 @@ a {
     background-color: #333030;
   }
 }
+#creditos{
+  max-width: 35%;
+  text-align: center;
+}
