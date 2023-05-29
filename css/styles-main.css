@@ -12,6 +12,7 @@
   box-sizing: border-box;
   list-style: none;
   color: white;
+  font-family: "IndieFlower";
 }
 body {
   margin-left: 10%;
@@ -116,7 +117,7 @@ nav ul li {
   color: white;
 }
 main{
-  font-family: "Zing";
+  font-family: "IndieFlower";
 }
 .menu {
   width: 100%;
@@ -218,7 +219,9 @@ article h2 {
 #sol:hover {
   transform: scale(1.1);
 }
-
+#mapa{
+  text-align: center;
+}
 .cohete {
   position: fixed;
   bottom: 1em;
@@ -278,6 +281,14 @@ article h2 {
   #menu {
     position: absolute;
     z-index: 10000;
+    text-align: center;
+  }
+  p,
+  li {
+    font-size: initial;
+  }
+  #sistema_solar{
+   height:60vh ; 
   }
   .mostrar {
     margin-left: 0;
@@ -351,8 +362,8 @@ article h2 {
 
   #mapa {
     order: 3;
-    text-align: center;
   }
+
   footer {
     margin: 2em 0 0;
   }
@@ -397,6 +408,13 @@ article h2 {
   #menu {
     position: absolute;
     z-index: 10000;
+  }
+  #sistema_solar{
+    height:65vh ; 
+   }
+  p,
+  li {
+    font-size: initial;
   }
   .mostrar {
     margin-left: 0;
@@ -474,7 +492,10 @@ a {
     left: -10px;
     transition: transform 2s ease;
   }
-
+  p,
+  li {
+    font-size: 1.3em;
+  }
   .button a:hover .naveicon {
     transform: translateX(125px);
   }
@@ -589,6 +610,7 @@ a {
 
 footer {
   background-color: #333030;
+  font-weight: bolder;
 }
 
 #contenidoFooter {
@@ -611,27 +633,8 @@ footer {
 footer {
   margin-top: 2.5rem;
 }
-/*Insercion del logo y el logo del instituto*/
-@media only screen and (min-width: 1024px) {
-  /*Modificacion de las letra*/
-  p,
-  li {
-    font-size: 1.3em;
-  }
-}
-/*desaparecer la imgen y el logo en si en esto tamaños*/
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  p,
-  li {
-    font-size: initial;
-  }
-}
-@media only screen and (max-width: 767px) {
-  #logotipo {
-    display: none;
-  }
-  p,
-  li {
-    font-size: initial;
+@media (min-width: 1025px) and (max-width: 1220px) {
+  nav ul{
+   font-size: 1.2rem;
   }
 }

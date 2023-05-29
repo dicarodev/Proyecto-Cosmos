@@ -9,7 +9,6 @@
   box-sizing: border-box;
   font-family: "IndieFlower";
 }
-
 body {
   margin: 1em 10% 1em 10%;
   font-size: 1.2em;
@@ -468,8 +467,25 @@ a {
     margin: 0;
     background-color: #333030;
   }
+
+  #creditos{
+    max-width: 33%;
+  }
+}
+footer p{
+  color: white;
+}
+#mapa{
+  width: fit-content;
+  height: fit-content;
+}
+#mapa p{
+  text-align: center;
+  font-size: 1.3rem;
 }
 #creditos{
-  max-width: 35%;
   text-align: center;
+}
+#creditos p:nth-of-type(1){
+  font-size: 1.3rem;
 }
