@@ -489,3 +489,6 @@ footer p{
 #creditos p:nth-of-type(1){
   font-size: 1.3rem;
 }
+.mapa p{
+  text-align: center;
+}
