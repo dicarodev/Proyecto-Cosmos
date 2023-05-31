@@ -32,6 +32,7 @@ header {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin-top: 1.5em;
 }
 
 /*Estilos para el texto y la animación del logo*/
@@ -202,7 +203,13 @@ li,
   background-color: #b8e9f6e5;
   box-shadow: 1px 3px 16px 11px rgba(119, 97, 128, 1), 1px 2px 14px 1px rgba(38, 39, 128, 1);
 }
-
+#astronauta {
+  height: 16em;
+  background: url(../assets/images/astronauta-tierra.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
 #caracteristicas {
   grid-area: caracteristicas;
   margin-right: 3em;
@@ -487,8 +494,9 @@ footer p{
   text-align: center;
 }
 #creditos p:nth-of-type(1){
-  font-size: 1.3rem;
+  font-size: 2rem;
 }
 .mapa p{
   text-align: center;
+  font-size: 2rem;
 }

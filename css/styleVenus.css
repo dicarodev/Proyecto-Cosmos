@@ -37,6 +37,7 @@ section {
 }
 #planetaContenido p {
   font-size: 2em;
+  text-align: center;
   padding: 1em 0;
   color: #ffffff;
 }
@@ -49,7 +50,13 @@ h1{
 #caracteristicas p {
   margin: 1em 0;
 }
-
+#astronauta {
+  height: 16em;
+  background: url(../assets/images/alien-ovni.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
 #curiosidades p {
   margin: 1em 0;
 }
@@ -77,7 +84,7 @@ h1{
   }
 
   #planetaContenido p {
-    font-size: 1.4em;
+    font-size: 1.3em;
   }
 
   #tierra {

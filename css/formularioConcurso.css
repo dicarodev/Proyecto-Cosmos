@@ -38,6 +38,7 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    margin-top: 1.5em;
 }
 
 /*Estilos para el texto y la animación del logo*/
@@ -369,10 +370,6 @@ a {
         font-size: initial;
     }
 
-    header{
-        justify-content: initial;
-    }
-
     .inicio{
         position: relative;
         right: 7%;
@@ -415,10 +412,11 @@ a {
     font-weight: bolder;
 }
 #creditos p:nth-of-type(1){
-    font-size: 1.2rem;
+    font-size: 2rem;
 }
-.mapa{
+.mapa p{
     text-align: center;
+    font-size: 2rem;
     color: white;
 }
 @media screen and (min-width: 800px){

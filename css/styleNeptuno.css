@@ -15,7 +15,13 @@ h1{
         0px 0px 55px #b0ebee,
         0px 0px 75px #b0ebee;
 }
-
+#astronauta {
+    height: 16em;
+    background: url(../assets/images/astronauta-lindo.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
 #voyager{
     color: blue;
     text-decoration: underline;

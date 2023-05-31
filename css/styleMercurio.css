@@ -54,7 +54,13 @@ h1 {
 #introduccion{
   margin-top: 0;
 }
-
+#astronauta {
+  height: 16em;
+  background: url(../assets/images/pintura-astronauta.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
 #btn1:hover {
   background-image: url(../assets/images/imagesNav/sol.webp);
 }

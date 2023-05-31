@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urano &#129680; - El planeta inclinado</title>
+    <link
+      rel="shortcut icon"
+      href="../assets/icons/iconsCosmos.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../css/styleUrano.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Urano &#129680; - El planeta inclinado</title>
-  <link rel="shortcut icon" href="../assets/icons/iconsCosmos.ico" type="image/x-icon">
-  <link rel="stylesheet" href="../css/styleUrano.css">
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-</head>
+  <body>
+    <header>
+      <a href="../index.html"
+        ><div class="logo">
+          <span>C</span>
+          <span class="planet left">&#129680;</span>
+          <span>S</span>
+          <span>M</span>
+          <span class="planet right">&#129680;</span>
+          <span>S</span>
+        </div></a
+      >
 
-<body>
-  <header>
-    <a href="../index.html"><div class="logo">
-      <span>C</span>
-      <span class="planet left">&#129680;</span>
-      <span>S</span>
-      <span>M</span>
-      <span class="planet right">&#129680;</span>
-      <span>S</span>
-    </div></a>
-
-    <!--<div id="banderas" class="banderas">
+      <!--<div id="banderas" class="banderas">
       <div class="bandera_item" data-language="es">
         <img src="../assets/icons/es.svg" alt="Bandera de España para la traducción" class="bandera_img">
       </div>
@@ -32,97 +40,136 @@
       </div>
     </div>-->
 
-    <div id="logoCentro">
-      <a href="https://www.iesjuanbosco.es" target="_blank"><img src="../assets/images/logoIESJuanBosco.webp"
-          alt="Logo IES Juan Bosco"></a>
+      <div id="logoCentro">
+        <a href="https://www.iesjuanbosco.es" target="_blank"
+          ><img
+            src="../assets/images/logoIESJuanBosco.webp"
+            alt="Logo IES Juan Bosco"
+        /></a>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="planeta">
+          <div id="planeta"></div>
+          <p>¿Por qué no hay vida en...?</p>
+          <h1>URANO</h1>
+        </div>
+
+        <div id="introduccion">
+          <p>
+            Del latín Uranus, de la traducción latina del griego antiguo
+            representante del cielo y padre del dios Saturno.
+          </p>
+          <p>
+            Es conocido por su inclinación extrema, ya que su eje de rotación
+            está inclinado más de 90&deg; en relación con su plano orbital, lo
+            que significa que parece estar girando sobre su costado.
+          </p>
+        </div>
+
+        <article id="caracteristicas">
+          <h2>CARACTERÍSTICAS</h2>
+          <ul>
+            <li><span>TEMPERATURA MEDIA &rarr; </span>-218&deg; C.</li>
+            <li>
+              <span>¿PRESENCIA DE AGUA? &rarr; </span>Sí, mayormete hielo.
+            </li>
+            <li>
+              <span>COMPOSICIÓN DE LA ATMÓSFERA &rarr; </span>Hidrógeno, helio,
+              metano, agua y amoniaco.
+            </li>
+            <li><span>GRAVEDAD &rarr; </span>8.7 m/s&sup2;</li>
+            <li>
+              <span>SUPERFICIE &rarr; </span>8.083 miles de millones de
+              km&sup2;.
+            </li>
+            <li><span>DURACIÓN DEL DÍA &rarr; </span>17H 14' 24''.</li>
+            <li><span>DURACIÓN DE UN AÑO &rarr; </span>84 años terrestres.</li>
+          </ul>
+          <div id="astronauta"></div>
+        </article>
+
+        <article id="curiosidades">
+          <h2>CURIOSIDADES</h2>
+          <ul>
+            <li>
+              Sistema de anillos muy tenue. Fue descubierto en 1977 por James L.
+              Elliot, Edward W. Dunham y Douglas J. Mink.
+            </li>
+            <li>
+              Urano tiene 27 lunas conocidas. Las más grandes son TITANIA Y
+              OBERÓN. Sus nombres son los de la reina y el rey de las hadas en
+              la obra "El sueño de una noche de verano" de Shakespeare.
+            </li>
+            <li>
+              Cada una de sus lunas tiene su propia órbita y características
+              únicas.
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <div id="menu">
+      <a class="btn" id="btn1" href="./saturno.html">Saturno</a>
+      <a class="btn" id="btn2" href="./neptuno.html">Neptuno</a>
     </div>
-  </header>
-
-  <main>
-    <section>
-      <div class="planeta">
-        <div id="planeta"></div>
-        <p>¿Por qué no hay vida en...?</p>
-        <h1>URANO</h1>
-      </div>
-
-      <div id="introduccion">
-        <p>Del latín Uranus, de la traducción latina del griego antiguo representante del cielo y padre
-          del dios Saturno.</p>
-        <p>Es conocido por su inclinación extrema, ya que su eje de rotación está inclinado
-          más de 90&deg; en relación con su plano orbital, lo que significa que parece estar girando sobre
-          su costado.</p>
-      </div>
-
-      <article id="caracteristicas">
-        <h2>CARACTERÍSTICAS</h2>
-        <ul>
-          <li><span>TEMPERATURA MEDIA &rarr; </span>-218&deg; C.</li>
-          <li><span>¿PRESENCIA DE AGUA? &rarr; </span>Sí, mayormete hielo.</li>
-          <li><span>COMPOSICIÓN DE LA ATMÓSFERA &rarr; </span>Hidrógeno, helio, metano, agua y
-            amoniaco.</li>
-          <li><span>GRAVEDAD &rarr; </span>8.7 m/s&sup2;</li>
-          <li><span>SUPERFICIE &rarr; </span>8.083 miles de millones de km&sup2;.</li>
-          <li><span>DURACIÓN DEL DÍA &rarr; </span>17H 14' 24''.</li>
-          <li><span>DURACIÓN DE UN AÑO &rarr; </span>84 años terrestres.</li>
+    <footer>
+      <div id="contenidoFooter">
+        <div id="creditos">
+          <p>CRÉDITOS</p>
+          <p>
+            En el desarrollo de esta página web participaron los programadores
+            Diego, Eduardo y Jorge junto con los estudiantes de Marina Martínez
+            Bonat 3º de ESO A, B y C, y los alumnos de Alicia Portero Hernández
+            del IES Juan Bosco de Alcázar de San Juan. Agradecemos especialmente
+            a María Teresa Olmedilla Escribano por su apoyo y orientación.
+          </p>
+        </div>
+        <ul class="wrapper">
+          <li class="icon github">
+            <span class="tipo">Diego</span>
+            <a href="https://github.com/MrWiskers06"
+              ><span><i class="fab fa-github"></i></span
+            ></a>
+          </li>
+          <li class="icon github">
+            <span class="tipo">Jorge</span>
+            <a href="https://github.com/jorgeescu"
+              ><span><i class="fab fa-github"></i></span
+            ></a>
+          </li>
+          <li class="icon github">
+            <span class="tipo">Eduardo</span>
+            <a href="https://github.com/eduscnr"
+              ><span><i class="fab fa-github"></i></span
+            ></a>
+          </li>
         </ul>
-      </article>
-
-      <article id="curiosidades">
-        <h2>CURIOSIDADES</h2>
-        <ul>
-          <li>Sistema de anillos muy tenue. Fue descubierto en 1977 por James L. Elliot, Edward W. Dunham y Douglas J.
-            Mink.</li>
-          <li>Urano tiene 27 lunas conocidas. Las más grandes son TITANIA Y OBERÓN. Sus nombres son los de
-            la reina y el rey de las hadas en la obra "El sueño de una noche de verano" de Shakespeare.</li>
-          <li>Cada una de sus lunas tiene su propia órbita y características únicas.</li>
-        </ul>
-      </article>
-    </section>
-  </main>
-
-  <div id="menu">
-    <a class="btn" id="btn1" href="./saturno.html">Saturno</a>
-    <a class="btn" id="btn2" href="./neptuno.html">Neptuno</a>
-  </div>
-  <footer>
-    <div id="contenidoFooter">
-      <div id="creditos">
-        <p>CRÉDITOS</p>
-        <p>
-          En la elaboración de esta página web participaron los programadores Jorge, Diego y Eduardo, cuya dedicación y talento fueron fundamentales para el éxito del proyecto. También reconocemos la valiosa colaboración de los estudiantes de Marina Martínez Bonat de 3º de ESO A, B y C, y los alumnos de Alicia Portero Hernández del IES Juan Bosco de Alcázar de San Juan. Su compromiso y entusiasmo fueron imprescindibles para hacer posible este proyecto. Agradecemos especialmente a María Teresa Olmedilla Escribano por su apoyo y orientación.
-        </p>
+        <div class="mapa">
+          <p>UBICACI&Oacute;N</p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3083.4422037949753!2d-3.2267739457325697!3d39.39150064446475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd69af036cec6af9%3A0x3cb32e283081ecee!2sIES%20Juan%20Bosco!5e0!3m2!1ses!2ses!4v1682613313155!5m2!1ses!2ses"
+            width="400"
+            height="300"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </div>
-      <ul class="wrapper">
-        <li class="icon github">
-          <span class="tipo">Diego</span>
-         <a href="https://github.com/MrWiskers06"><span><i class="fab fa-github"></i></span></a>
-        </li>
-        <li class="icon github">
-          <span class="tipo">Jorge</span>
-          <a href="https://github.com/jorgeescu"><span><i class="fab fa-github"></i></span></a>
-        </li>
-        <li class="icon github">
-          <span class="tipo">Eduardo</span>
-          <a href="https://github.com/eduscnr"
-            ><span><i class="fab fa-github"></i></span
-          ></a>
-        </li>
-      </ul>
-      <div class="mapa">
-        <p>UBICACI&Oacute;N</p>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3083.4422037949753!2d-3.2267739457325697!3d39.39150064446475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd69af036cec6af9%3A0x3cb32e283081ecee!2sIES%20Juan%20Bosco!5e0!3m2!1ses!2ses!4v1682613313155!5m2!1ses!2ses"
-          width="400" height="300" style="border: 0" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div>
-  </footer>
-  <img src="../assets/images/botonInicioPagina.webp" alt="Imagen cohete para volver al inicio" id="inicio"
-    class="cohete">
+    </footer>
+    <img
+      src="../assets/images/botonInicioPagina.webp"
+      alt="Imagen cohete para volver al inicio"
+      id="inicio"
+      class="cohete"
+    />
 
-  <script src="../js/pages.js"></script>
-  <script src="../js/translateUrano.js"></script>
-</body>
-
+    <script src="../js/pages.js"></script>
+    <script src="../js/translateUrano.js"></script>
+  </body>
 </html>

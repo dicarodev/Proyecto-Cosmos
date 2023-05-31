@@ -48,7 +48,13 @@ h1 {
 #caracteristicas p {
   margin: 1em 0;
 }
-
+#astronauta {
+  height: 16em;
+  background: url(../assets/images/cosmonauta.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
 #curiosidades p {
   margin: 1em 0;
 }

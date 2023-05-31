@@ -2,10 +2,12 @@
   font-family: "IndieFlower";
   src: url(../assets/fonts/IndieFlower-Regular.woff);
 }
+
 @font-face {
   font-family: "Zing";
   src: url(../assets/fonts/zing.rust-demo-base.woff);
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -13,15 +15,17 @@
   list-style: none;
   font-family: "IndieFlower";
 }
+
 body {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 3% 10% 0 10%;
   background-image: url(../assets/images/fondo-espacio-estrellas-ilustracion-vectorial_97886-319.webp);
 }
+
 #sistema_solar {
   width: 100%;
   height: 80vh;
 }
+
 /*Logos*/
 .logo {
   display: flex;
@@ -81,6 +85,7 @@ body {
   width: 5em;
   border-radius: 50%;
 }
+
 #logotipo {
   display: flex;
   color: white;
@@ -88,10 +93,12 @@ body {
   width: 100%;
   margin-top: 0.5rem;
 }
+
 #logoCentro img {
   width: 5em;
   border-radius: 50%;
 }
+
 nav ul {
   display: flex;
   justify-content: space-between;
@@ -102,10 +109,12 @@ nav ul {
   font-weight: bolder;
   cursor: pointer;
 }
+
 nav ul li {
   display: inline-block;
   font-family: "IndieFlower";
 }
+
 #btnMenu {
   background-color: black;
   padding: 20px;
@@ -115,31 +124,38 @@ nav ul li {
   width: 100%;
   color: white;
 }
-main{
+
+main {
   font-family: "IndieFlower";
 }
+
 .menu {
   width: 100%;
   margin-left: -100%;
   transition: all 0.5s;
 }
+
 /*Aquí se empezaria a editar lo que seria el sol*/
 section {
   margin-top: 40px;
 }
+
 #centrar {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 #descripcionSol {
   text-align: center;
 }
+
 #descripcionSol p {
   font-size: 2em;
   padding: 0.5em 0;
   color: yellow;
 }
+
 h1 {
   color: #d1b513;
   text-shadow: 1px 7px 5px #ed6c06, 1px -6px 5px #ed6c06, 6px 0px 5px #ed6c06,
@@ -148,37 +164,34 @@ h1 {
   font-size: 8rem;
 }
 
+section article{
+  font-weight: 600;
+  color: white;
+  background-color: #fc7210af;
+  box-shadow: 0px 0px 10px #ffd700, 0px 0px 20px #ffa500, 0px 0px 30px #ff8c00,
+    0px 0px 40px #ff4500;
+}
 #introduccion {
   grid-area: introduccion;
   padding: 1em;
   width: fit-content;
   height: fit-content;
-  background-color: #ff6a00;
-  box-shadow: 0px 0px 10px #ffd700, 0px 0px 20px #ffa500, 0px 0px 30px #ff8c00,
-    0px 0px 40px #ff4500;
 }
+
 #introduccion p {
-  color: #f5f5f5;
+  color: white;
   text-align: center;
-  font-size: 1.3em;
 }
-#caracteristicas {
-  background-color: #ff6a00;
-  box-shadow: 0px 0px 10px #ffd700, 0px 0px 20px #ffa500, 0px 0px 30px #ff8c00,
-    0px 0px 40px #ff4500;
-}
+
+
 #foto {
   height: 16em;
-  background: url(../assets/images/solConGafas.webp);
+  background: url(../assets/images/soleccillo.webp);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
-#curiosidades {
-  background-color: #ff6a00;
-  box-shadow: 0px 0px 10px #ffd700, 0px 0px 20px #ffa500, 0px 0px 30px #ff8c00,
-    0px 0px 40px #ff4500;
-}
+
 
 li {
   margin: 1em 0;
@@ -194,6 +207,7 @@ article {
   border: 2px solid white;
   border-radius: 5px 5px 40px 40px;
 }
+
 article h2 {
   text-align: center;
   font-size: 2em;
@@ -201,11 +215,13 @@ article h2 {
   text-shadow: 2px 2px 4px #000, -2px -2px 4px #000, 0px 4px 4px #000,
     0px -4px 4px #000;
 }
+
 #caracteristicas {
   grid-area: caracteristicas;
   margin-right: 3em;
   margin-bottom: 1.5rem;
 }
+
 #sol {
   background: url(../assets/images/sun.webp);
   width: 400px;
@@ -215,12 +231,15 @@ article h2 {
   background-position: bottom;
   transition: transform 0.3s ease;
 }
+
 #sol:hover {
   transform: scale(1.1);
 }
-#mapa{
+
+#mapa {
   text-align: center;
 }
+
 .cohete {
   position: fixed;
   bottom: 1em;
@@ -228,9 +247,11 @@ article h2 {
   cursor: pointer;
   display: none;
 }
+
 #emojiSol {
   color: yellow;
 }
+
 /*Empezamos con lo responsive*/
 
 #contenido {
@@ -240,15 +261,17 @@ article h2 {
     "introduccion introduccion"
     "caracteristicas curiosidades";
 }
+
 #planetaContenido {
   grid-area: planetaContenido;
 }
 
 @media only screen and (max-width: 767px) {
   body {
-    margin: 0;
+    margin: 3% 0 0 0;
     font-size: initial;
   }
+
   nav ul {
     flex-direction: column;
     align-items: flex-start;
@@ -258,6 +281,7 @@ article h2 {
     width: 100%;
     margin-bottom: 10px;
   }
+
   nav ul li::after {
     content: "";
     display: block;
@@ -267,46 +291,55 @@ article h2 {
     margin: auto;
     transition: 0.4s;
   }
+
   nav ul li:hover:after {
     width: 100%;
   }
+
   .menu {
     background-color: black;
     color: white;
   }
+
   #menu a {
     padding: 15px;
   }
+
   #menu {
     position: absolute;
     z-index: 10000;
     text-align: center;
   }
+
   p,
   li {
     font-size: initial;
   }
-  #sistema_solar{
-   height:60vh ; 
+
+  #sistema_solar {
+    height: 60vh;
   }
+
   .mostrar {
     margin-left: 0;
   }
+
   h1 {
     font-size: 3.5rem;
   }
+
   #descripcionSol p {
     font-size: initial;
   }
-  article h2 {
-    font-size: initial;
-  }
+
   #introduccion p {
     font-size: initial;
   }
+
   li {
     font-size: initial;
   }
+
   #contenido {
     display: grid;
     grid-template-areas:
@@ -315,32 +348,40 @@ article h2 {
       "caracteristicas"
       "curiosidades";
   }
+
   #planetaContenido {
     grid-area: planetaContenido;
   }
+
   #introducion {
     grid-area: introducion;
   }
+
   article {
     margin: 2.2em 0;
   }
+
   #curiosidades {
     grid-area: curiosidades;
     margin-top: 2rem;
     margin-bottom: 1rem;
   }
+
   #caracteristicas {
     grid-area: caracteristicas;
     margin-right: 0em;
   }
+
   #sol {
     height: 300px;
     width: 300px;
     animation: none;
   }
+
   #foto {
     height: 10em;
   }
+
   #contenidoFooter {
     display: flex;
     flex-direction: column;
@@ -362,23 +403,28 @@ article h2 {
   #mapa {
     order: 3;
   }
-  #mapa iframe{
+
+  #mapa iframe {
     width: fit-content;
     height: fit-content;
   }
+
   footer {
     margin: 2em 0 0;
   }
+
   a {
     color: unset;
     text-decoration: none;
   }
 }
+
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   body {
     margin: 0;
     padding: 0;
   }
+
   nav ul {
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -389,41 +435,52 @@ article h2 {
     margin-right: 0;
     margin-bottom: 10px;
   }
+
   #introduccion {
     margin-right: 1.25em;
     margin-left: 1.25em;
   }
+
   #curiosidades {
     margin-right: 1.25em;
   }
+
   #caracteristicas {
     margin-left: 1.25em;
   }
+
   .menu {
     background-color: black;
     color: white;
     border: none;
   }
+
   #menu a {
     padding: 15px;
   }
+
   #menu {
     position: absolute;
     z-index: 10000;
   }
-  #sistema_solar{
-    height:65vh ; 
-   }
+
+  #sistema_solar {
+    height: 65vh;
+  }
+
   p,
   li {
     font-size: initial;
   }
+
   .mostrar {
     margin-left: 0;
   }
+
   .button {
     width: 100%;
   }
+
   #creditos {
     margin-left: 70px;
     font-size: 1.2em;
@@ -431,6 +488,7 @@ article h2 {
     text-align: center;
     max-width: 33%;
   }
+
   footer {
     margin: 3em 0 0;
   }
@@ -446,12 +504,15 @@ a {
     justify-content: center;
     align-items: center;
   }
+
   nav ul li {
     margin-right: 20px;
   }
+
   nav ul li:last-child {
     margin-right: 0;
   }
+
   nav ul li::after {
     content: "";
     display: block;
@@ -461,15 +522,19 @@ a {
     margin: auto;
     transition: 0.4s;
   }
+
   nav ul li:hover:after {
     width: 100%;
   }
+
   #btnMenu {
     display: none;
   }
+
   .menu {
     margin-left: 0;
   }
+
   .button {
     position: relative;
   }
@@ -482,31 +547,16 @@ a {
     align-items: center;
   }
 
-  .naveicon {
-    width: 100px;
-    height: 100px;
-    background-image: url("../assets/images/nave-removebg-preview-removebg-preview.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: left;
-    margin-right: 10px;
-    position: absolute;
-    left: -10px;
-    transition: transform 2s ease;
-  }
   p,
   li {
     font-size: 1.3em;
   }
-  .button a:hover .naveicon {
-    transform: translateX(125px);
-  }
+
   footer {
     position: absolute;
     left: 0;
     z-index: -1;
     width: 100%;
-    padding: 2.5em 0;
     margin: 3em 0 0;
     background-color: #333030;
     box-shadow: 0px -1px 10px 0px rgba(255, 166, 0, 1),
@@ -517,6 +567,7 @@ a {
   #TituloCredito {
     text-align: center;
   }
+
   #creditos {
     font-size: 1.5em;
     grid-area: creditos;
@@ -524,18 +575,21 @@ a {
     max-width: 33%;
   }
 }
+
 .wrapper {
   display: flex;
   list-style: none;
   justify-content: center;
 }
+
 .wrapper a:active {
   background-color: transparent;
 }
+
 .wrapper .icon {
   position: relative;
   border-radius: 50%;
-  background-color:white;
+  background-color: white;
   padding: 15px;
   margin: 10px;
   width: 45px;
@@ -548,6 +602,7 @@ a {
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+
 .wrapper .tipo {
   position: absolute;
   top: 0;
@@ -561,6 +616,7 @@ a {
   pointer-events: none;
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+
 .wrapper .tipo::before {
   position: absolute;
   content: "";
@@ -572,12 +628,14 @@ a {
   transform: translate(-50%) rotate(45deg);
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+
 .wrapper .icon:hover .tipo {
   top: -45px;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
+
 .wrapper .icon:hover span,
 .wrapper .icon:hover .tipo {
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
@@ -589,6 +647,7 @@ a {
   background: #333333;
   color: #ffffff;
 }
+
 a {
   color: unset;
   text-decoration: none;
@@ -602,6 +661,7 @@ footer {
 #contenidoFooter {
   display: flex;
   justify-content: space-evenly;
+  padding: 2.5rem 0;
 }
 
 footer {
@@ -616,17 +676,24 @@ footer {
 #creditos {
   font-size: 0.95rem;
 }
+
 footer {
   margin-top: 2.5rem;
 }
+
 @media (min-width: 1025px) and (max-width: 1220px) {
-  nav ul{
-   font-size: 1.2rem;
+  nav ul {
+    font-size: 1.2rem;
   }
 }
-main, #creditos, #mapa,header{
+
+main,
+#creditos,
+#mapa,
+header {
   color: white;
 }
+
 #foto {
   height: 16em;
   background: url(../assets/images/soleccillo.webp);
